@@ -8,18 +8,19 @@
 
 #import "DeviceInformationTableViewController.h"
 
+
 @interface DeviceInformationTableViewController ()
 
 @end
+
 
 @implementation DeviceInformationTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dictionary = @{
-                        @"处理器数目": @"ProcessNumberViewController"
-                        };
-
+        @"处理器数目" : @"ProcessNumberViewController"
+    };
 }
 
 @end

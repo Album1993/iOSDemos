@@ -9,9 +9,11 @@
 #import "GCDTableViewController.h"
 #import "NotifyRegisterDispatchViewController.h"
 
+
 @interface GCDTableViewController ()
 
 @end
+
 
 @implementation GCDTableViewController
 
@@ -19,16 +21,13 @@
     [super viewDidLoad];
 
     self.dictionary = @{
-                        @"NotifyRegisterDispatch" : @"NotifyRegisterDispatchViewController",
-                        @"GlobalQueueInitialAndQueueSpec" : @"GlobalQueueInitialAndQueueSpec",
-                        @"DispatchSourceTypeTimer" : @"DispatchSourceTypeTimerViewController",
-                        @"DispatchGroup" : @"DispatchGroupViewController",
-                        @"DispathcAsyncAndSync" :@"DispathcAsyncAndSyncViewController"
-                        };
-    
+        @"NotifyRegisterDispatch" : @"NotifyRegisterDispatchViewController",
+        @"GlobalQueueInitialAndQueueSpec" : @"GlobalQueueInitialAndQueueSpec",
+        @"DispatchSourceTypeTimer" : @"DispatchSourceTypeTimerViewController",
+        @"DispatchGroup" : @"DispatchGroupViewController",
+        @"DispathcAsyncAndSync" : @"DispathcAsyncAndSyncViewController"
+    };
 }
-
-
 
 
 @end

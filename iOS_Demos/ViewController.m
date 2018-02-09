@@ -12,33 +12,34 @@
 #import "DeviceInformationTableViewController.h"
 #import "HttpTableViewController.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView * tableview;
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) NSDictionary * dictionary;
+@property (nonatomic, strong) UITableView *tableview;
+
+@property (nonatomic, strong) NSDictionary *dictionary;
 
 @end
+
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.view.backgroundColor = [UIColor whiteColor];
-    
+
     self.tableview = [[UITableView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.tableview];
-    self.tableview.delegate = self;
+    self.tableview.delegate   = self;
     self.tableview.dataSource = self;
     [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"zymtableview"];
     self.dictionary = @{
-                        @"GCD" : @"GCDTableViewController",
-                        @"AppAccident": @"AppAccidentTableViewController",
-                        @"DeviceInformation" : @"DeviceInformationTableViewController",
-                        @"Http" : @"HttpTableViewController"
-                        };
-    
+        @"GCD" : @"GCDTableViewController",
+        @"AppAccident" : @"AppAccidentTableViewController",
+        @"DeviceInformation" : @"DeviceInformationTableViewController",
+        @"Http" : @"HttpTableViewController"
+    };
 }
 
 
@@ -58,13 +59,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"zymtableview" forIndexPath:indexPath];
-    
-    cell.textLabel.text =self.dictionary [self.dictionary.allKeys[indexPath.row]];
+
+    cell.textLabel.text = self.dictionary[self.dictionary.allKeys[indexPath.row]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Class cls = NSClassFromString(self.dictionary [self.dictionary.allKeys[indexPath.row]]);
+    Class cls = NSClassFromString(self.dictionary[self.dictionary.allKeys[indexPath.row]]);
     [self.navigationController pushViewController:[cls new] animated:YES];
 }
 

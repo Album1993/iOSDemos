@@ -23,15 +23,16 @@
  */
 static void *const GlobalLoggingQueueIdentityKey = (void *)&GlobalLoggingQueueIdentityKey;
 
-@interface GlobalQueueInitialAndQueueSpec (){
-    @public
-    dispatch_queue_t _loggerQueue;
 
+@interface GlobalQueueInitialAndQueueSpec () {
+   @public
+    dispatch_queue_t _loggerQueue;
 }
 @property (nonatomic, readonly) dispatch_queue_t loggerQueue;
 
 
 @end
+
 
 @implementation GlobalQueueInitialAndQueueSpec
 
@@ -44,14 +45,14 @@ static dispatch_queue_t _loggingQueue;
  **/
 + (void)initialize {
     static dispatch_once_t DDLogOnceToken;
-    
+
     dispatch_once(&DDLogOnceToken, ^{
-        
+
         _loggingQueue = dispatch_queue_create("cocoa.lumberjack", NULL);
-        
+
         void *nonNullValue = GlobalLoggingQueueIdentityKey; // Whatever, just not null
         dispatch_queue_set_specific(_loggingQueue, GlobalLoggingQueueIdentityKey, nonNullValue, NULL);
-        
+
     });
 }
 
@@ -68,7 +69,7 @@ static dispatch_queue_t _loggingQueue;
 // 这方法是给一些二级queue使用的
 - (BOOL)isOnInternalLoggerQueue {
     void *key = (__bridge void *)self;
-    
+
     return (dispatch_get_specific(key) != NULL);
 }
 
@@ -220,11 +221,11 @@ static dispatch_queue_t _loggingQueue;
 
 - (void)dealloc {
 #if !OS_OBJECT_USE_OBJC
-    
+
     if (_loggerQueue) {
         dispatch_release(_loggerQueue);
     }
-    
+
 #endif
 }
 

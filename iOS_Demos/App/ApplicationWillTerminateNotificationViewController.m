@@ -8,9 +8,11 @@
 
 #import "ApplicationWillTerminateNotificationViewController.h"
 
+
 @interface ApplicationWillTerminateNotificationViewController ()
 
 @end
+
 
 @implementation ApplicationWillTerminateNotificationViewController
 
@@ -20,38 +22,37 @@
         NSString *notificationName = @"UIApplicationWillTerminateNotification";
 #else
         NSString *notificationName = nil;
-        
-        // On Command Line Tool apps AppKit may not be avaliable
+
+// On Command Line Tool apps AppKit may not be avaliable
 #ifdef NSAppKitVersionNumber10_0
-        
+
         if (NSApp) {
             notificationName = @"NSApplicationWillTerminateNotification";
         }
-        
+
 #endif
-        
+
         if (!notificationName) {
             // If there is no NSApp -> we are running Command Line Tool app.
             // In this case terminate notification wouldn't be fired, so we use workaround.
-            atexit_b (^{
+            atexit_b(^{
                 [self applicationWillTerminate:nil];
             });
         }
-        
+
 #endif /* if TARGET_OS_IOS */
-        
+
         if (notificationName) {
             [[NSNotificationCenter defaultCenter] addObserver:self
                                                      selector:@selector(applicationWillTerminate:)
                                                          name:notificationName
                                                        object:nil];
         }
-    
     }
     return self;
 }
 
-- (void)applicationWillTerminate:(NSNotification * __attribute__((unused)))notification {
+- (void)applicationWillTerminate:(NSNotification *__attribute__((unused)))notification {
     // ....
 }
 

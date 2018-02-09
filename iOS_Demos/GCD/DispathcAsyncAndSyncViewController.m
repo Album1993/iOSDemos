@@ -8,9 +8,11 @@
 
 #import "DispathcAsyncAndSyncViewController.h"
 
+
 @interface DispathcAsyncAndSyncViewController ()
 
 @end
+
 
 @implementation DispathcAsyncAndSyncViewController
 
@@ -21,15 +23,14 @@ static dispatch_queue_t _loggingQueue;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-//    [self dispatchAsyncSerial];
-//    [self dispatchSyncSerial];
-//    [self dispatchAsyncConcurrent];
-//    [self dispatchSyncConcurrent];
+    //    [self dispatchAsyncSerial];
+    //    [self dispatchSyncSerial];
+    //    [self dispatchAsyncConcurrent];
+    //    [self dispatchSyncConcurrent];
     [self outerSerialAsync];
-
 }
 
--(void)dispatchAsyncSerial {
+- (void)dispatchAsyncSerial {
     NSLog(@"-----------dispatch serial -------- async ---------");
     dispatch_queue_t queue = dispatch_queue_create("cocoa.lumberjack2", NULL);
     for (int i = 0; i < 5; i++) {
@@ -41,7 +42,7 @@ static dispatch_queue_t _loggingQueue;
     NSLog(@"\n\n\n");
 }
 
--(void)dispatchSyncSerial {
+- (void)dispatchSyncSerial {
     NSLog(@"-----------dispatch serial -------- sync ---------");
     dispatch_queue_t queue = dispatch_queue_create("cocoa.lumberjack2", NULL);
     for (int i = 0; i < 5; i++) {
@@ -53,7 +54,7 @@ static dispatch_queue_t _loggingQueue;
     NSLog(@"\n\n\n");
 }
 
--(void)dispatchAsyncConcurrent {
+- (void)dispatchAsyncConcurrent {
     NSLog(@"-----------dispatch Concurrent -------- async ---------");
     dispatch_queue_t queue = dispatch_queue_create("cocoa.lumberjack2", DISPATCH_QUEUE_CONCURRENT);
     for (int i = 0; i < 5; i++) {
@@ -66,7 +67,7 @@ static dispatch_queue_t _loggingQueue;
 }
 
 
--(void)dispatchSyncConcurrent {
+- (void)dispatchSyncConcurrent {
     NSLog(@"-----------dispatch Concurrent -------- async ---------");
     dispatch_queue_t queue = dispatch_queue_create("cocoa.lumberjack2", DISPATCH_QUEUE_CONCURRENT);
     for (int i = 0; i < 5; i++) {
@@ -123,8 +124,6 @@ static dispatch_queue_t _loggingQueue;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    
-
 }
 
 

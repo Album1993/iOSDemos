@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 
+
 @interface iOS_9ViewController : ViewController
 
 /*
@@ -66,9 +67,9 @@
  */
 
 
-
 @end
 
-@interface test:NSObject
+
+@interface test : NSObject
 
 @end

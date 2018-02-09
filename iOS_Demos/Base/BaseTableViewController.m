@@ -8,17 +8,18 @@
 
 #import "BaseTableViewController.h"
 
+
 @interface BaseTableViewController ()
 
 @end
+
 
 @implementation BaseTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"BaseTableview"];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,13 +38,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BaseTableview" forIndexPath:indexPath];
-    
-    cell.textLabel.text =self.dictionary.allKeys[indexPath.row];
+
+    cell.textLabel.text = self.dictionary.allKeys[indexPath.row];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Class cls = NSClassFromString(self.dictionary [self.dictionary.allKeys[indexPath.row]]);
+    Class cls = NSClassFromString(self.dictionary[self.dictionary.allKeys[indexPath.row]]);
     [self.navigationController pushViewController:[cls new] animated:YES];
 }
 

@@ -17,33 +17,34 @@
 
 @end
 
+
 @implementation NotifyRegisterDispatchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.view.backgroundColor = [UIColor whiteColor];
-    UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake(50, 200, 200, 30)];
+    UIButton *button          = [[UIButton alloc] initWithFrame:CGRectMake(50, 200, 200, 30)];
     [button setTitle:@"send Notification" forState:UIControlStateNormal];
     [button setBackgroundColor:[UIColor blueColor]];
-    
-    [ button addTarget:self action:@selector(sendNotification) forControlEvents:UIControlEventTouchUpInside];
+
+    [button addTarget:self action:@selector(sendNotification) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-    
+
     [self registerForNotifications];
 }
 
--(void) sendNotification {
+- (void)sendNotification {
     double delayInSeconds = 0.001;
-    
+
     dispatch_queue_t q = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0l);
     dispatch_async(q, ^(void) {
         notify_set_state(notifyToken, 2);
         notify_post(EVENT);
     });
-    
+
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, q, ^(void){
+    dispatch_after(popTime, q, ^(void) {
         notify_set_state(notifyToken, 3);
         notify_post(EVENT);
     });
@@ -64,10 +65,10 @@ static int notifyToken = 0;
         NSLog(@"register failure = %d", result);
     }
     CFNotificationCenterAddObserver(CFNotificationCenterGetDarwinNotifyCenter(), //center
-                                    NULL, // observer
-                                    notifyCallback, // callback
-                                    CFSTR(EVENT), // event name
-                                    NULL, // object
+                                    NULL,                                        // observer
+                                    notifyCallback,                              // callback
+                                    CFSTR(EVENT),                                // event name
+                                    NULL,                                        // object
                                     CFNotificationSuspensionBehaviorCoalesce);
 }
 
@@ -76,7 +77,6 @@ static void notifyCallback(CFNotificationCenterRef center, void *observer, CFStr
     notify_get_state(notifyToken, &state);
     NSLog(@"notifyCallback(): %d", (int)state);
 }
-
 
 
 @end

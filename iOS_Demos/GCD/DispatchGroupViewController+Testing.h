@@ -9,7 +9,7 @@
 #import "DispatchGroupViewController.h"
 
 
-@interface DispatchGroupViewController(Test)
+@interface DispatchGroupViewController (Test)
 
 - (void)groupSync2;
 

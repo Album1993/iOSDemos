@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface BaseTableViewController : UITableViewController
 
-@property (nonatomic, strong) NSDictionary * dictionary;
+@property (nonatomic, strong) NSDictionary *dictionary;
 
 @end

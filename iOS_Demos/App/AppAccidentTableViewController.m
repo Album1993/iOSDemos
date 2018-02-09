@@ -8,18 +8,20 @@
 
 #import "AppAccidentTableViewController.h"
 
+
 @interface AppAccidentTableViewController ()
 
 @end
+
 
 @implementation AppAccidentTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.dictionary = @{
-                        @"ApplicationWillTerminate":@"ApplicationWillTerminateNotificationViewController"
-                        };
+        @"ApplicationWillTerminate" : @"ApplicationWillTerminateNotificationViewController"
+    };
 }
 
 @end

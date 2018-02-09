@@ -8,9 +8,11 @@
 
 #import "iOS_9ViewController.h"
 
+
 @interface iOS_9ViewController ()
 
 @end
+
 
 @implementation iOS_9ViewController
 
@@ -47,13 +49,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+
     //    _Null_unspecified:
-    
-    
-    
+
+
     //    self setName:(NSString * _Nullable)
-    
 }
 
 @end
@@ -61,8 +61,8 @@
 
 @implementation test
 
--(void) testNullable {
-    iOS_9ViewController * v = [iOS_9ViewController new];
+- (void)testNullable {
+    iOS_9ViewController *v = [iOS_9ViewController new];
 }
 
 @end

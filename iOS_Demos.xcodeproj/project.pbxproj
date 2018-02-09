@@ -22,6 +22,24 @@
 		FC2A210420122DB9006B723F /* YtknetworkHttpsSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2A210320122DB9006B723F /* YtknetworkHttpsSetting.m */; };
 		FC362B6F2008A7580001DD6E /* DispatchGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC362B6E2008A7580001DD6E /* DispatchGroupViewController.m */; };
 		FC362B7C2008BB770001DD6E /* iOS_DemosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC362B7B2008BB770001DD6E /* iOS_DemosTests.swift */; };
+		FC54B74A202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B749202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf */; };
+		FC54B74D202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B74C202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf */; };
+		FC54B756202AE83D00007FC8 /* Objective C类方法load和initialize的区别.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B755202AE83D00007FC8 /* Objective C类方法load和initialize的区别.pdf */; };
+		FC54B758202D5E3000007FC8 /* JS 与iOS交互 in Resources */ = {isa = PBXBuildFile; fileRef = FC54B757202D5E3000007FC8 /* JS 与iOS交互 */; };
+		FC54B75C202D705400007FC8 /* IMPDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54B75B202D705400007FC8 /* IMPDemo.m */; };
+		FC54B75F202D77A700007FC8 /* SetAssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54B75E202D77A700007FC8 /* SetAssociatedObject.m */; };
+		FC54B763202D79F200007FC8 /* UINavigationBar+DeletebarColor.m in Sources */ = {isa = PBXBuildFile; fileRef = FC54B762202D79F200007FC8 /* UINavigationBar+DeletebarColor.m */; };
+		FC54B765202D7CBE00007FC8 /* HTTP的客户端识别.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B764202D7CBE00007FC8 /* HTTP的客户端识别.pdf */; };
+		FC54B767202D7CC900007FC8 /* iOS 保持界面流畅的技巧.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B766202D7CC900007FC8 /* iOS 保持界面流畅的技巧.pdf */; };
+		FC54B769202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B768202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf */; };
+		FC54B76B202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B76A202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf */; };
+		FC54B76D202D7CFB00007FC8 /* 深入理解RunLoop.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B76C202D7CFB00007FC8 /* 深入理解RunLoop.pdf */; };
+		FC6733B62022EDE80078CE03 /* Xcode快捷键 in Resources */ = {isa = PBXBuildFile; fileRef = FC6733B52022EDE80078CE03 /* Xcode快捷键 */; };
+		FC6733BB2028163C0078CE03 /* safe_area.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6733BA2028163C0078CE03 /* safe_area.pdf */; };
+		FC6733BE2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6733BD2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf */; };
+		FC6733C020281B690078CE03 /* iOS 静态库详解与开发.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6733BF20281B690078CE03 /* iOS 静态库详解与开发.pdf */; };
+		FC6EB4702029417E00DF644D /* mac下的socket调试工具---sokit.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */; };
+		FC6EB4722029439A00DF644D /* Swift 网络单元测试完全手册.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */; };
 		FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */; };
 		FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */; };
 		FCA7AC942008D24000586824 /* DispatchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC932008D24000586824 /* DispatchGroupViewController.swift */; };
@@ -91,6 +109,27 @@
 		FC362B792008BB770001DD6E /* iOS_DemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_DemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC362B7B2008BB770001DD6E /* iOS_DemosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_DemosTests.swift; sourceTree = "<group>"; };
 		FC362B7D2008BB770001DD6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC54B749202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "用 LLDB 调试 Swift 代码.pdf"; sourceTree = "<group>"; };
+		FC54B74C202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "用 LLDB 调试 Swift 代码.pdf"; sourceTree = "<group>"; };
+		FC54B755202AE83D00007FC8 /* Objective C类方法load和initialize的区别.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Objective C类方法load和initialize的区别.pdf"; sourceTree = "<group>"; };
+		FC54B757202D5E3000007FC8 /* JS 与iOS交互 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "JS 与iOS交互"; sourceTree = "<group>"; };
+		FC54B75A202D705400007FC8 /* IMPDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMPDemo.h; sourceTree = "<group>"; };
+		FC54B75B202D705400007FC8 /* IMPDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMPDemo.m; sourceTree = "<group>"; };
+		FC54B75D202D77A700007FC8 /* SetAssociatedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetAssociatedObject.h; sourceTree = "<group>"; };
+		FC54B75E202D77A700007FC8 /* SetAssociatedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetAssociatedObject.m; sourceTree = "<group>"; };
+		FC54B761202D79F200007FC8 /* UINavigationBar+DeletebarColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+DeletebarColor.h"; sourceTree = "<group>"; };
+		FC54B762202D79F200007FC8 /* UINavigationBar+DeletebarColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+DeletebarColor.m"; sourceTree = "<group>"; };
+		FC54B764202D7CBE00007FC8 /* HTTP的客户端识别.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "HTTP的客户端识别.pdf"; sourceTree = "<group>"; };
+		FC54B766202D7CC900007FC8 /* iOS 保持界面流畅的技巧.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS 保持界面流畅的技巧.pdf"; sourceTree = "<group>"; };
+		FC54B768202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS 模块化之 JLRoute 路由示例.pdf"; sourceTree = "<group>"; };
+		FC54B76A202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "URI跳转方式地图导航的代码实践.pdf"; sourceTree = "<group>"; };
+		FC54B76C202D7CFB00007FC8 /* 深入理解RunLoop.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "深入理解RunLoop.pdf"; sourceTree = "<group>"; };
+		FC6733B52022EDE80078CE03 /* Xcode快捷键 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Xcode快捷键"; sourceTree = "<group>"; };
+		FC6733BA2028163C0078CE03 /* safe_area.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = safe_area.pdf; sourceTree = "<group>"; };
+		FC6733BD2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CocoaPods 给每个库单独指定 Swift 版本教程.pdf"; sourceTree = "<group>"; };
+		FC6733BF20281B690078CE03 /* iOS 静态库详解与开发.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS 静态库详解与开发.pdf"; sourceTree = "<group>"; };
+		FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "mac下的socket调试工具---sokit.pdf"; sourceTree = "<group>"; };
+		FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Swift 网络单元测试完全手册.pdf"; sourceTree = "<group>"; };
 		FC9738092013413900E6CFA8 /* iOS_9ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_9ViewController.h; sourceTree = "<group>"; };
 		FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_9ViewController.m; sourceTree = "<group>"; };
 		FCA7AC8F2008CEE000586824 /* iOS_Demos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_Demos-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -214,6 +253,73 @@
 			path = iOS_DemosTests;
 			sourceTree = "<group>";
 		};
+		FC54B74B202AC51700007FC8 /* pattern */ = {
+			isa = PBXGroup;
+			children = (
+				FC54B74C202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf */,
+			);
+			path = pattern;
+			sourceTree = "<group>";
+		};
+		FC54B751202AD93C00007FC8 /* oc */ = {
+			isa = PBXGroup;
+			children = (
+				FC54B755202AE83D00007FC8 /* Objective C类方法load和initialize的区别.pdf */,
+			);
+			path = oc;
+			sourceTree = "<group>";
+		};
+		FC54B759202D702A00007FC8 /* runtime */ = {
+			isa = PBXGroup;
+			children = (
+				FC54B76C202D7CFB00007FC8 /* 深入理解RunLoop.pdf */,
+				FC54B75A202D705400007FC8 /* IMPDemo.h */,
+				FC54B75B202D705400007FC8 /* IMPDemo.m */,
+				FC54B75D202D77A700007FC8 /* SetAssociatedObject.h */,
+				FC54B75E202D77A700007FC8 /* SetAssociatedObject.m */,
+			);
+			path = runtime;
+			sourceTree = "<group>";
+		};
+		FC54B760202D79B200007FC8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FC54B766202D7CC900007FC8 /* iOS 保持界面流畅的技巧.pdf */,
+				FC54B768202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf */,
+				FC54B76A202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf */,
+				FC54B761202D79F200007FC8 /* UINavigationBar+DeletebarColor.h */,
+				FC54B762202D79F200007FC8 /* UINavigationBar+DeletebarColor.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FC6733B22022ED920078CE03 /* Xcode */ = {
+			isa = PBXGroup;
+			children = (
+				FC54B749202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf */,
+				FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */,
+				FC6733BF20281B690078CE03 /* iOS 静态库详解与开发.pdf */,
+				FC6733B52022EDE80078CE03 /* Xcode快捷键 */,
+			);
+			path = Xcode;
+			sourceTree = "<group>";
+		};
+		FC6733B72022F08F0078CE03 /* iOS11 */ = {
+			isa = PBXGroup;
+			children = (
+				FC6733BA2028163C0078CE03 /* safe_area.pdf */,
+			);
+			path = iOS11;
+			sourceTree = "<group>";
+		};
+		FC6733BC2028184E0078CE03 /* Cocoapods */ = {
+			isa = PBXGroup;
+			children = (
+				FC6733BD2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf */,
+			);
+			path = Cocoapods;
+			sourceTree = "<group>";
+		};
 		FC9738082013410400E6CFA8 /* iOS9 */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,12 +332,15 @@
 		FCE789D4200DF137003C621D /* Http */ = {
 			isa = PBXGroup;
 			children = (
+				FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */,
+				FC54B764202D7CBE00007FC8 /* HTTP的客户端识别.pdf */,
 				FCE789D5200DF164003C621D /* HttpTableViewController.h */,
 				FCE789D6200DF164003C621D /* HttpTableViewController.m */,
 				FCE789D8200DF2D5003C621D /* HttpsAuthenticationViewController.h */,
 				FCE789D9200DF2D5003C621D /* HttpsAuthenticationViewController.m */,
 				FC2A210220122DB9006B723F /* YtknetworkHttpsSetting.h */,
 				FC2A210320122DB9006B723F /* YtknetworkHttpsSetting.m */,
+				FC54B757202D5E3000007FC8 /* JS 与iOS交互 */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -261,6 +370,13 @@
 		FCED5D452005DFD2009A43DD /* iOS_Demos */ = {
 			isa = PBXGroup;
 			children = (
+				FC54B760202D79B200007FC8 /* UI */,
+				FC54B759202D702A00007FC8 /* runtime */,
+				FC54B751202AD93C00007FC8 /* oc */,
+				FC54B74B202AC51700007FC8 /* pattern */,
+				FC6733BC2028184E0078CE03 /* Cocoapods */,
+				FC6733B72022F08F0078CE03 /* iOS11 */,
+				FC6733B22022ED920078CE03 /* Xcode */,
 				FC9738082013410400E6CFA8 /* iOS9 */,
 				FCE789D4200DF137003C621D /* Http */,
 				FC01912820075AA20069A3E0 /* DeviceInfo */,
@@ -438,8 +554,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCED5D532005DFD2009A43DD /* LaunchScreen.storyboard in Resources */,
+				FC6EB4702029417E00DF644D /* mac下的socket调试工具---sokit.pdf in Resources */,
+				FC6EB4722029439A00DF644D /* Swift 网络单元测试完全手册.pdf in Resources */,
 				FCED5D502005DFD2009A43DD /* Assets.xcassets in Resources */,
+				FC54B758202D5E3000007FC8 /* JS 与iOS交互 in Resources */,
+				FC54B765202D7CBE00007FC8 /* HTTP的客户端识别.pdf in Resources */,
+				FC54B74D202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */,
+				FC6733BE2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf in Resources */,
 				FCED5D4E2005DFD2009A43DD /* Main.storyboard in Resources */,
+				FC54B767202D7CC900007FC8 /* iOS 保持界面流畅的技巧.pdf in Resources */,
+				FC6733C020281B690078CE03 /* iOS 静态库详解与开发.pdf in Resources */,
+				FC54B76D202D7CFB00007FC8 /* 深入理解RunLoop.pdf in Resources */,
+				FC54B74A202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */,
+				FC6733B62022EDE80078CE03 /* Xcode快捷键 in Resources */,
+				FC54B756202AE83D00007FC8 /* Objective C类方法load和initialize的区别.pdf in Resources */,
+				FC54B76B202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf in Resources */,
+				FC6733BB2028163C0078CE03 /* safe_area.pdf in Resources */,
+				FC54B769202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,12 +751,15 @@
 				FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */,
 				FC01911C200749990069A3E0 /* GlobalQueueInitialAndQueueSpec.m in Sources */,
 				FCED5D4B2005DFD2009A43DD /* ViewController.m in Sources */,
+				FC54B75F202D77A700007FC8 /* SetAssociatedObject.m in Sources */,
+				FC54B75C202D705400007FC8 /* IMPDemo.m in Sources */,
 				FC0191112005F1A60069A3E0 /* BaseNaviViewController.m in Sources */,
 				FC01910D2005E4510069A3E0 /* GCDTableViewController.m in Sources */,
 				FC01912320074FC10069A3E0 /* ApplicationWillTerminateNotificationViewController.m in Sources */,
 				FC01912E20075AE10069A3E0 /* ProcessNumberViewController.m in Sources */,
 				FC0191142005F4120069A3E0 /* BaseTableViewController.m in Sources */,
 				FCE789D7200DF164003C621D /* HttpTableViewController.m in Sources */,
+				FC54B763202D79F200007FC8 /* UINavigationBar+DeletebarColor.m in Sources */,
 				FC01912B20075ACF0069A3E0 /* DeviceInformationTableViewController.m in Sources */,
 				FCA7AC942008D24000586824 /* DispatchGroupViewController.swift in Sources */,
 				FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */,

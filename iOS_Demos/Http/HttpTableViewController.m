@@ -8,19 +8,20 @@
 
 #import "HttpTableViewController.h"
 
+
 @interface HttpTableViewController ()
 
 @end
+
 
 @implementation HttpTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dictionary = @{
-                        @"单向/双向认证": @"HttpsAuthenticationViewController",
-                        @"ytknetworkhttps": @"YtknetworkHttpsSetting"
-                        };
-
+        @"单向/双向认证" : @"HttpsAuthenticationViewController",
+        @"ytknetworkhttps" : @"YtknetworkHttpsSetting"
+    };
 }
 
 @end

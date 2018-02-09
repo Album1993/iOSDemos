@@ -9,9 +9,11 @@
 #import "AppDelegate.h"
 #import "BaseNaviViewController.h"
 
+
 @interface AppDelegate ()
 
 @end
+
 
 @implementation AppDelegate
 
@@ -19,12 +21,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch
     if (!_tabVC) {
-        self.tabVC = [[ViewController alloc]init];
+        self.tabVC = [[ViewController alloc] init];
     }
-    BaseNaviViewController *homeNavVC = [[BaseNaviViewController alloc]initWithRootViewController:self.tabVC];
+    BaseNaviViewController *homeNavVC = [[BaseNaviViewController alloc] initWithRootViewController:self.tabVC];
 
     self.window.rootViewController = homeNavVC;
-    
+
     return YES;
 }
 

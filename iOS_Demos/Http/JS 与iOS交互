@@ -1,0 +1,278 @@
+前言
+不论是在创业团队中快速试错，还是在成熟团队中快速迭代复杂需求，还或者是其他原因，WebView在APP中的大量使用已经成为了一个明显的趋势，这也应该算是大前端融合的一个表象吧。笔者在工作中也遇到过很多App&Js交互的问题，粗浅的研究了一下，这里也分享给大家，如果有错误的地方还请下方留言指出，共同进步。
+
+iOS系统中的交互
+众所周知，iOS有UIWebView、WKWebView两个组件可以用来渲染嵌入页面。前者使用甚广，出生的也早，后者是iOS8推出的，优化了加载速度和内存，安全性上也有所提升。具体的两者比较百度、简书上都很多，这里不做赘述。
+
+
+
+方案一，拦截跳转
+WebView：UIWebView
+原生调用JS：
+UIWebView直接调用Js方法，示例代码如下：
+[self.webView stringByEvaluatingJavaScriptFromString:@"showResponse('123')"];
+JS调用原生：
+拦截跳转是我们最常见的一种方式，也是最简单，最容易理解的一种。我们可以在UIWebView的代理方法中拦截每一个请求，如果是特殊的链接就可以做一些事情，比如跳转、执行某些方法等。示例如下：
+// JS端
+window.location = 'app://login?account=13011112222&password=123456';
+
+// iOS端
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+NSString *scheme = request.URL.scheme;
+NSString *host = request.URL.host;
+
+// 一般用作交互的链接都会有一个固定的协议头，这里我们一“app”作为协议头为了，实际项目中可以修改
+if ([scheme isEqualToString:@"app"]) { // scheme为“app”说明是做交互的链接
+if ([host isEqualToString:@"login"]) { // host为“login”对应的就是登录操作
+NSDictionary *paramsDict = [request.URL getURLParams];
+NSString *account = paramsDict[@"account"];
+NSString *password = paramsDict[@"password"];
+NSString *msg = [NSString stringWithFormat:@"执行登录操作，账号为：%@，密码为：%@", account, password];
+UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"原生弹窗" message:msg delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+[alert show];
+}
+return YES;
+}
+
+
+
+方案二，拦截跳转
+WebView：WKWebView
+
+原生调用JS： WKWebView直接调用Js方法，示例代码如下：
+
+[self.webView evaluateJavaScript:@"showResponse('点击了原生的按钮22222222222')" completionHandler:^(id _Nullable response, NSError * _Nullable error) {
+if (error) {
+NSLog(@"%@", error);
+} else {
+NSLog(@"%@", response);
+}
+}];
+它相对于UIWebView而言最大的优点就是支持callback，不想UIWebView那样只能一去不复返。
+
+JS调用原生： 类似UIWebView，在WK中我们同样可以拦截跳转，原理相同，代码不同。示例如下：
+
+// JS端
+window.location = 'app://login?account=13011112222&password=123456';
+
+// iOS端
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+NSURLRequest *request = navigationAction.request;
+NSString *scheme = request.URL.scheme;
+NSString *host = request.URL.host;
+
+// 一般用作交互的链接都会有一个固定的协议头，这里我们一“app”作为协议头为了，实际项目中可以修改
+if ([scheme isEqualToString:@"app"]) { // scheme为“app”说明是做交互的链接
+if ([host isEqualToString:@"login"]) { // host为“login”对应的就是登录操作
+NSDictionary *paramsDict = [request.URL getURLParams];
+NSString *account = paramsDict[@"account"];
+NSString *password = paramsDict[@"password"];
+NSString *msg = [NSString stringWithFormat:@"执行登录操作，账号为：%@，密码为：%@", account, password];
+UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"原生弹窗" message:msg delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+[alert show];
+}
+
+// ... 这里可以继续加 else if
+
+decisionHandler(WKNavigationActionPolicyCancel);
+return;
+}
+decisionHandler(WKNavigationActionPolicyAllow);
+}
+阶段小结
+前两种方法到此就介绍完了，很简单，但是在项目大了之后拦截跳转的代理方法中会有非常多的判断。冗余、可维护性差，硬编码重。所以我们会有下面的其他方法。
+
+
+
+
+方案三，JSContext
+JSContext即JavaScriptContext，这个东西在UIWebView中可以拿到，但是在WKWebView中却是取不到了，所以只能用在UIWebView中。除此以外Android里也有类似的一个东西，所以使用JSContext就有了在JS端多平台统一的可能，这里不多说，在《App与Js交互（三）》中会有详细说明。
+JSContext的原理就是iOS暴露出去一个遵守<JSExport>协议的对象给JS，JS可以直接调用该对象的public方法。
+
+WebView：UIWebView
+原生调用JS：
+// 有两种方式。jsContext 是一个【JSContext *】变量，需要在【webViewDidFinishLoad: 】方法中每次赋值
+// 方式1：
+[self.jsContext evaluateScript:@"showResponse('点击了按钮1111111111111111')"];
+
+// 方式2：
+JSValue *value = self.jsContext[@"showResponse"];
+[value callWithArguments:@[@"点击了按钮222222222"]];
+JS调用原生：
+// JS端，app是iOS中注册的一个对象
+app.login("13011112222", "123456");
+
+// iOS端
+// 每次嵌入页面加载完毕都要给jsContext赋值，否则在js端调用可能会失效。
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+self.jsContext = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+self.jsContext.exceptionHandler = ^(JSContext *context, JSValue *exception) {
+context.exception = exception;
+NSLog(@"异常信息：%@", exception);
+};
+// app是随便取的名字，可以改，改了之后JS要同步修改。如果Android端使用@JavaScriptInterface的形式，那么还要保证Android、iOS两端同步，建议都用app
+self.jsContext[@"app"] = [[JSContextModel alloc] init];
+}
+
+// JSContextModel，
+@protocol JsContextExport<JSExport>
+/**
+* 登出方法，js调用的方法名也是logout
+*/
+- (void)logout;
+/**
+* 登录方法，JSExportAs的作用就是给OC方法导出一个js方法名，例如下面的方法js调用就是 login("your account", "your password")。在多参数的方法声明时必须使用这种方式
+*/
+JSExportAs(login, - (void)loginWithAccount:(NSString *)account   password:(NSString *)password);
+/**
+* 获取登录信息
+* @return 当前登录用户的身份信息。JSContext方式调用OC时，方法的返回值只能是NSString、NSArray、NSDictionary、NSNumber、BooL，其他类型不能解析
+*/
+- (NSDictionary *)getLoginUser;
+@end
+
+@interface JSContextModel : NSObject<JsContextExport>
+@end
+
+
+
+方案四，WebKit
+window.webkit.messagehandlers.<name>.postMessage是apple推荐使用的WKWebView的JS交互方式，使用起来比较简单，不支持callback回调。
+
+WebView：WKWebView
+原生调用JS：
+参考【方案二】的原生调用JS
+JS调用原生：
+// js
+window.webkit.messageHandlers.login.postMessage({
+'account': '13000000000',
+'password': '123456'
+});
+
+// iOS - 初始化WKWebView时设置 configuration
+self.webView = [[WKWebView alloc] initWithFrame:CGRectZero configuration:[[WKWebViewConfiguration alloc] init]];
+WKUserContentController *confVc = self.webView.configuration.userContentController;
+[confVc addScriptMessageHandler:self name:@"login"];
+
+// iOS - 在ScriptMessageHandler 的代理方法中处理
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+if ([message.name isEqualToString:@"login"]) {
+if (![message.body isKindOfClass:[NSDictionary class]]) {
+return;
+}
+NSDictionary *data = message.body;
+NSString *account = data[@"account"];
+NSString *password = data[@"password"];
+
+NSString *msg = [NSString stringWithFormat:@"执行登录操作，账号为：%@，密码为：%@", account, password];
+UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"原生弹窗" message:msg delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+[alert show];
+return;
+}
+}
+方案五，JsBridge
+WebView：UIWebView、WKWebView同时支持，且方法名完全没有差异
+初始化代码：
+// JS初始化代码
+/**
+* 初始化jsbridge
+* @param readyCallback 初始化完成后的回调
+*/
+function initJsBridge(readyCallback) {
+var u = navigator.userAgent;
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+// 注册jsbridge
+function connectWebViewJavascriptBridge(callback) {
+if (isAndroid) {
+if (window.WebViewJavascriptBridge) {
+callback(WebViewJavascriptBridge)
+} else {
+document.addEventListener(
+'WebViewJavascriptBridgeReady'
+, function () {
+callback(WebViewJavascriptBridge)
+},
+false
+);
+}
+return;
+}
+if (isiOS) {
+if (window.WebViewJavascriptBridge) {
+return callback(WebViewJavascriptBridge);
+}
+if (window.WVJBCallbacks) {
+return window.WVJBCallbacks.push(callback);
+}
+window.WVJBCallbacks = [callback];
+var WVJBIframe = document.createElement('iframe');
+WVJBIframe.style.display = 'none';
+WVJBIframe.src = 'https://__bridge_loaded__';
+document.documentElement.appendChild(WVJBIframe);
+setTimeout(function () {
+document.documentElement.removeChild(WVJBIframe)
+}, 0)
+}
+}
+// 调用注册方法
+connectWebViewJavascriptBridge(function (bridge) {
+if (isAndroid) {
+bridge.init(function (message, responseCallback) {
+console.log('JS got a message', message);
+responseCallback(data);
+});
+}
+bridge.registerHandler('jsbridge_showMessage', function (data, responseCallback) {
+showResponse(data);
+});
+bridge.registerHandler('jsbridge_getJsMessage', function (data, responseCallback) {
+showResponse(data);
+responseCallback('native 传过来的是：' + data);
+});
+
+readyCallback();
+});
+}
+
+// iOS初始化代码
+- (void)setupJsBridge {
+if (self.bridge) return;
+// self.webview既可以是UIWebView，又可以是WKWebView
+self.bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
+
+[self.bridge registerHandler:@"getOS" handler:^(id data, WVJBResponseCallback responseCallback) {
+// 这里Response的回调可以传id类型数据，但是为了保持Android、iOS的统一，全部使用json字符串作为返回数据
+NSDictionary *response = @{@"error": @(0), @"message": @"", @"data": @{@"os": @"ios"}};
+responseCallback([response jsonString]);
+}];
+
+[self.bridge registerHandler:@"login" handler:^(id data, WVJBResponseCallback responseCallback) {
+if (data == nil || ![data isKindOfClass:[NSDictionary class]]) {
+NSDictionary *response = @{@"error": @(-1), @"message": @"调用参数有误"};
+responseCallback([response jsonString]);
+return;
+}
+
+NSString *account = data[@"account"];
+NSString *passwd = data[@"password"];
+NSDictionary *response = @{@"error": @(0), @"message": @"登录成功", @"data" : [NSString stringWithFormat:@"执行登录操作，账号为：%@、密码为：@%@", account, passwd]};
+responseCallback([response jsonString]);
+}];
+}
+原生调用JS
+[self.bridge callHandler:@"jsbridge_getJsMessage" data:@"点击了原生的按钮222222222" responseCallback:^(id responseData) {
+UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"显示jsbridge返回值" message:responseData delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+[alert show];
+}];
+JS调用原生
+// 首先调用JSBridge初始化代码，完成后再设置其他
+initJsBridge(function () {
+$("#getOS").click(function () {
+// 通过JsBridge调用原生方法，写法固定，第一个参数时方法名，第二个参数时传入参数，第三个参数时响应回调
+window.WebViewJavascriptBridge.callHandler('getOS', null, function (response) {
+showResponse(response);
+});
+});
+});
+

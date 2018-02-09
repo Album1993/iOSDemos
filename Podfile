@@ -9,6 +9,13 @@ target 'iOS_Demos' do
   pod 'AFNetworking', '~> 3.0'
   pod 'YTKNetwork'
 
+
+
+  #iPhone X 信号栏增加网络活动指示器
+  pod 'FTLinearActivityIndicator'
+
+
+
   target 'iOS_DemosTests' do
     inherit! :search_paths
     # Pods for testing
@@ -20,3 +27,6 @@ target 'iOS_Demos' do
   end
 
 end
+
+#ARKit 的项目收集
+#https://github.com/olucurious/Awesome-ARKit?utm_source=gold_browser_extension

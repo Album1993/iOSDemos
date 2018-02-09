@@ -8,25 +8,26 @@
 
 #import "DispatchSourceTypeTimerViewController.h"
 
-@interface DispatchSourceTypeTimerViewController (){
-@protected
-    NSUInteger _saveThreshold;
+
+@interface DispatchSourceTypeTimerViewController () {
+   @protected
+    NSUInteger     _saveThreshold;
     NSTimeInterval _saveInterval;
     NSTimeInterval _maxAge;
     NSTimeInterval _deleteInterval;
-    BOOL _deleteOnEverySave;
-    
-    BOOL _saveTimerSuspended;
-    NSUInteger _unsavedCount;
+    BOOL           _deleteOnEverySave;
+
+    BOOL            _saveTimerSuspended;
+    NSUInteger      _unsavedCount;
     dispatch_time_t _unsavedTime;
     // 时间控制的
     dispatch_source_t _saveTimer;
-    dispatch_time_t _lastDeleteTime;
+    dispatch_time_t   _lastDeleteTime;
     dispatch_source_t _deleteTimer;
-    
 }
 
 @end
+
 
 @implementation DispatchSourceTypeTimerViewController
 
@@ -39,7 +40,7 @@
 //        _saveTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, self.loggerQueue);
 //        // 漂亮， 什么都不用多写
 //        dispatch_source_set_event_handler(_saveTimer, ^{ @autoreleasepool {
-            // 这个方法里面就是执行暂停这个timer
+// 这个方法里面就是执行暂停这个timer
 //            [self performSaveAndSuspendSaveTimer];
 //        } });
 //        // 使用savetimer suspend 来 做标志位
@@ -143,11 +144,10 @@
 
 // 在dealloc 中注销就行，这样就不用各种注销了
 - (void)dealloc {
-//    [self destroySaveTimer];
-//    [self destroyDeleteTimer];
+    //    [self destroySaveTimer];
+    //    [self destroyDeleteTimer];
 }
 @end
-
 
 
 #pragma mark 完整代码
@@ -814,8 +814,3 @@
 //}
 //
 //@end
-
- 
-
-
-

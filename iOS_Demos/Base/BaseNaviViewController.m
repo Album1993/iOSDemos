@@ -8,9 +8,11 @@
 
 #import "BaseNaviViewController.h"
 
+
 @interface BaseNaviViewController ()
 
 @end
+
 
 @implementation BaseNaviViewController
 
@@ -19,8 +21,7 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
-{
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (![[super topViewController] isKindOfClass:[viewController class]]) {
         // 如果和上一个控制器一样，隔绝此操作
         [super pushViewController:viewController animated:animated];
