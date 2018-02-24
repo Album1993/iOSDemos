@@ -13,6 +13,9 @@
 #import "HttpTableViewController.h"
 
 
+#import "iOS_Demos-Swift.h"
+//@class CurryingViewController;
+//@class SequenceViewController;
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableview;
@@ -38,7 +41,10 @@
         @"GCD" : @"GCDTableViewController",
         @"AppAccident" : @"AppAccidentTableViewController",
         @"DeviceInformation" : @"DeviceInformationTableViewController",
-        @"Http" : @"HttpTableViewController"
+        @"Http" : @"HttpTableViewController",
+        @"Currying" : @"CurryingViewController",
+        @"Sequence" : @"SequenceViewController"
+
     };
 }
 

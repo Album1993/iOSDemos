@@ -2,30 +2,43 @@
 # platform :ios, '9.0'
 
 target 'iOS_Demos' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    # Pods for iOS_Demos
+    pod 'AFNetworking', '~> 3.0'
+    pod 'YTKNetwork'
+    
+    # 提示组件框架
+    pod 'SVProgressHUD', '~> 2.2.2'
+    # AOP面向切面
+    pod 'Aspects', '~> 1.4.1'
+    # 响应函数式框架
+    pod 'ReactiveObjC', '~> 3.0.0'
+    # 路由组件化解耦
+    pod 'JLRoutes', '~> 2.0.5'
+    # 提示组件框架
+    pod 'SVProgressHUD', '~> 2.2.2'
+    # 自动布局
+    pod 'Masonry', '~> 1.0.2'
+    pod 'AFNetworking-RACExtensions', :git => 'https://github.com/knshiro/AFNetworking-RACExtensions.git'
 
-  # Pods for iOS_Demos
-  pod 'AFNetworking', '~> 3.0'
-  pod 'YTKNetwork'
-
-
-
-  #iPhone X 信号栏增加网络活动指示器
-  pod 'FTLinearActivityIndicator'
-
-
-
-  target 'iOS_DemosTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'iOS_DemosUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+    
+    #iPhone X 信号栏增加网络活动指示器
+    pod 'FTLinearActivityIndicator'
+    
+    
+    
+    target 'iOS_DemosTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
+    target 'iOS_DemosUITests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
 end
 
 #ARKit 的项目收集

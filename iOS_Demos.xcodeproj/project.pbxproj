@@ -34,6 +34,11 @@
 		FC54B769202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B768202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf */; };
 		FC54B76B202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B76A202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf */; };
 		FC54B76D202D7CFB00007FC8 /* 深入理解RunLoop.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B76C202D7CFB00007FC8 /* 深入理解RunLoop.pdf */; };
+		FC601013203413A900E2C193 /* RacLifeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC601012203413A900E2C193 /* RacLifeSelectorViewController.m */; };
+		FC601016203414F500E2C193 /* RACMacroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC601015203414F500E2C193 /* RACMacroViewController.m */; };
+		FC60101920341A7200E2C193 /* RACMulticastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60101820341A7200E2C193 /* RACMulticastViewController.m */; };
+		FC60101C203521B500E2C193 /* RACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60101B203521B500E2C193 /* RACCommandViewController.m */; };
+		FC6308982032B17D005BB402 /* RACSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6308972032B17D005BB402 /* RACSubjectViewController.m */; };
 		FC6733B62022EDE80078CE03 /* Xcode快捷键 in Resources */ = {isa = PBXBuildFile; fileRef = FC6733B52022EDE80078CE03 /* Xcode快捷键 */; };
 		FC6733BB2028163C0078CE03 /* safe_area.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6733BA2028163C0078CE03 /* safe_area.pdf */; };
 		FC6733BE2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6733BD2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf */; };
@@ -44,6 +49,36 @@
 		FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */; };
 		FCA7AC942008D24000586824 /* DispatchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC932008D24000586824 /* DispatchGroupViewController.swift */; };
 		FCA7AC962008D48C00586824 /* DispatchGroupViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC952008D48C00586824 /* DispatchGroupViewControllerExtension.swift */; };
+		FCA902A52037EB5D0088AC7B /* RACMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A42037EB5D0088AC7B /* RACMapViewController.m */; };
+		FCA902A820382C5E0088AC7B /* RACConcatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A720382C5E0088AC7B /* RACConcatViewController.m */; };
+		FCA902AB203BEC510088AC7B /* RACFliterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902AA203BEC500088AC7B /* RACFliterViewController.m */; };
+		FCAF82302033EFC400A46E21 /* RACTupleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF822F2033EFC400A46E21 /* RACTupleViewController.m */; };
+		FCAF82332033F9B700A46E21 /* RACNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF82322033F9B700A46E21 /* RACNormalViewController.m */; };
+		FCAF86CB203FDFCE008CFE43 /* SVW_ViewModelIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86B8203FDFCE008CFE43 /* SVW_ViewModelIntercepter.m */; };
+		FCAF86CC203FDFCE008CFE43 /* NSObject+NonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86B9203FDFCE008CFE43 /* NSObject+NonBase.m */; };
+		FCAF86CD203FDFCE008CFE43 /* UIView+NonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86C2203FDFCE008CFE43 /* UIView+NonBase.m */; };
+		FCAF86CE203FDFCE008CFE43 /* SVW_ViewIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86C4203FDFCE008CFE43 /* SVW_ViewIntercepter.m */; };
+		FCAF86CF203FDFCE008CFE43 /* UIViewController+NonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86C7203FDFCE008CFE43 /* UIViewController+NonBase.m */; };
+		FCAF86D0203FDFCE008CFE43 /* SVW_ViewControllerIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86CA203FDFCE008CFE43 /* SVW_ViewControllerIntercepter.m */; };
+		FCAF86DA203FE011008CFE43 /* SVW_FunctionDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86D9203FE011008CFE43 /* SVW_FunctionDefine.m */; };
+		FCAF86E2203FE01F008CFE43 /* SVW_BaseRequest+Rac.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86DC203FE01F008CFE43 /* SVW_BaseRequest+Rac.m */; };
+		FCAF86E3203FE01F008CFE43 /* SVW_BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86DE203FE01F008CFE43 /* SVW_BaseRequest.m */; };
+		FCAF86E4203FE01F008CFE43 /* SVW_BaseRequestIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86E1203FE01F008CFE43 /* SVW_BaseRequestIntercepter.m */; };
+		FCAF86EA203FE029008CFE43 /* SVW_RouterConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86E6203FE029008CFE43 /* SVW_RouterConstant.m */; };
+		FCAF86EB203FE029008CFE43 /* JLRoutes+GenerateURL.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86E8203FE029008CFE43 /* JLRoutes+GenerateURL.m */; };
+		FCAF86F3203FE032008CFE43 /* UIImage+SVW_Color.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86EE203FE032008CFE43 /* UIImage+SVW_Color.m */; };
+		FCAF86F4203FE032008CFE43 /* UIColor+SVW_Color.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86F0203FE032008CFE43 /* UIColor+SVW_Color.m */; };
+		FCAF86F5203FE032008CFE43 /* SVProgressHUD+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86F2203FE032008CFE43 /* SVProgressHUD+Helper.m */; };
+		FCAF86F920413574008CFE43 /* CurryingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86F820413573008CFE43 /* CurryingViewController.swift */; };
+		FCAF86FD2041560E008CFE43 /* SequenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86FC2041560E008CFE43 /* SequenceViewController.swift */; };
+		FCAF86FF204158ED008CFE43 /* swift4_tips.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FCAF86FE204158EC008CFE43 /* swift4_tips.pdf */; };
+		FCB663D32031968C004B1325 /* NSString+EmailAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663D22031968B004B1325 /* NSString+EmailAdditions.m */; };
+		FCB663D62032712D004B1325 /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663D52032712D004B1325 /* NSObject+Property.m */; };
+		FCB663D9203278D1004B1325 /* MethodChainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663D8203278D1004B1325 /* MethodChainingViewController.m */; };
+		FCB663DF203289C6004B1325 /* FunctionProgrammingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663DE203289C6004B1325 /* FunctionProgrammingViewController.m */; };
+		FCB663E220328E4E004B1325 /* RacSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663E120328E4E004B1325 /* RacSignalViewController.m */; };
+		FCB663E520329FD3004B1325 /* RacDisposibleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663E420329FD3004B1325 /* RacDisposibleViewController.m */; };
+		FCE550DC2037BF030088BFFB /* RACBindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE550DB2037BF030088BFFB /* RACBindViewController.m */; };
 		FCE789D7200DF164003C621D /* HttpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE789D6200DF164003C621D /* HttpTableViewController.m */; };
 		FCE789DA200DF2D5003C621D /* HttpsAuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE789D9200DF2D5003C621D /* HttpsAuthenticationViewController.m */; };
 		FCE789DD200F0DDE003C621D /* DispathcAsyncAndSyncViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE789DC200F0DDE003C621D /* DispathcAsyncAndSyncViewController.m */; };
@@ -124,6 +159,16 @@
 		FC54B768202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS 模块化之 JLRoute 路由示例.pdf"; sourceTree = "<group>"; };
 		FC54B76A202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "URI跳转方式地图导航的代码实践.pdf"; sourceTree = "<group>"; };
 		FC54B76C202D7CFB00007FC8 /* 深入理解RunLoop.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "深入理解RunLoop.pdf"; sourceTree = "<group>"; };
+		FC601011203413A900E2C193 /* RacLifeSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RacLifeSelectorViewController.h; sourceTree = "<group>"; };
+		FC601012203413A900E2C193 /* RacLifeSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RacLifeSelectorViewController.m; sourceTree = "<group>"; };
+		FC601014203414F500E2C193 /* RACMacroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACMacroViewController.h; sourceTree = "<group>"; };
+		FC601015203414F500E2C193 /* RACMacroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACMacroViewController.m; sourceTree = "<group>"; };
+		FC60101720341A7200E2C193 /* RACMulticastViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACMulticastViewController.h; sourceTree = "<group>"; };
+		FC60101820341A7200E2C193 /* RACMulticastViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACMulticastViewController.m; sourceTree = "<group>"; };
+		FC60101A203521B500E2C193 /* RACCommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACCommandViewController.h; sourceTree = "<group>"; };
+		FC60101B203521B500E2C193 /* RACCommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACCommandViewController.m; sourceTree = "<group>"; };
+		FC6308962032B17D005BB402 /* RACSubjectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACSubjectViewController.h; sourceTree = "<group>"; };
+		FC6308972032B17D005BB402 /* RACSubjectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACSubjectViewController.m; sourceTree = "<group>"; };
 		FC6733B52022EDE80078CE03 /* Xcode快捷键 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Xcode快捷键"; sourceTree = "<group>"; };
 		FC6733BA2028163C0078CE03 /* safe_area.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = safe_area.pdf; sourceTree = "<group>"; };
 		FC6733BD2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CocoaPods 给每个库单独指定 Swift 版本教程.pdf"; sourceTree = "<group>"; };
@@ -137,6 +182,70 @@
 		FCA7AC922008D03C00586824 /* DispatchGroupViewController+Testing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DispatchGroupViewController+Testing.h"; sourceTree = "<group>"; };
 		FCA7AC932008D24000586824 /* DispatchGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchGroupViewController.swift; sourceTree = "<group>"; };
 		FCA7AC952008D48C00586824 /* DispatchGroupViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchGroupViewControllerExtension.swift; sourceTree = "<group>"; };
+		FCA902A32037EB5D0088AC7B /* RACMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACMapViewController.h; sourceTree = "<group>"; };
+		FCA902A42037EB5D0088AC7B /* RACMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACMapViewController.m; sourceTree = "<group>"; };
+		FCA902A620382C5E0088AC7B /* RACConcatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACConcatViewController.h; sourceTree = "<group>"; };
+		FCA902A720382C5E0088AC7B /* RACConcatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACConcatViewController.m; sourceTree = "<group>"; };
+		FCA902A9203BEC500088AC7B /* RACFliterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACFliterViewController.h; sourceTree = "<group>"; };
+		FCA902AA203BEC500088AC7B /* RACFliterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACFliterViewController.m; sourceTree = "<group>"; };
+		FCAF822E2033EFC400A46E21 /* RACTupleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACTupleViewController.h; sourceTree = "<group>"; };
+		FCAF822F2033EFC400A46E21 /* RACTupleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACTupleViewController.m; sourceTree = "<group>"; };
+		FCAF82312033F9B700A46E21 /* RACNormalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACNormalViewController.h; sourceTree = "<group>"; };
+		FCAF82322033F9B700A46E21 /* RACNormalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACNormalViewController.m; sourceTree = "<group>"; };
+		FCAF86B8203FDFCE008CFE43 /* SVW_ViewModelIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVW_ViewModelIntercepter.m; sourceTree = "<group>"; };
+		FCAF86B9203FDFCE008CFE43 /* NSObject+NonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NonBase.m"; sourceTree = "<group>"; };
+		FCAF86BA203FDFCE008CFE43 /* NSObject+NonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NonBase.h"; sourceTree = "<group>"; };
+		FCAF86BB203FDFCE008CFE43 /* SVW_ViewModelIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_ViewModelIntercepter.h; sourceTree = "<group>"; };
+		FCAF86BC203FDFCE008CFE43 /* SVW_ViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_ViewModelProtocol.h; sourceTree = "<group>"; };
+		FCAF86BE203FDFCE008CFE43 /* SVW_TableViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_TableViewCellProtocol.h; sourceTree = "<group>"; };
+		FCAF86BF203FDFCE008CFE43 /* SVW_ViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_ViewProtocol.h; sourceTree = "<group>"; };
+		FCAF86C0203FDFCE008CFE43 /* SVW_TableViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_TableViewProtocol.h; sourceTree = "<group>"; };
+		FCAF86C1203FDFCE008CFE43 /* SVW_ViewIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_ViewIntercepter.h; sourceTree = "<group>"; };
+		FCAF86C2203FDFCE008CFE43 /* UIView+NonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NonBase.m"; sourceTree = "<group>"; };
+		FCAF86C3203FDFCE008CFE43 /* UIView+NonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NonBase.h"; sourceTree = "<group>"; };
+		FCAF86C4203FDFCE008CFE43 /* SVW_ViewIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVW_ViewIntercepter.m; sourceTree = "<group>"; };
+		FCAF86C6203FDFCE008CFE43 /* SVW_ViewControllerIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_ViewControllerIntercepter.h; sourceTree = "<group>"; };
+		FCAF86C7203FDFCE008CFE43 /* UIViewController+NonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NonBase.m"; sourceTree = "<group>"; };
+		FCAF86C8203FDFCE008CFE43 /* SVW_ViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_ViewControllerProtocol.h; sourceTree = "<group>"; };
+		FCAF86C9203FDFCE008CFE43 /* UIViewController+NonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NonBase.h"; sourceTree = "<group>"; };
+		FCAF86CA203FDFCE008CFE43 /* SVW_ViewControllerIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVW_ViewControllerIntercepter.m; sourceTree = "<group>"; };
+		FCAF86D7203FE011008CFE43 /* SVW_GlobalDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_GlobalDefine.h; sourceTree = "<group>"; };
+		FCAF86D8203FE011008CFE43 /* SVW_FunctionDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_FunctionDefine.h; sourceTree = "<group>"; };
+		FCAF86D9203FE011008CFE43 /* SVW_FunctionDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVW_FunctionDefine.m; sourceTree = "<group>"; };
+		FCAF86DC203FE01F008CFE43 /* SVW_BaseRequest+Rac.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVW_BaseRequest+Rac.m"; sourceTree = "<group>"; };
+		FCAF86DD203FE01F008CFE43 /* SVW_BaseRequestIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_BaseRequestIntercepter.h; sourceTree = "<group>"; };
+		FCAF86DE203FE01F008CFE43 /* SVW_BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVW_BaseRequest.m; sourceTree = "<group>"; };
+		FCAF86DF203FE01F008CFE43 /* SVW_BaseRequest+Rac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVW_BaseRequest+Rac.h"; sourceTree = "<group>"; };
+		FCAF86E0203FE01F008CFE43 /* SVW_BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_BaseRequest.h; sourceTree = "<group>"; };
+		FCAF86E1203FE01F008CFE43 /* SVW_BaseRequestIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVW_BaseRequestIntercepter.m; sourceTree = "<group>"; };
+		FCAF86E6203FE029008CFE43 /* SVW_RouterConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVW_RouterConstant.m; sourceTree = "<group>"; };
+		FCAF86E7203FE029008CFE43 /* JLRoutes+GenerateURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JLRoutes+GenerateURL.h"; sourceTree = "<group>"; };
+		FCAF86E8203FE029008CFE43 /* JLRoutes+GenerateURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JLRoutes+GenerateURL.m"; sourceTree = "<group>"; };
+		FCAF86E9203FE029008CFE43 /* SVW_RouterConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_RouterConstant.h; sourceTree = "<group>"; };
+		FCAF86ED203FE032008CFE43 /* UIColor+SVW_Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SVW_Color.h"; sourceTree = "<group>"; };
+		FCAF86EE203FE032008CFE43 /* UIImage+SVW_Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SVW_Color.m"; sourceTree = "<group>"; };
+		FCAF86EF203FE032008CFE43 /* SVProgressHUD+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+Helper.h"; sourceTree = "<group>"; };
+		FCAF86F0203FE032008CFE43 /* UIColor+SVW_Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SVW_Color.m"; sourceTree = "<group>"; };
+		FCAF86F1203FE032008CFE43 /* UIImage+SVW_Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SVW_Color.h"; sourceTree = "<group>"; };
+		FCAF86F2203FE032008CFE43 /* SVProgressHUD+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+Helper.m"; sourceTree = "<group>"; };
+		FCAF86F6203FE3A6008CFE43 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FCAF86F820413573008CFE43 /* CurryingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurryingViewController.swift; sourceTree = "<group>"; };
+		FCAF86FC2041560E008CFE43 /* SequenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceViewController.swift; sourceTree = "<group>"; };
+		FCAF86FE204158EC008CFE43 /* swift4_tips.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = swift4_tips.pdf; sourceTree = "<group>"; };
+		FCB663D12031968B004B1325 /* NSString+EmailAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EmailAdditions.h"; sourceTree = "<group>"; };
+		FCB663D22031968B004B1325 /* NSString+EmailAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EmailAdditions.m"; sourceTree = "<group>"; };
+		FCB663D42032712D004B1325 /* NSObject+Property.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Property.h"; sourceTree = "<group>"; };
+		FCB663D52032712D004B1325 /* NSObject+Property.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Property.m"; sourceTree = "<group>"; };
+		FCB663D7203278D1004B1325 /* MethodChainingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodChainingViewController.h; sourceTree = "<group>"; };
+		FCB663D8203278D1004B1325 /* MethodChainingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodChainingViewController.m; sourceTree = "<group>"; };
+		FCB663DD203289C6004B1325 /* FunctionProgrammingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FunctionProgrammingViewController.h; sourceTree = "<group>"; };
+		FCB663DE203289C6004B1325 /* FunctionProgrammingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunctionProgrammingViewController.m; sourceTree = "<group>"; };
+		FCB663E020328E4E004B1325 /* RacSignalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RacSignalViewController.h; sourceTree = "<group>"; };
+		FCB663E120328E4E004B1325 /* RacSignalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RacSignalViewController.m; sourceTree = "<group>"; };
+		FCB663E320329FD3004B1325 /* RacDisposibleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RacDisposibleViewController.h; sourceTree = "<group>"; };
+		FCB663E420329FD3004B1325 /* RacDisposibleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RacDisposibleViewController.m; sourceTree = "<group>"; };
+		FCE550DA2037BF030088BFFB /* RACBindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACBindViewController.h; sourceTree = "<group>"; };
+		FCE550DB2037BF030088BFFB /* RACBindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACBindViewController.m; sourceTree = "<group>"; };
 		FCE789D5200DF164003C621D /* HttpTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpTableViewController.h; sourceTree = "<group>"; };
 		FCE789D6200DF164003C621D /* HttpTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HttpTableViewController.m; sourceTree = "<group>"; };
 		FCE789D8200DF2D5003C621D /* HttpsAuthenticationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpsAuthenticationViewController.h; sourceTree = "<group>"; };
@@ -214,6 +323,8 @@
 		FC01910E2005F1640069A3E0 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FCB663D12031968B004B1325 /* NSString+EmailAdditions.h */,
+				FCB663D22031968B004B1325 /* NSString+EmailAdditions.m */,
 				FC01910F2005F1A60069A3E0 /* BaseNaviViewController.h */,
 				FC0191102005F1A60069A3E0 /* BaseNaviViewController.m */,
 				FC0191122005F4120069A3E0 /* BaseTableViewController.h */,
@@ -265,6 +376,10 @@
 			isa = PBXGroup;
 			children = (
 				FC54B755202AE83D00007FC8 /* Objective C类方法load和initialize的区别.pdf */,
+				FCB663D7203278D1004B1325 /* MethodChainingViewController.h */,
+				FCB663D8203278D1004B1325 /* MethodChainingViewController.m */,
+				FCB663DD203289C6004B1325 /* FunctionProgrammingViewController.h */,
+				FCB663DE203289C6004B1325 /* FunctionProgrammingViewController.m */,
 			);
 			path = oc;
 			sourceTree = "<group>";
@@ -277,6 +392,8 @@
 				FC54B75B202D705400007FC8 /* IMPDemo.m */,
 				FC54B75D202D77A700007FC8 /* SetAssociatedObject.h */,
 				FC54B75E202D77A700007FC8 /* SetAssociatedObject.m */,
+				FCB663D42032712D004B1325 /* NSObject+Property.h */,
+				FCB663D52032712D004B1325 /* NSObject+Property.m */,
 			);
 			path = runtime;
 			sourceTree = "<group>";
@@ -329,6 +446,152 @@
 			path = iOS9;
 			sourceTree = "<group>";
 		};
+		FCAF86B6203FDFCE008CFE43 /* NonBase */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF86B7203FDFCE008CFE43 /* ViewModel */,
+				FCAF86BD203FDFCE008CFE43 /* View */,
+				FCAF86C5203FDFCE008CFE43 /* ViewController */,
+			);
+			path = NonBase;
+			sourceTree = "<group>";
+		};
+		FCAF86B7203FDFCE008CFE43 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF86B8203FDFCE008CFE43 /* SVW_ViewModelIntercepter.m */,
+				FCAF86B9203FDFCE008CFE43 /* NSObject+NonBase.m */,
+				FCAF86BA203FDFCE008CFE43 /* NSObject+NonBase.h */,
+				FCAF86BB203FDFCE008CFE43 /* SVW_ViewModelIntercepter.h */,
+				FCAF86BC203FDFCE008CFE43 /* SVW_ViewModelProtocol.h */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FCAF86BD203FDFCE008CFE43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF86BE203FDFCE008CFE43 /* SVW_TableViewCellProtocol.h */,
+				FCAF86BF203FDFCE008CFE43 /* SVW_ViewProtocol.h */,
+				FCAF86C0203FDFCE008CFE43 /* SVW_TableViewProtocol.h */,
+				FCAF86C1203FDFCE008CFE43 /* SVW_ViewIntercepter.h */,
+				FCAF86C2203FDFCE008CFE43 /* UIView+NonBase.m */,
+				FCAF86C3203FDFCE008CFE43 /* UIView+NonBase.h */,
+				FCAF86C4203FDFCE008CFE43 /* SVW_ViewIntercepter.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCAF86C5203FDFCE008CFE43 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF86C6203FDFCE008CFE43 /* SVW_ViewControllerIntercepter.h */,
+				FCAF86C7203FDFCE008CFE43 /* UIViewController+NonBase.m */,
+				FCAF86C8203FDFCE008CFE43 /* SVW_ViewControllerProtocol.h */,
+				FCAF86C9203FDFCE008CFE43 /* UIViewController+NonBase.h */,
+				FCAF86CA203FDFCE008CFE43 /* SVW_ViewControllerIntercepter.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FCAF86D6203FE011008CFE43 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF86D7203FE011008CFE43 /* SVW_GlobalDefine.h */,
+				FCAF86D8203FE011008CFE43 /* SVW_FunctionDefine.h */,
+				FCAF86D9203FE011008CFE43 /* SVW_FunctionDefine.m */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		FCAF86DB203FE01F008CFE43 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF86DC203FE01F008CFE43 /* SVW_BaseRequest+Rac.m */,
+				FCAF86DD203FE01F008CFE43 /* SVW_BaseRequestIntercepter.h */,
+				FCAF86DE203FE01F008CFE43 /* SVW_BaseRequest.m */,
+				FCAF86DF203FE01F008CFE43 /* SVW_BaseRequest+Rac.h */,
+				FCAF86E0203FE01F008CFE43 /* SVW_BaseRequest.h */,
+				FCAF86E1203FE01F008CFE43 /* SVW_BaseRequestIntercepter.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FCAF86E5203FE029008CFE43 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF86E6203FE029008CFE43 /* SVW_RouterConstant.m */,
+				FCAF86E7203FE029008CFE43 /* JLRoutes+GenerateURL.h */,
+				FCAF86E8203FE029008CFE43 /* JLRoutes+GenerateURL.m */,
+				FCAF86E9203FE029008CFE43 /* SVW_RouterConstant.h */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		FCAF86EC203FE032008CFE43 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF86ED203FE032008CFE43 /* UIColor+SVW_Color.h */,
+				FCAF86EE203FE032008CFE43 /* UIImage+SVW_Color.m */,
+				FCAF86EF203FE032008CFE43 /* SVProgressHUD+Helper.h */,
+				FCAF86F0203FE032008CFE43 /* UIColor+SVW_Color.m */,
+				FCAF86F1203FE032008CFE43 /* UIImage+SVW_Color.h */,
+				FCAF86F2203FE032008CFE43 /* SVProgressHUD+Helper.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FCAF86F72041354A008CFE43 /* Swift tips */ = {
+			isa = PBXGroup;
+			children = (
+				FCAF86FE204158EC008CFE43 /* swift4_tips.pdf */,
+				FCAF86F820413573008CFE43 /* CurryingViewController.swift */,
+				FCAF86FC2041560E008CFE43 /* SequenceViewController.swift */,
+			);
+			path = "Swift tips";
+			sourceTree = "<group>";
+		};
+		FCB663C9203195C3004B1325 /* Rac */ = {
+			isa = PBXGroup;
+			children = (
+				FCB663CA203195F3004B1325 /* raccommand */,
+				FCB663E020328E4E004B1325 /* RacSignalViewController.h */,
+				FCB663E120328E4E004B1325 /* RacSignalViewController.m */,
+				FCB663E320329FD3004B1325 /* RacDisposibleViewController.h */,
+				FCB663E420329FD3004B1325 /* RacDisposibleViewController.m */,
+				FC6308962032B17D005BB402 /* RACSubjectViewController.h */,
+				FC6308972032B17D005BB402 /* RACSubjectViewController.m */,
+				FCAF822E2033EFC400A46E21 /* RACTupleViewController.h */,
+				FCAF822F2033EFC400A46E21 /* RACTupleViewController.m */,
+				FCAF82312033F9B700A46E21 /* RACNormalViewController.h */,
+				FCAF82322033F9B700A46E21 /* RACNormalViewController.m */,
+				FC601011203413A900E2C193 /* RacLifeSelectorViewController.h */,
+				FC601012203413A900E2C193 /* RacLifeSelectorViewController.m */,
+				FC601014203414F500E2C193 /* RACMacroViewController.h */,
+				FC601015203414F500E2C193 /* RACMacroViewController.m */,
+				FC60101720341A7200E2C193 /* RACMulticastViewController.h */,
+				FC60101820341A7200E2C193 /* RACMulticastViewController.m */,
+				FC60101A203521B500E2C193 /* RACCommandViewController.h */,
+				FC60101B203521B500E2C193 /* RACCommandViewController.m */,
+				FCE550DA2037BF030088BFFB /* RACBindViewController.h */,
+				FCE550DB2037BF030088BFFB /* RACBindViewController.m */,
+				FCA902A32037EB5D0088AC7B /* RACMapViewController.h */,
+				FCA902A42037EB5D0088AC7B /* RACMapViewController.m */,
+				FCA902A620382C5E0088AC7B /* RACConcatViewController.h */,
+				FCA902A720382C5E0088AC7B /* RACConcatViewController.m */,
+				FCA902A9203BEC500088AC7B /* RACFliterViewController.h */,
+				FCA902AA203BEC500088AC7B /* RACFliterViewController.m */,
+			);
+			path = Rac;
+			sourceTree = "<group>";
+		};
+		FCB663CA203195F3004B1325 /* raccommand */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = raccommand;
+			sourceTree = "<group>";
+		};
 		FCE789D4200DF137003C621D /* Http */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +633,13 @@
 		FCED5D452005DFD2009A43DD /* iOS_Demos */ = {
 			isa = PBXGroup;
 			children = (
+				FCAF86F72041354A008CFE43 /* Swift tips */,
+				FCAF86EC203FE032008CFE43 /* Utils */,
+				FCAF86E5203FE029008CFE43 /* Router */,
+				FCAF86DB203FE01F008CFE43 /* Network */,
+				FCAF86D6203FE011008CFE43 /* Constant */,
+				FCAF86B6203FDFCE008CFE43 /* NonBase */,
+				FCB663C9203195C3004B1325 /* Rac */,
 				FC54B760202D79B200007FC8 /* UI */,
 				FC54B759202D702A00007FC8 /* runtime */,
 				FC54B751202AD93C00007FC8 /* oc */,
@@ -394,6 +664,7 @@
 				FCED5D552005DFD2009A43DD /* main.m */,
 				FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */,
 				FCA7AC8F2008CEE000586824 /* iOS_Demos-Bridging-Header.h */,
+				FCAF86F6203FE3A6008CFE43 /* PrefixHeader.pch */,
 			);
 			path = iOS_Demos;
 			sourceTree = "<group>";
@@ -564,6 +835,7 @@
 				FCED5D4E2005DFD2009A43DD /* Main.storyboard in Resources */,
 				FC54B767202D7CC900007FC8 /* iOS 保持界面流畅的技巧.pdf in Resources */,
 				FC6733C020281B690078CE03 /* iOS 静态库详解与开发.pdf in Resources */,
+				FCAF86FF204158ED008CFE43 /* swift4_tips.pdf in Resources */,
 				FC54B76D202D7CFB00007FC8 /* 深入理解RunLoop.pdf in Resources */,
 				FC54B74A202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */,
 				FC6733B62022EDE80078CE03 /* Xcode快捷键 in Resources */,
@@ -670,11 +942,23 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOS_Demos/Pods-iOS_Demos-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+				"${BUILT_PRODUCTS_DIR}/FTLinearActivityIndicator/FTLinearActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTLinearActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLRoutes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -749,28 +1033,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */,
+				FCA902A820382C5E0088AC7B /* RACConcatViewController.m in Sources */,
 				FC01911C200749990069A3E0 /* GlobalQueueInitialAndQueueSpec.m in Sources */,
 				FCED5D4B2005DFD2009A43DD /* ViewController.m in Sources */,
 				FC54B75F202D77A700007FC8 /* SetAssociatedObject.m in Sources */,
+				FCAF86DA203FE011008CFE43 /* SVW_FunctionDefine.m in Sources */,
 				FC54B75C202D705400007FC8 /* IMPDemo.m in Sources */,
 				FC0191112005F1A60069A3E0 /* BaseNaviViewController.m in Sources */,
+				FCAF86EB203FE029008CFE43 /* JLRoutes+GenerateURL.m in Sources */,
+				FCAF86E3203FE01F008CFE43 /* SVW_BaseRequest.m in Sources */,
 				FC01910D2005E4510069A3E0 /* GCDTableViewController.m in Sources */,
 				FC01912320074FC10069A3E0 /* ApplicationWillTerminateNotificationViewController.m in Sources */,
 				FC01912E20075AE10069A3E0 /* ProcessNumberViewController.m in Sources */,
+				FCAF86CB203FDFCE008CFE43 /* SVW_ViewModelIntercepter.m in Sources */,
 				FC0191142005F4120069A3E0 /* BaseTableViewController.m in Sources */,
+				FC601013203413A900E2C193 /* RacLifeSelectorViewController.m in Sources */,
+				FCAF86E4203FE01F008CFE43 /* SVW_BaseRequestIntercepter.m in Sources */,
+				FCAF86CF203FDFCE008CFE43 /* UIViewController+NonBase.m in Sources */,
+				FCB663D9203278D1004B1325 /* MethodChainingViewController.m in Sources */,
+				FCE550DC2037BF030088BFFB /* RACBindViewController.m in Sources */,
+				FCAF86F5203FE032008CFE43 /* SVProgressHUD+Helper.m in Sources */,
+				FCAF86FD2041560E008CFE43 /* SequenceViewController.swift in Sources */,
+				FCB663D32031968C004B1325 /* NSString+EmailAdditions.m in Sources */,
+				FCA902AB203BEC510088AC7B /* RACFliterViewController.m in Sources */,
 				FCE789D7200DF164003C621D /* HttpTableViewController.m in Sources */,
+				FCAF86CC203FDFCE008CFE43 /* NSObject+NonBase.m in Sources */,
 				FC54B763202D79F200007FC8 /* UINavigationBar+DeletebarColor.m in Sources */,
 				FC01912B20075ACF0069A3E0 /* DeviceInformationTableViewController.m in Sources */,
 				FCA7AC942008D24000586824 /* DispatchGroupViewController.swift in Sources */,
 				FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */,
+				FCAF86F3203FE032008CFE43 /* UIImage+SVW_Color.m in Sources */,
+				FCAF82302033EFC400A46E21 /* RACTupleViewController.m in Sources */,
+				FCB663E220328E4E004B1325 /* RacSignalViewController.m in Sources */,
+				FCAF86CE203FDFCE008CFE43 /* SVW_ViewIntercepter.m in Sources */,
+				FCB663DF203289C6004B1325 /* FunctionProgrammingViewController.m in Sources */,
 				FCED5D562005DFD2009A43DD /* main.m in Sources */,
+				FCB663E520329FD3004B1325 /* RacDisposibleViewController.m in Sources */,
 				FC2A210420122DB9006B723F /* YtknetworkHttpsSetting.m in Sources */,
 				FCE789DD200F0DDE003C621D /* DispathcAsyncAndSyncViewController.m in Sources */,
 				FC01912020074F6B0069A3E0 /* AppAccidentTableViewController.m in Sources */,
+				FC601016203414F500E2C193 /* RACMacroViewController.m in Sources */,
+				FCA902A52037EB5D0088AC7B /* RACMapViewController.m in Sources */,
+				FC60101920341A7200E2C193 /* RACMulticastViewController.m in Sources */,
 				FCA7AC962008D48C00586824 /* DispatchGroupViewControllerExtension.swift in Sources */,
+				FCB663D62032712D004B1325 /* NSObject+Property.m in Sources */,
+				FCAF86EA203FE029008CFE43 /* SVW_RouterConstant.m in Sources */,
+				FCAF86F4203FE032008CFE43 /* UIColor+SVW_Color.m in Sources */,
+				FC6308982032B17D005BB402 /* RACSubjectViewController.m in Sources */,
 				FCE789DA200DF2D5003C621D /* HttpsAuthenticationViewController.m in Sources */,
 				FC019119200746530069A3E0 /* DispatchSourceTypeTimerViewController.m in Sources */,
+				FCAF86CD203FDFCE008CFE43 /* UIView+NonBase.m in Sources */,
+				FCAF82332033F9B700A46E21 /* RACNormalViewController.m in Sources */,
+				FCAF86F920413574008CFE43 /* CurryingViewController.swift in Sources */,
+				FCAF86E2203FE01F008CFE43 /* SVW_BaseRequest+Rac.m in Sources */,
 				FCED5D7B2005E055009A43DD /* NotifyRegisterDispatchViewController.m in Sources */,
+				FC60101C203521B500E2C193 /* RACCommandViewController.m in Sources */,
+				FCAF86D0203FDFCE008CFE43 /* SVW_ViewControllerIntercepter.m in Sources */,
 				FC362B6F2008A7580001DD6E /* DispatchGroupViewController.m in Sources */,
 				FCED5D482005DFD2009A43DD /* AppDelegate.m in Sources */,
 			);
@@ -899,6 +1217,8 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_Demos/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -953,6 +1273,8 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS_Demos/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
