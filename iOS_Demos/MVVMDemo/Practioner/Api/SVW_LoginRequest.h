@@ -9,6 +9,7 @@ FOUNDATION_EXTERN NSString *SVW_LoginAccessTokenKey;
 // 也可以写成 局部常量形式
 static const NSString *SVW_LoginAccessTokenKey2 = @"accessToken";
 
+
 @interface SVW_LoginRequest : SVW_BaseRequest
 
 - (id)initWithUsr:(NSString *)usr pwd:(NSString *)pwd;
