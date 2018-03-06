@@ -25,10 +25,6 @@ class iOS_DemosTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let d =  ViewController()
-        d.testDD()
-        let v = DispatchGroupViewController();
-        v.groupSync2()
 
     }
     

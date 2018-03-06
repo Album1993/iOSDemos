@@ -13,6 +13,7 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 
+#ifdef __OBJC__
 // 提示组件
 #import "SVProgressHUD+Helper.h"
 // 全局定义
@@ -40,5 +41,9 @@
 #import "UIViewController+NonBase.h"
 #import "UIColor+SVW_Color.h"
 #import "UIImage+SVW_Color.h"
+
+#endif
+
+
 
 #endif /* PrefixHeader_pch */

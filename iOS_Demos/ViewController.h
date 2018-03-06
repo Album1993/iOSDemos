@@ -11,6 +11,5 @@
 
 @interface ViewController : UIViewController
 
-- (void)testDD;
 
 @end

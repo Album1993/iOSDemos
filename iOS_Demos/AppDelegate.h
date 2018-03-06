@@ -9,10 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 
+@class BaseNaviViewController;
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) ViewController *tabVC;
+
+@property (strong, nonatomic) BaseNaviViewController *homeNavVC;
+
 @end

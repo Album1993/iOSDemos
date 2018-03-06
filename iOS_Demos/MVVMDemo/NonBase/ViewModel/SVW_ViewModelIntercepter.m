@@ -38,13 +38,13 @@
 
 #pragma mark - Hook Methods
 - (void)_initWithInstance:(NSObject<SVW_ViewModelProtocol> *)viewModel {
-    if ([viewModel respondsToSelector:@selector(svw_initializeForViewModelsvw_initializeForViewModel)]) {
+    if ([viewModel respondsToSelector:@selector(svw_initializeForViewModel)]) {
         [viewModel svw_initializeForViewModel];
     }
 }
 
 - (void)_initWithInstance:(NSObject<SVW_ViewModelProtocol> *)viewModel params:(NSDictionary *)param {
-    if ([viewModel respondsToSelector:@selector(svw_initializeForViewModelsvw_initializeForViewModel)]) {
+    if ([viewModel respondsToSelector:@selector(svw_initializeForViewModel)]) {
         [viewModel svw_initializeForViewModel];
     }
 }

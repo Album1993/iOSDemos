@@ -55,7 +55,7 @@
         [view svw_initializeForView];
     }
 
-    if ([view respondsToSelector:@selector(svw_createViewForViewsvw_createViewForViewsvw_createViewForViewsvw_createViewForViewsvw_createViewForView)]) {
+    if ([view respondsToSelector:@selector(svw_createViewForView)]) {
         [view svw_createViewForView];
     }
 }
@@ -67,7 +67,7 @@
 }
 
 - (void)_awakFromNib:(UIView<SVW_ViewProtocol> *)view {
-    if ([view respondsToSelector:@selector(svw_createViewForViewsvw_createViewForViewsvw_createViewForViewsvw_createViewForViewsvw_createViewForView)]) {
+    if ([view respondsToSelector:@selector(svw_createViewForView)]) {
         [view svw_createViewForView];
     }
 }

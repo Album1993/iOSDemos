@@ -50,17 +50,20 @@
         // 只有遵守 SVW_ViewControllerProtocol 的 viewController 才进行 配置
         controller.edgesForExtendedLayout               = UIRectEdgeAll;
         controller.extendedLayoutIncludesOpaqueBars     = NO;
-        controller.automaticallyAdjustsScrollViewInsets = NO;
-
+        //        controller.automaticallyAdjustsScrollViewInsets = NO;
+        
+        
         // 背景色设置为白色
         controller.view.backgroundColor = [UIColor whiteColor];
-
+        
         // 执行协议方法
         [controller svw_initialDefaultsForController];
         [controller svw_bindViewModelForController];
         [controller svw_configNavigationForController];
         [controller svw_createViewForConctroller];
     }
+    
+    
 }
 
 - (void)_viewWillAppear:(BOOL)animated controller:(UIViewController<SVW_ViewControllerProtocol> *)controller {
