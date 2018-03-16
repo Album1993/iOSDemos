@@ -15,8 +15,15 @@ target 'iOS_Demos' do
     # swift 网络库
     pod 'Alamofire', '~> 4.6'
     
+#    audio
+#    https://github.com/AudioKit/AudioKit?utm_source=gold_browser_extension
+
+    
     
     #    UI 库
+#    直接设置app theme
+#    https://github.com/wddwycc/RxTheme?utm_source=gold_browser_extension
+
     #iPhone X 信号栏增加网络活动指示器
     pod 'FTLinearActivityIndicator'
     
@@ -24,17 +31,21 @@ target 'iOS_Demos' do
     pod 'SVProgressHUD', '~> 2.2.2'
     
     #3d 旋转地图
-    pod 'FlyoverKit'
-    
+#    pod 'FlyoverKit'
+
     # 非常好看的tableview
     pod 'garland-view'
     
     #调节音量的指示器在屏幕上方
     #https://github.com/lacklock/ZHStatusVolume
     
+#    就是有三四个选项的view
+#    https://github.com/sima-11/SMSegmentView?utm_source=gold_browser_extension
+
     #图表
     pod 'Charts'
-    
+#    https://github.com/Pluto-Y/iOS-Echarts
+
     #form表单，用户填写使用的
     pod'XLForm', '~> 4.0'
     
@@ -54,47 +65,91 @@ target 'iOS_Demos' do
     #照片选取（有滤镜）
     pod 'YPImagePicker'
     
+#    emoji
+#    https://github.com/JKalash/Croc?utm_source=gold_browser_extension
+
     #  腾讯图片处理库
     #    https://github.com/Tencent/LKImageKit
-    
+#    可以剪切图片什么的
+    #    https://github.com/koher/EasyImagy?utm_source=gold_browser_extension
+
     #类似swift 切换不同页面的效果
     #https://github.com/AfrozZaheer/AZSafariCollectionViewLayout?utm_source=gold_browser_extension
     
     #动画基础库，有view 切换的动画
     #https://github.com/lkzhao/Hero?utm_source=gold_browser_extension
     
+#    动画基础语法
+#    https://useyourloaf.com/blog/quick-guide-to-property-animators/
+
     #也是基础动画库，有很棒的首页切换效果
     #https://github.com/hyperoslo/Presentation?utm_source=gold_browser_extension
     #https://github.com/marcosgriselli/ViewAnimator?utm_source=gold_browser_extension
     #    这个是卡片的库，左滑右滑的
     #    https://github.com/chenzhengxu/CardView.git
     
+#    menu
+#    https://github.com/GitHawkApp/ContextMenu?utm_source=gold_browser_extension
+
+#左滑菜单 有隐藏status bar的动画
+#https://github.com/kukushi/SideMenu
+
     #    各种组建的使用实例
     #    https://github.com/CosmicMind/Material?utm_source=gold_browser_extension
     
+#    swift的UI设计教程，有代码
+#    https://github.com/pointfreeco/pointfreeco?utm_source=gold_browser_extension
+
     # 提示组件框架
     pod 'SVProgressHUD', '~> 2.2.2'
     # 自动布局
     pod 'Masonry', '~> 1.0.2'
     
+#    swift的约束
+#    https://github.com/SnapKit/SnapKit
+
+#使用autolayout的写法生成frame
+#https://github.com/casatwy/HandyAutoLayout
+
+#给uicollectionview 的流布局数据
+#https://github.com/zenangst/Blueprints?utm_source=gold_browser_extension
+
     #工具类
-    
+#    swift 自定义数学表达式，并且提供了很多数学表达式
+#    https://github.com/tevelee/Eval?utm_source=gold_browser_extension
+
+#切换国际化的插件
+#https://github.com/marmelroy/Localize-Swift?utm_source=gold_browser_extension
+
     #debug利器
     #https://github.com/liman123/DebugMan?utm_source=gold_browser_extension
+#    https://github.com/DotzuX/DotzuX?utm_source=gold_browser_extension
     pod 'DebugMan'
     
+#    断言
+#    https://github.com/google/resumable-assert?utm_campaign=Revue%20newsletter&utm_medium=Newsletter&utm_source=AppCoda%20Weekly
+
     #国际化屏幕截图
     #https://github.com/IdeasOnCanvas/ScreenshotFramer.git
     
     #swift 代码格式化
     #https://github.com/kishikawakatsumi/swiftfmt.git
-    
+#    https://github.com/benoitsan/BBUncrustifyPlugin-Xcode/releases
+
+#json 转模型，生成代码
+#https://github.com/EnjoySR/ESJsonFormat-Xcode
+#自动枚举的插件
+#https://github.com/stefanceriu/SCXcodeSwitchExpander
+
     #    获取用户电话号码
     #    https://github.com/frogg/Steal-Phone-Number?utm_source=gold_browser_extension
     
     # swift 格式化数据解析（json， repl）
     #https://github.com/nicklockwood/Consumer?utm_source=gold_browser_extension
     
+#    swift 将对象转化为json
+#https://github.com/tattn/MoreCodable?utm_source=gold_browser_extension
+
     # ibm orm 对象存储
     #https://github.com/IBM-Swift/Swift-Kuery-ORM
     
@@ -121,10 +176,13 @@ target 'iOS_Demos' do
     
     #swift 异步
     #https://github.com/mxcl/PromiseKit/blob/master/README.zh_CN.md
-    
+    #https://github.com/malcommac/Hydra?utm_source=gold_browser_extension
+
     #iOS 上使用js的库
     #https://github.com/wendux/DSBridge-IOS/blob/master/readme-chs.md
-    
+#    https://github.com/marcuswestin/WebViewJavascriptBridge
+#https://github.com/zhangbozhb/WebViewBridge.Swift
+
     #自动化发布的jekin环境
     #http://answerhuang.duapp.com/index.php/2018/02/15/jenkins-2/
     
@@ -132,6 +190,9 @@ target 'iOS_Demos' do
     # swift 实现的各大算法
     #https://github.com/raywenderlich/swift-algorithm-club?utm_source=gold_browser_extension
     
+#    算法以及最佳实践
+#    https://github.com/soapyigu/LeetCode-Swift?utm_source=gold_browser_extension
+
     #swift 30种使用UI基本组件使用方式
     #https://github.com/LiuqingDu/30_Swift_Projects?utm_source=gold_browser_extension
     

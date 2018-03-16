@@ -26,6 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [self groupSync2];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -91,6 +93,10 @@
     dispatch_group_t dispatchGroup = dispatch_group_create();
     dispatch_group_async(dispatchGroup, dispatchQueue, ^() {
 
+        sleep(5);
+
+        NSLog(@"任务一开始");
+
         dispatch_async(globalQueue, ^{
 
             sleep(5);
@@ -99,13 +105,17 @@
     });
     dispatch_group_async(dispatchGroup, dispatchQueue, ^() {
 
+        sleep(5);
+
+        NSLog(@"任务二开始");
+
         dispatch_async(globalQueue, ^{
 
             sleep(8);
             NSLog(@"任务二完成");
         });
     });
-    dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^() {
+    dispatch_group_notify(dispatchGroup, dispatchQueue, ^() {
         NSLog(@"notify：任务都完成了");
     });
     dispatch_group_wait(dispatchGroup, DISPATCH_TIME_FOREVER);
