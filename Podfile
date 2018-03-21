@@ -1,209 +1,171 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+
+
+workspace 'iOS_Demos.xcworkspace' #workspace文件名
+project 'iOS_Demos/iOS_Demos.xcodeproj' #主工程路径
+
+target 'VueX' do
+    platform :ios, '9.0'
+    project 'VueX.xcodeproj'
+    
+end
 
 target 'iOS_Demos' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
-    
-    #网络库
+    platform :ios, '9.0'
+    project 'iOS_Demos.xcodeproj'
+    # 网络库
     pod 'AFNetworking', '~> 3.0'
     pod 'YTKNetwork'
-    pod 'AFNetworking-RACExtensions', :git => 'https://github.com/knshiro/AFNetworking-RACExtensions.git'
+    # pod 'AFNetworking-RACExtensions', :git => 'https://github.com/knshiro/AFNetworking-RACExtensions.git'
     
-    #对alamofire 的封装
-    pod 'Moya/ReactiveSwift', '~> 11.0'
+
     # swift 网络库
-    pod 'Alamofire', '~> 4.6'
+
+    # pod 'Moya/ReactiveSwift', '~> 11.0'
+    # pod 'Alamofire', '~> 4.6'
+
     
-#    audio
-#    https://github.com/AudioKit/AudioKit?utm_source=gold_browser_extension
+    # audio
+    
+    # pod 'AudioKit', '~> 4.0'
+    
+    
+    # UI 库
+    
+    # pod 'RxTheme'                             # 直接设置app theme
+    # pod 'FTLinearActivityIndicator'           # iPhone X 信号栏增加网络活动指示器
+    # pod 'SVProgressHUD', '~> 2.2.2'           # 提示组件框架
+    # pod 'FlyoverKit'                          # 3d 旋转地图
+    # pod 'garland-view'                        # 非常好看的tableview
+    # pod 'ZHStatusVolume'                      # 调节音量的指示器在屏幕上方
+    # pod 'SMSegmentView'                       # 分割视图 ，SegmentView
+    # pod 'XLForm', '~> 4.0'                    # form表单，用户填写使用的
+    # pod 'Parchment'                           # 滚动的viewcontrollers
+    # pod 'XHLaunchAd'                          # 启动广告
+    # pod 'MessageViewController'               # 输入的文本框 （有@功能）
+    # pod 'Croc'                                # emoji
+    # pod 'AZSafariCollectionViewLayout'        # 类似safari的切换页面的动画
+    # pod 'ContextMenu'                         # menu
+    # pod 'SideMenu'                            # 左滑菜单 有隐藏status bar的动画
+    # YZXUnlock                                 # 手势解锁
+    # pod 'SVProgressHUD', '~> 2.2.2'           # 提示组件
+    # pigfly/A_J_Dot_Loading_Indicator          # 三个点的loading动画
 
     
     
-    #    UI 库
-#    直接设置app theme
-#    https://github.com/wddwycc/RxTheme?utm_source=gold_browser_extension
+    # 图表
 
-    #iPhone X 信号栏增加网络活动指示器
-    pod 'FTLinearActivityIndicator'
-    
-    # 提示组件框架
-    pod 'SVProgressHUD', '~> 2.2.2'
-    
-    #3d 旋转地图
-#    pod 'FlyoverKit'
+    # pod 'Charts'
+    # pod 'iOS-Echarts'
+    # ResearchKit                               # 要集成
+    # pod 'HSStockChart'                        # 股票图表
 
-    # 非常好看的tableview
-    pod 'garland-view'
     
-    #调节音量的指示器在屏幕上方
-    #https://github.com/lacklock/ZHStatusVolume
     
-#    就是有三四个选项的view
-#    https://github.com/sima-11/SMSegmentView?utm_source=gold_browser_extension
+    # 图片
 
-    #图表
-    pod 'Charts'
-#    https://github.com/Pluto-Y/iOS-Echarts
+    # pod 'YPImagePicker'                       # 照片选取（有滤镜）
+    # LKImageKit                                # 包括了图片控件，图片下载、内存缓存、磁盘缓存、图片解码、图片处理
+    # EasyImagy                                 # 图片剪切旋转放大缩小
 
-    #form表单，用户填写使用的
-    pod'XLForm', '~> 4.0'
     
-    #股票图表
-    #https://github.com/zyphs21/HSStockChart?utm_source=gold_browser_extension
-    pod 'HSStockChart'
     
-    # 多viewcontroller左右滑动
-    #    https://github.com/rechsteiner/Parchment?utm_source=gold_browser_extension
-    
-    # applaunch 可以有广告和倒计时
-    #    https://github.com/CoderZhuXH/XHLaunchAd
-    
-    #输入的文本框 （有@功能）
-    pod 'MessageViewController'
-    
-    #照片选取（有滤镜）
-    pod 'YPImagePicker'
-    
-#    emoji
-#    https://github.com/JKalash/Croc?utm_source=gold_browser_extension
+    # 基础动画
 
-    #  腾讯图片处理库
-    #    https://github.com/Tencent/LKImageKit
-#    可以剪切图片什么的
-    #    https://github.com/koher/EasyImagy?utm_source=gold_browser_extension
+    # Hero                                      # 基础动画库，页面切换动画
+    # pod 'Presentation'                        # 页面切换动画
+    # pod "ViewAnimator"                        # tableview，collectionview 的切换动画
+    # CosmicMind/Material                       # 很多优秀的小交互
+    # pod 'Blueprints'                          # Blueprints is a collection of flow layouts that is meant to make your life easier when working with collection view flow layouts.
 
-    #类似swift 切换不同页面的效果
-    #https://github.com/AfrozZaheer/AZSafariCollectionViewLayout?utm_source=gold_browser_extension
-    
-    #动画基础库，有view 切换的动画
-    #https://github.com/lkzhao/Hero?utm_source=gold_browser_extension
-    
-#    动画基础语法
-#    https://useyourloaf.com/blog/quick-guide-to-property-animators/
 
-    #也是基础动画库，有很棒的首页切换效果
-    #https://github.com/hyperoslo/Presentation?utm_source=gold_browser_extension
-    #https://github.com/marcosgriselli/ViewAnimator?utm_source=gold_browser_extension
-    #    这个是卡片的库，左滑右滑的
-    #    https://github.com/chenzhengxu/CardView.git
     
-#    menu
-#    https://github.com/GitHawkApp/ContextMenu?utm_source=gold_browser_extension
+    # 约束
 
-#左滑菜单 有隐藏status bar的动画
-#https://github.com/kukushi/SideMenu
+    # pod 'Masonry', '~> 1.0.2'                 # 自动布局
+    # pod 'SnapKit', '~> 4.0.0'
+    # pod 'HandyFrame'                          # 简化语法
+    
 
-    #    各种组建的使用实例
-    #    https://github.com/CosmicMind/Material?utm_source=gold_browser_extension
     
-#    swift的UI设计教程，有代码
-#    https://github.com/pointfreeco/pointfreeco?utm_source=gold_browser_extension
+    # 工具类
 
-    # 提示组件框架
-    pod 'SVProgressHUD', '~> 2.2.2'
-    # 自动布局
-    pod 'Masonry', '~> 1.0.2'
-    
-#    swift的约束
-#    https://github.com/SnapKit/SnapKit
+    # Zuikyo/ZIKCellularAuthorization           # 用于修复iOS 10首次安装app时，不会弹出"允许xxx使用数据？"授权框的bug；使用了私有API，已经经过混淆
+    # pod 'Eval', '~> 1.3.0'                    # swift 自定义数学表达式，并且提供了很多数学表达式
+    # pod 'Localize-Swift', '~> 2.0'            # 切换国际化的插件
+    # ScreenshotFramer                          # 国际化截图
+    # kishikawakatsumi/swiftfmt                 # swift 代码格式化
+    # benoitsan/BBUncrustifyPlugin-Xcode        # objc 代码格式化
+    # square/spacecommander                     # objc 代码格式化
+    # ESJsonFormat-Xcode                        # json转代码
+    # stefanceriu/SCXcodeSwitchExpander         # 自动枚举补全
+    # frogg/Steal-Phone-Number                  # 获取用户电话号码    
+    # pod 'Consumer', '~> 0.3'                  # swift 格式化数据解析（json， repl）
+    # pod 'MoreCodable'                         # json 转字符串， json 比较
+    # IBM-Swift/Swift-Kuery-ORM                 # mac 对象存储 
+    # pod 'SwifterSwift'                        # swift extension
+    # http://answerhuang.duapp.com/index.php/2018/02/15/jenkins-2/      #自动化发布的jekin环境
 
-#使用autolayout的写法生成frame
-#https://github.com/casatwy/HandyAutoLayout
+    
+    
+    # Debug
 
-#给uicollectionview 的流布局数据
-#https://github.com/zenangst/Blueprints?utm_source=gold_browser_extension
+    # pod 'DotzuX', :configurations => ['Debug'] # Swift4.0 Debug网络
+    # DebuggableContext                         # 摇晃手机
+    # pod 'ResumableAssert', '~> 1.0'           # 可恢复断言
 
-    #工具类
-#    swift 自定义数学表达式，并且提供了很多数学表达式
-#    https://github.com/tevelee/Eval?utm_source=gold_browser_extension
 
-#切换国际化的插件
-#https://github.com/marmelroy/Localize-Swift?utm_source=gold_browser_extension
 
-    #debug利器
-    #https://github.com/liman123/DebugMan?utm_source=gold_browser_extension
-#    https://github.com/DotzuX/DotzuX?utm_source=gold_browser_extension
-    pod 'DebugMan'
-    
-#    断言
-#    https://github.com/google/resumable-assert?utm_campaign=Revue%20newsletter&utm_medium=Newsletter&utm_source=AppCoda%20Weekly
+    # reactive
 
-    #国际化屏幕截图
-    #https://github.com/IdeasOnCanvas/ScreenshotFramer.git
-    
-    #swift 代码格式化
-    #https://github.com/kishikawakatsumi/swiftfmt.git
-#    https://github.com/benoitsan/BBUncrustifyPlugin-Xcode/releases
+    # pod 'RxSwift',    '~> 4.0'                # 和RxCocoa配套
+    # pod 'RxCocoa',    '~> 4.0'
 
-#json 转模型，生成代码
-#https://github.com/EnjoySR/ESJsonFormat-Xcode
-#自动枚举的插件
-#https://github.com/stefanceriu/SCXcodeSwitchExpander
 
-    #    获取用户电话号码
-    #    https://github.com/frogg/Steal-Phone-Number?utm_source=gold_browser_extension
-    
-    # swift 格式化数据解析（json， repl）
-    #https://github.com/nicklockwood/Consumer?utm_source=gold_browser_extension
-    
-#    swift 将对象转化为json
-#https://github.com/tattn/MoreCodable?utm_source=gold_browser_extension
 
-    # ibm orm 对象存储
-    #https://github.com/IBM-Swift/Swift-Kuery-ORM
-    
-    #    项目拓展架构类
-    #非常有用的extension
-    #https://github.com/SwifterSwift/SwifterSwift?utm_source=gold_browser_extension
-    
-    #swift reactive
-    #https://github.com/ReactiveX/RxSwift?utm_source=gold_browser_extension#installation
-    
-    #UBer 框架库
-    #https://github.com/uber/RIBs
-    
-    pod 'RIBs', '~> 0.9'
-    
-    # AOP面向切面
-    pod 'Aspects', '~> 1.4.1'
-    # 响应函数式框架
-    pod 'ReactiveObjC', '~> 3.0.0'
-    
-    # 路由组件化解耦
-    pod 'JLRoutes', '~> 2.0.5'
-    
-    
-    #swift 异步
-    #https://github.com/mxcl/PromiseKit/blob/master/README.zh_CN.md
-    #https://github.com/malcommac/Hydra?utm_source=gold_browser_extension
+    # 架构
 
-    #iOS 上使用js的库
-    #https://github.com/wendux/DSBridge-IOS/blob/master/readme-chs.md
-#    https://github.com/marcuswestin/WebViewJavascriptBridge
-#https://github.com/zhangbozhb/WebViewBridge.Swift
+    # pod 'RIBs', '~> 0.9'                      # UBer 框架库
+    pod 'Aspects', '~> 1.4.1'                   # 面向切片编程
+    pod 'ReactiveObjC', '~> 3.0.0'              
+    # pod "PromiseKit", "~> 6.0"                # 异步编程
+    # pod 'HydraAsync'                          # 异步编程
+    # pod "FluxCapacitor"                       # fluxprotocal
 
-    #自动化发布的jekin环境
-    #http://answerhuang.duapp.com/index.php/2018/02/15/jenkins-2/
-    
-    #事例类
-    # swift 实现的各大算法
-    #https://github.com/raywenderlich/swift-algorithm-club?utm_source=gold_browser_extension
-    
-#    算法以及最佳实践
-#    https://github.com/soapyigu/LeetCode-Swift?utm_source=gold_browser_extension
 
-    #swift 30种使用UI基本组件使用方式
-    #https://github.com/LiuqingDu/30_Swift_Projects?utm_source=gold_browser_extension
+
+    # 组件化
     
-    #flux design 的demo
-    #https://github.com/marty-suzuki/FluxCapacitor
-    
-    #iOS开源项目
-    #https://github.com/dkhamsing/open-source-ios-apps?utm_source=gold_browser_extension
-    
-    #    reactnative
-    #reactnative 各种字体动画的集合，是有动画的
+    pod 'JLRoutes', '~> 2.0.5'                  # objc
+    # pod 'URLNavigator'                        # swift
+    # swift 路由组件化，场景挺多的
+    # pod 'FNUrlRoute', :git => 'git@github.com:Fnoz/FNUrlRoute.git', :tag => '1.0.0'           
+
+
+
+    # js Bridge
+
+    # wendux/DSBridge-IOS
+    # pod 'WebViewJavascriptBridge', '~> 6.0'   # 很多star
+    # pod 'WebViewBridge.Swift'                 
+
+
+
+    # 事例类
+
+    # raywenderlich/swift-algorithm-club        # swift 实现的各大算法
+    # soapyigu/LeetCode-Swift                   # swift 实现的各大算法
+    # LiuqingDu/30_Swift_Projects               # swift 30种使用UI基本组件使用方式
+
+
+
+    # 集合类
+
+    # dkhamsing/open-source-ios-apps
+    # olucurious/Awesome-ARKit                  # ARKit 的项目收集
+
     
     target 'iOS_DemosTests' do
         inherit! :search_paths
@@ -217,5 +179,3 @@ target 'iOS_Demos' do
     
 end
 
-#ARKit 的项目收集
-#https://github.com/olucurious/Awesome-ARKit?utm_source=gold_browser_extension

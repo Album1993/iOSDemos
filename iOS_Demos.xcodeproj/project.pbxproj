@@ -46,6 +46,7 @@
 		FC6733BB2028163C0078CE03 /* safe_area.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6733BA2028163C0078CE03 /* safe_area.pdf */; };
 		FC6733BE2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6733BD2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf */; };
 		FC6733C020281B690078CE03 /* iOS 静态库详解与开发.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6733BF20281B690078CE03 /* iOS 静态库详解与开发.pdf */; };
+		FC69DF45206103AA006461A6 /* Xcode配置.md in Resources */ = {isa = PBXBuildFile; fileRef = FC69DF44206103AA006461A6 /* Xcode配置.md */; };
 		FC6EB4702029417E00DF644D /* mac下的socket调试工具---sokit.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */; };
 		FC6EB4722029439A00DF644D /* Swift 网络单元测试完全手册.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */; };
 		FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */; };
@@ -193,6 +194,27 @@
 		FC6733BA2028163C0078CE03 /* safe_area.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = safe_area.pdf; sourceTree = "<group>"; };
 		FC6733BD2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CocoaPods 给每个库单独指定 Swift 版本教程.pdf"; sourceTree = "<group>"; };
 		FC6733BF20281B690078CE03 /* iOS 静态库详解与开发.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS 静态库详解与开发.pdf"; sourceTree = "<group>"; };
+		FC69DE8720609906006461A6 /* Adapter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Adapter.playground; sourceTree = "<group>"; };
+		FC69DE8820609906006461A6 /* Bridge.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Bridge.playground; sourceTree = "<group>"; };
+		FC69DE8920609911006461A6 /* ChainOfResponsibility.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ChainOfResponsibility.playground; sourceTree = "<group>"; };
+		FC69DE8A20609911006461A6 /* Strategy.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Strategy.playground; sourceTree = "<group>"; };
+		FC69DE8B20609912006461A6 /* Command.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Command.playground; sourceTree = "<group>"; };
+		FC69DE8C20609912006461A6 /* Prototype.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Prototype.playground; sourceTree = "<group>"; };
+		FC69DE8D20609912006461A6 /* Memento.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Memento.playground; sourceTree = "<group>"; };
+		FC69DE8E20609912006461A6 /* Iterator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Iterator.playground; sourceTree = "<group>"; };
+		FC69DE8F20609912006461A6 /* TemplateMethod.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TemplateMethod.playground; sourceTree = "<group>"; };
+		FC69DE9020609912006461A6 /* Visit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Visit.playground; sourceTree = "<group>"; };
+		FC69DE9120609912006461A6 /* Mediator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Mediator.playground; sourceTree = "<group>"; };
+		FC69DE9220609912006461A6 /* Proxy.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Proxy.playground; sourceTree = "<group>"; };
+		FC69DE9320609912006461A6 /* Singleton.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Singleton.playground; sourceTree = "<group>"; };
+		FC69DE9420609913006461A6 /* Facade.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Facade.playground; sourceTree = "<group>"; };
+		FC69DE9520609913006461A6 /* State.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = State.playground; sourceTree = "<group>"; };
+		FC69DE9620609913006461A6 /* Composite.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Composite.playground; sourceTree = "<group>"; };
+		FC69DE9720609913006461A6 /* Interpreter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Interpreter.playground; sourceTree = "<group>"; };
+		FC69DE9820609913006461A6 /* Decorator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Decorator.playground; sourceTree = "<group>"; };
+		FC69DE9920609913006461A6 /* Flyweight.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Flyweight.playground; sourceTree = "<group>"; };
+		FC69DE9A20609913006461A6 /* Observer.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Observer.playground; sourceTree = "<group>"; };
+		FC69DF44206103AA006461A6 /* Xcode配置.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Xcode配置.md"; sourceTree = "<group>"; };
 		FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "mac下的socket调试工具---sokit.pdf"; sourceTree = "<group>"; };
 		FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Swift 网络单元测试完全手册.pdf"; sourceTree = "<group>"; };
 		FC9738092013413900E6CFA8 /* iOS_9ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_9ViewController.h; sourceTree = "<group>"; };
@@ -303,6 +325,8 @@
 		FCED5D6C2005DFD2009A43DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCED5D792005E055009A43DD /* NotifyRegisterDispatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotifyRegisterDispatchViewController.h; sourceTree = "<group>"; };
 		FCED5D7A2005E055009A43DD /* NotifyRegisterDispatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifyRegisterDispatchViewController.m; sourceTree = "<group>"; };
+		FCEDE11D205F7EBE00A30CFF /* Factory.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Factory.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FCEDE11E205F7F8000A30CFF /* Builder.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Builder.playground; sourceTree = "<group>"; };
 		FCF568E1204FCFC800AD5D86 /* MacroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroViewController.h; sourceTree = "<group>"; };
 		FCF568E2204FCFC800AD5D86 /* MacroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacroViewController.m; sourceTree = "<group>"; };
 		FCF568E4204FFF1800AD5D86 /* OperationQueueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationQueueViewController.h; sourceTree = "<group>"; };
@@ -463,6 +487,7 @@
 		FC6733B22022ED920078CE03 /* Xcode */ = {
 			isa = PBXGroup;
 			children = (
+				FC69DF44206103AA006461A6 /* Xcode配置.md */,
 				FC54B749202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf */,
 				FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */,
 				FC6733BF20281B690078CE03 /* iOS 静态库详解与开发.pdf */,
@@ -656,6 +681,35 @@
 			path = raccommand;
 			sourceTree = "<group>";
 		};
+		FCC0D8D0205F79C1002A8CDA /* DesignPattern */ = {
+			isa = PBXGroup;
+			children = (
+				FC69DE8920609911006461A6 /* ChainOfResponsibility.playground */,
+				FC69DE8B20609912006461A6 /* Command.playground */,
+				FC69DE9620609913006461A6 /* Composite.playground */,
+				FC69DE9820609913006461A6 /* Decorator.playground */,
+				FC69DE9420609913006461A6 /* Facade.playground */,
+				FC69DE9920609913006461A6 /* Flyweight.playground */,
+				FC69DE9720609913006461A6 /* Interpreter.playground */,
+				FC69DE8E20609912006461A6 /* Iterator.playground */,
+				FC69DE9120609912006461A6 /* Mediator.playground */,
+				FC69DE8D20609912006461A6 /* Memento.playground */,
+				FC69DE9A20609913006461A6 /* Observer.playground */,
+				FC69DE8C20609912006461A6 /* Prototype.playground */,
+				FC69DE9220609912006461A6 /* Proxy.playground */,
+				FC69DE9320609912006461A6 /* Singleton.playground */,
+				FC69DE9520609913006461A6 /* State.playground */,
+				FC69DE8A20609911006461A6 /* Strategy.playground */,
+				FC69DE8F20609912006461A6 /* TemplateMethod.playground */,
+				FC69DE9020609912006461A6 /* Visit.playground */,
+				FC69DE8720609906006461A6 /* Adapter.playground */,
+				FC69DE8820609906006461A6 /* Bridge.playground */,
+				FCEDE11E205F7F8000A30CFF /* Builder.playground */,
+				FCEDE11D205F7EBE00A30CFF /* Factory.playground */,
+			);
+			path = DesignPattern;
+			sourceTree = "<group>";
+		};
 		FCD72D2F2044FB53001EC81E /* Practioner */ = {
 			isa = PBXGroup;
 			children = (
@@ -698,6 +752,7 @@
 		FCD72D6520464507001EC81E /* algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				FCC0D8D0205F79C1002A8CDA /* DesignPattern */,
 				FCD72D66204646C9001EC81E /* MirrorBinaryTree.h */,
 				FCD72D67204646C9001EC81E /* MirrorBinaryTree.m */,
 			);
@@ -956,6 +1011,7 @@
 				FC54B76B202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf in Resources */,
 				FC6733BB2028163C0078CE03 /* safe_area.pdf in Resources */,
 				FC54B769202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf in Resources */,
+				FC69DF45206103AA006461A6 /* Xcode配置.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1056,22 +1112,16 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-iOS_Demos/Pods-iOS_Demos-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
-				"${BUILT_PRODUCTS_DIR}/FTLinearActivityIndicator/FTLinearActivityIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTLinearActivityIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLRoutes.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
