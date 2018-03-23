@@ -13,7 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+//    The Store：以单一数据结构管理整个 app 的状态，状态只能通过 dispatching Actions 来进行修改。一旦 store 中的状态改变了，它就会通知给所有的 observers 。
+//
+//    Actions：通过陈述的形式来描述一次状态变更，它不包含任何代码，存储在 store，被转发给 reducers。reducers 会接收这些 actions 然后进行相应的状态逻辑变更。
+//
+//    Reducers：基于当前的 action 和 app 状态，通过纯函数来返回一个新的 app 状态。
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
