@@ -49,6 +49,8 @@
 		FC69DF45206103AA006461A6 /* Xcode配置.md in Resources */ = {isa = PBXBuildFile; fileRef = FC69DF44206103AA006461A6 /* Xcode配置.md */; };
 		FC6EB4702029417E00DF644D /* mac下的socket调试工具---sokit.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */; };
 		FC6EB4722029439A00DF644D /* Swift 网络单元测试完全手册.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */; };
+		FC7FBAD52064D57800157E07 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FBAD42064D57800157E07 /* Observable.swift */; };
+		FC7FBAD72064D8D200157E07 /* Observable.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAD62064D8D200157E07 /* Observable.md */; };
 		FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */; };
 		FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */; };
 		FCA902A52037EB5D0088AC7B /* RACMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A42037EB5D0088AC7B /* RACMapViewController.m */; };
@@ -217,6 +219,9 @@
 		FC69DF44206103AA006461A6 /* Xcode配置.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Xcode配置.md"; sourceTree = "<group>"; };
 		FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "mac下的socket调试工具---sokit.pdf"; sourceTree = "<group>"; };
 		FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Swift 网络单元测试完全手册.pdf"; sourceTree = "<group>"; };
+		FC7FBAD42064D57800157E07 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		FC7FBAD62064D8D200157E07 /* Observable.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Observable.md; sourceTree = "<group>"; };
+		FC8A13A22063538C00150191 /* CodableDemos.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CodableDemos.playground; sourceTree = "<group>"; };
 		FC9738092013413900E6CFA8 /* iOS_9ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_9ViewController.h; sourceTree = "<group>"; };
 		FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_9ViewController.m; sourceTree = "<group>"; };
 		FCA7AC8F2008CEE000586824 /* iOS_Demos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_Demos-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -525,6 +530,15 @@
 			path = MVVMDemo;
 			sourceTree = "<group>";
 		};
+		FC7FBAD32064D44D00157E07 /* RxSwift */ = {
+			isa = PBXGroup;
+			children = (
+				FC7FBAD42064D57800157E07 /* Observable.swift */,
+				FC7FBAD62064D8D200157E07 /* Observable.md */,
+			);
+			path = RxSwift;
+			sourceTree = "<group>";
+		};
 		FC9738082013410400E6CFA8 /* iOS9 */ = {
 			isa = PBXGroup;
 			children = (
@@ -630,6 +644,7 @@
 		FCAF86F72041354A008CFE43 /* Swift tips */ = {
 			isa = PBXGroup;
 			children = (
+				FC8A13A22063538C00150191 /* CodableDemos.playground */,
 				FCAF86FE204158EC008CFE43 /* swift4_tips.pdf */,
 				FCAF86F820413573008CFE43 /* CurryingViewController.swift */,
 				FCAF86FC2041560E008CFE43 /* SequenceViewController.swift */,
@@ -643,6 +658,7 @@
 		FCB663C9203195C3004B1325 /* Rac */ = {
 			isa = PBXGroup;
 			children = (
+				FC7FBAD32064D44D00157E07 /* RxSwift */,
 				FCB663CA203195F3004B1325 /* raccommand */,
 				FCB663E020328E4E004B1325 /* RacSignalViewController.h */,
 				FCB663E120328E4E004B1325 /* RacSignalViewController.m */,
@@ -999,6 +1015,7 @@
 				FC54B758202D5E3000007FC8 /* JS 与iOS交互 in Resources */,
 				FC54B765202D7CBE00007FC8 /* HTTP的客户端识别.pdf in Resources */,
 				FC54B74D202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */,
+				FC7FBAD72064D8D200157E07 /* Observable.md in Resources */,
 				FC6733BE2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf in Resources */,
 				FCED5D4E2005DFD2009A43DD /* Main.storyboard in Resources */,
 				FC54B767202D7CC900007FC8 /* iOS 保持界面流畅的技巧.pdf in Resources */,
@@ -1114,6 +1131,7 @@
 				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
 				"${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1122,6 +1140,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLRoutes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1226,6 +1245,7 @@
 				FCAF86F5203FE032008CFE43 /* SVProgressHUD+Helper.m in Sources */,
 				FCAF86FD2041560E008CFE43 /* SequenceViewController.swift in Sources */,
 				FCB663D32031968C004B1325 /* NSString+EmailAdditions.m in Sources */,
+				FC7FBAD52064D57800157E07 /* Observable.swift in Sources */,
 				FCA902AB203BEC510088AC7B /* RACFliterViewController.m in Sources */,
 				FC48A45F204E6D9E00B27F1E /* UIControl+Permission.m in Sources */,
 				FCE789D7200DF164003C621D /* HttpTableViewController.m in Sources */,

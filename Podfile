@@ -4,11 +4,9 @@
 workspace 'iOS_Demos.xcworkspace' #workspace文件名
 project 'iOS_Demos/iOS_Demos.xcodeproj' #主工程路径
 
-target 'VueX' do
-    platform :ios, '9.0'
-    project 'VueX.xcodeproj'
-    
-end
+
+use_frameworks!
+
 
 target 'iOS_Demos' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -50,7 +48,7 @@ target 'iOS_Demos' do
     # pod 'ContextMenu'                         # menu
     # pod 'SideMenu'                            # 左滑菜单 有隐藏status bar的动画
     # YZXUnlock                                 # 手势解锁
-    # pod 'SVProgressHUD', '~> 2.2.2'           # 提示组件
+    pod 'SVProgressHUD', '~> 2.2.2'             # 提示组件
     # pigfly/A_J_Dot_Loading_Indicator          # 三个点的loading动画
 
     
@@ -87,7 +85,8 @@ target 'iOS_Demos' do
     # pod 'Masonry', '~> 1.0.2'                 # 自动布局
     # pod 'SnapKit', '~> 4.0.0'
     # pod 'HandyFrame'                          # 简化语法
-    
+    # schibsted/layout                          # 使用html来写layout
+    # pod "FlexBoxLayout"                       # 饿了么高性能frame
 
     
     # 工具类
@@ -107,6 +106,7 @@ target 'iOS_Demos' do
     # IBM-Swift/Swift-Kuery-ORM                 # mac 对象存储 
     # pod 'SwifterSwift'                        # swift extension
     # http://answerhuang.duapp.com/index.php/2018/02/15/jenkins-2/      #自动化发布的jekin环境
+    # commitizen/cz-cli                         # git commit 格式化
 
     
     
