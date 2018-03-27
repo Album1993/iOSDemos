@@ -49,8 +49,27 @@
 		FC69DF45206103AA006461A6 /* Xcode配置.md in Resources */ = {isa = PBXBuildFile; fileRef = FC69DF44206103AA006461A6 /* Xcode配置.md */; };
 		FC6EB4702029417E00DF644D /* mac下的socket调试工具---sokit.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */; };
 		FC6EB4722029439A00DF644D /* Swift 网络单元测试完全手册.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */; };
-		FC7FBAD52064D57800157E07 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FBAD42064D57800157E07 /* Observable.swift */; };
 		FC7FBAD72064D8D200157E07 /* Observable.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAD62064D8D200157E07 /* Observable.md */; };
+		FC7FBADC20651E3500157E07 /* Subjects、Variables.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAD820651E3500157E07 /* Subjects、Variables.md */; };
+		FC7FBADD20651E3500157E07 /* 观察者1： AnyObserver、Binder.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAD920651E3500157E07 /* 观察者1： AnyObserver、Binder.md */; };
+		FC7FBADE20651E3500157E07 /* 观察者2： 自定义可绑定属性.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBADA20651E3500157E07 /* 观察者2： 自定义可绑定属性.md */; };
+		FC7FBADF20651E3500157E07 /* Observable订阅、事件监听、订阅销毁.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBADB20651E3500157E07 /* Observable订阅、事件监听、订阅销毁.md */; };
+		FC7FBAF02069D60A00157E07 /* 条件和布尔操作符：amb、takeWhile、skipWhile等.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAE02069D60700157E07 /* 条件和布尔操作符：amb、takeWhile、skipWhile等.md */; };
+		FC7FBAF12069D60A00157E07 /* 过滤操作符：filter、take、skip等.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAE12069D60800157E07 /* 过滤操作符：filter、take、skip等.md */; };
+		FC7FBAF22069D60A00157E07 /* UI控件扩展1：UILabel.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAE22069D60800157E07 /* UI控件扩展1：UILabel.md */; };
+		FC7FBAF32069D60A00157E07 /* Combining Observables.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAE32069D60800157E07 /* Combining Observables.md */; };
+		FC7FBAF42069D60A00157E07 /* toArray、reduce、concat.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAE42069D60800157E07 /* toArray、reduce、concat.md */; };
+		FC7FBAF52069D60A00157E07 /* 调度器、subscribeOn、observeOn.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAE52069D60800157E07 /* 调度器、subscribeOn、observeOn.md */; };
+		FC7FBAF62069D60A00157E07 /* 其他操作符：delay、materialize、timeout等.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAE62069D60800157E07 /* 其他操作符：delay、materialize、timeout等.md */; };
+		FC7FBAF72069D60A00157E07 /* 连接操作符：connect、publish、replay、multicast.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAE72069D60800157E07 /* 连接操作符：connect、publish、replay、multicast.md */; };
+		FC7FBAF82069D60A00157E07 /* 特征序列1：Single、Completable、Maybe.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAE82069D60900157E07 /* 特征序列1：Single、Completable、Maybe.md */; };
+		FC7FBAF92069D60A00157E07 /* 调试操作.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAE92069D60900157E07 /* 调试操作.md */; };
+		FC7FBAFA2069D60A00157E07 /* UI控件扩展3：UIButton、UIBarButtonItem.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAEA2069D60900157E07 /* UI控件扩展3：UIButton、UIBarButtonItem.md */; };
+		FC7FBAFB2069D60A00157E07 /* UI控件扩展2：UITextField、UITextView.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAEB2069D60900157E07 /* UI控件扩展2：UITextField、UITextView.md */; };
+		FC7FBAFC2069D60A00157E07 /* 变换操作符：buffer、map、flatMap、scan等.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAEC2069D60900157E07 /* 变换操作符：buffer、map、flatMap、scan等.md */; };
+		FC7FBAFD2069D60A00157E07 /* 特征序列3：ControlProperty、 ControlEvent.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAED2069D60900157E07 /* 特征序列3：ControlProperty、 ControlEvent.md */; };
+		FC7FBAFE2069D60A00157E07 /* 错误处理操作（Error Handling Operators）.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAEE2069D60A00157E07 /* 错误处理操作（Error Handling Operators）.md */; };
+		FC7FBAFF2069D60A00157E07 /* 特征序列2：Driver.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAEF2069D60A00157E07 /* 特征序列2：Driver.md */; };
 		FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */; };
 		FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */; };
 		FCA902A52037EB5D0088AC7B /* RACMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A42037EB5D0088AC7B /* RACMapViewController.m */; };
@@ -219,8 +238,27 @@
 		FC69DF44206103AA006461A6 /* Xcode配置.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Xcode配置.md"; sourceTree = "<group>"; };
 		FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "mac下的socket调试工具---sokit.pdf"; sourceTree = "<group>"; };
 		FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Swift 网络单元测试完全手册.pdf"; sourceTree = "<group>"; };
-		FC7FBAD42064D57800157E07 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		FC7FBAD62064D8D200157E07 /* Observable.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Observable.md; sourceTree = "<group>"; };
+		FC7FBAD820651E3500157E07 /* Subjects、Variables.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Subjects、Variables.md"; sourceTree = "<group>"; };
+		FC7FBAD920651E3500157E07 /* 观察者1： AnyObserver、Binder.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "观察者1： AnyObserver、Binder.md"; sourceTree = "<group>"; };
+		FC7FBADA20651E3500157E07 /* 观察者2： 自定义可绑定属性.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "观察者2： 自定义可绑定属性.md"; sourceTree = "<group>"; };
+		FC7FBADB20651E3500157E07 /* Observable订阅、事件监听、订阅销毁.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Observable订阅、事件监听、订阅销毁.md"; sourceTree = "<group>"; };
+		FC7FBAE02069D60700157E07 /* 条件和布尔操作符：amb、takeWhile、skipWhile等.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "条件和布尔操作符：amb、takeWhile、skipWhile等.md"; sourceTree = "<group>"; };
+		FC7FBAE12069D60800157E07 /* 过滤操作符：filter、take、skip等.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "过滤操作符：filter、take、skip等.md"; sourceTree = "<group>"; };
+		FC7FBAE22069D60800157E07 /* UI控件扩展1：UILabel.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "UI控件扩展1：UILabel.md"; sourceTree = "<group>"; };
+		FC7FBAE32069D60800157E07 /* Combining Observables.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Combining Observables.md"; sourceTree = "<group>"; };
+		FC7FBAE42069D60800157E07 /* toArray、reduce、concat.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "toArray、reduce、concat.md"; sourceTree = "<group>"; };
+		FC7FBAE52069D60800157E07 /* 调度器、subscribeOn、observeOn.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "调度器、subscribeOn、observeOn.md"; sourceTree = "<group>"; };
+		FC7FBAE62069D60800157E07 /* 其他操作符：delay、materialize、timeout等.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "其他操作符：delay、materialize、timeout等.md"; sourceTree = "<group>"; };
+		FC7FBAE72069D60800157E07 /* 连接操作符：connect、publish、replay、multicast.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "连接操作符：connect、publish、replay、multicast.md"; sourceTree = "<group>"; };
+		FC7FBAE82069D60900157E07 /* 特征序列1：Single、Completable、Maybe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "特征序列1：Single、Completable、Maybe.md"; sourceTree = "<group>"; };
+		FC7FBAE92069D60900157E07 /* 调试操作.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "调试操作.md"; sourceTree = "<group>"; };
+		FC7FBAEA2069D60900157E07 /* UI控件扩展3：UIButton、UIBarButtonItem.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "UI控件扩展3：UIButton、UIBarButtonItem.md"; sourceTree = "<group>"; };
+		FC7FBAEB2069D60900157E07 /* UI控件扩展2：UITextField、UITextView.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "UI控件扩展2：UITextField、UITextView.md"; sourceTree = "<group>"; };
+		FC7FBAEC2069D60900157E07 /* 变换操作符：buffer、map、flatMap、scan等.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "变换操作符：buffer、map、flatMap、scan等.md"; sourceTree = "<group>"; };
+		FC7FBAED2069D60900157E07 /* 特征序列3：ControlProperty、 ControlEvent.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "特征序列3：ControlProperty、 ControlEvent.md"; sourceTree = "<group>"; };
+		FC7FBAEE2069D60A00157E07 /* 错误处理操作（Error Handling Operators）.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "错误处理操作（Error Handling Operators）.md"; sourceTree = "<group>"; };
+		FC7FBAEF2069D60A00157E07 /* 特征序列2：Driver.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "特征序列2：Driver.md"; sourceTree = "<group>"; };
 		FC8A13A22063538C00150191 /* CodableDemos.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CodableDemos.playground; sourceTree = "<group>"; };
 		FC9738092013413900E6CFA8 /* iOS_9ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_9ViewController.h; sourceTree = "<group>"; };
 		FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_9ViewController.m; sourceTree = "<group>"; };
@@ -533,7 +571,26 @@
 		FC7FBAD32064D44D00157E07 /* RxSwift */ = {
 			isa = PBXGroup;
 			children = (
-				FC7FBAD42064D57800157E07 /* Observable.swift */,
+				FC7FBAE32069D60800157E07 /* Combining Observables.md */,
+				FC7FBAE42069D60800157E07 /* toArray、reduce、concat.md */,
+				FC7FBAE22069D60800157E07 /* UI控件扩展1：UILabel.md */,
+				FC7FBAEB2069D60900157E07 /* UI控件扩展2：UITextField、UITextView.md */,
+				FC7FBAEA2069D60900157E07 /* UI控件扩展3：UIButton、UIBarButtonItem.md */,
+				FC7FBAE62069D60800157E07 /* 其他操作符：delay、materialize、timeout等.md */,
+				FC7FBAEC2069D60900157E07 /* 变换操作符：buffer、map、flatMap、scan等.md */,
+				FC7FBAE02069D60700157E07 /* 条件和布尔操作符：amb、takeWhile、skipWhile等.md */,
+				FC7FBAE82069D60900157E07 /* 特征序列1：Single、Completable、Maybe.md */,
+				FC7FBAEF2069D60A00157E07 /* 特征序列2：Driver.md */,
+				FC7FBAED2069D60900157E07 /* 特征序列3：ControlProperty、 ControlEvent.md */,
+				FC7FBAE52069D60800157E07 /* 调度器、subscribeOn、observeOn.md */,
+				FC7FBAE92069D60900157E07 /* 调试操作.md */,
+				FC7FBAE12069D60800157E07 /* 过滤操作符：filter、take、skip等.md */,
+				FC7FBAE72069D60800157E07 /* 连接操作符：connect、publish、replay、multicast.md */,
+				FC7FBAEE2069D60A00157E07 /* 错误处理操作（Error Handling Operators）.md */,
+				FC7FBADB20651E3500157E07 /* Observable订阅、事件监听、订阅销毁.md */,
+				FC7FBAD820651E3500157E07 /* Subjects、Variables.md */,
+				FC7FBAD920651E3500157E07 /* 观察者1： AnyObserver、Binder.md */,
+				FC7FBADA20651E3500157E07 /* 观察者2： 自定义可绑定属性.md */,
 				FC7FBAD62064D8D200157E07 /* Observable.md */,
 			);
 			path = RxSwift;
@@ -1009,24 +1066,44 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCED5D532005DFD2009A43DD /* LaunchScreen.storyboard in Resources */,
+				FC7FBADC20651E3500157E07 /* Subjects、Variables.md in Resources */,
 				FC6EB4702029417E00DF644D /* mac下的socket调试工具---sokit.pdf in Resources */,
 				FC6EB4722029439A00DF644D /* Swift 网络单元测试完全手册.pdf in Resources */,
+				FC7FBAF72069D60A00157E07 /* 连接操作符：connect、publish、replay、multicast.md in Resources */,
 				FCED5D502005DFD2009A43DD /* Assets.xcassets in Resources */,
+				FC7FBAF42069D60A00157E07 /* toArray、reduce、concat.md in Resources */,
 				FC54B758202D5E3000007FC8 /* JS 与iOS交互 in Resources */,
+				FC7FBAF62069D60A00157E07 /* 其他操作符：delay、materialize、timeout等.md in Resources */,
+				FC7FBADE20651E3500157E07 /* 观察者2： 自定义可绑定属性.md in Resources */,
 				FC54B765202D7CBE00007FC8 /* HTTP的客户端识别.pdf in Resources */,
 				FC54B74D202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */,
+				FC7FBAF92069D60A00157E07 /* 调试操作.md in Resources */,
+				FC7FBAF12069D60A00157E07 /* 过滤操作符：filter、take、skip等.md in Resources */,
 				FC7FBAD72064D8D200157E07 /* Observable.md in Resources */,
+				FC7FBAFF2069D60A00157E07 /* 特征序列2：Driver.md in Resources */,
 				FC6733BE2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf in Resources */,
 				FCED5D4E2005DFD2009A43DD /* Main.storyboard in Resources */,
 				FC54B767202D7CC900007FC8 /* iOS 保持界面流畅的技巧.pdf in Resources */,
 				FC6733C020281B690078CE03 /* iOS 静态库详解与开发.pdf in Resources */,
 				FCAF86FF204158ED008CFE43 /* swift4_tips.pdf in Resources */,
+				FC7FBAF32069D60A00157E07 /* Combining Observables.md in Resources */,
 				FC54B76D202D7CFB00007FC8 /* 深入理解RunLoop.pdf in Resources */,
 				FC54B74A202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */,
+				FC7FBAF02069D60A00157E07 /* 条件和布尔操作符：amb、takeWhile、skipWhile等.md in Resources */,
+				FC7FBAF82069D60A00157E07 /* 特征序列1：Single、Completable、Maybe.md in Resources */,
+				FC7FBAFD2069D60A00157E07 /* 特征序列3：ControlProperty、 ControlEvent.md in Resources */,
+				FC7FBAF22069D60A00157E07 /* UI控件扩展1：UILabel.md in Resources */,
 				FC6733B62022EDE80078CE03 /* Xcode快捷键 in Resources */,
 				FC54B756202AE83D00007FC8 /* Objective C类方法load和initialize的区别.pdf in Resources */,
+				FC7FBAF52069D60A00157E07 /* 调度器、subscribeOn、observeOn.md in Resources */,
+				FC7FBAFB2069D60A00157E07 /* UI控件扩展2：UITextField、UITextView.md in Resources */,
 				FC54B76B202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf in Resources */,
+				FC7FBAFC2069D60A00157E07 /* 变换操作符：buffer、map、flatMap、scan等.md in Resources */,
+				FC7FBADD20651E3500157E07 /* 观察者1： AnyObserver、Binder.md in Resources */,
+				FC7FBADF20651E3500157E07 /* Observable订阅、事件监听、订阅销毁.md in Resources */,
 				FC6733BB2028163C0078CE03 /* safe_area.pdf in Resources */,
+				FC7FBAFE2069D60A00157E07 /* 错误处理操作（Error Handling Operators）.md in Resources */,
+				FC7FBAFA2069D60A00157E07 /* UI控件扩展3：UIButton、UIBarButtonItem.md in Resources */,
 				FC54B769202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf in Resources */,
 				FC69DF45206103AA006461A6 /* Xcode配置.md in Resources */,
 			);
@@ -1245,7 +1322,6 @@
 				FCAF86F5203FE032008CFE43 /* SVProgressHUD+Helper.m in Sources */,
 				FCAF86FD2041560E008CFE43 /* SequenceViewController.swift in Sources */,
 				FCB663D32031968C004B1325 /* NSString+EmailAdditions.m in Sources */,
-				FC7FBAD52064D57800157E07 /* Observable.swift in Sources */,
 				FCA902AB203BEC510088AC7B /* RACFliterViewController.m in Sources */,
 				FC48A45F204E6D9E00B27F1E /* UIControl+Permission.m in Sources */,
 				FCE789D7200DF164003C621D /* HttpTableViewController.m in Sources */,
