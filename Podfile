@@ -23,8 +23,8 @@ target 'iOS_Demos' do
 
     # pod 'Moya/ReactiveSwift', '~> 11.0'
     # pod 'Alamofire', '~> 4.6'
+    # pod 'Tiercel'                            # swift 大文件下载框架
 
-    
     # audio
     
     # pod 'AudioKit', '~> 4.0'
@@ -50,8 +50,8 @@ target 'iOS_Demos' do
     # YZXUnlock                                 # 手势解锁
     pod 'SVProgressHUD', '~> 2.2.2'             # 提示组件
     # pigfly/A_J_Dot_Loading_Indicator          # 三个点的loading动画
+    # yinxing29/YZXCalendar                     # 日历
 
-    
     
     # 图表
 
@@ -107,7 +107,8 @@ target 'iOS_Demos' do
     # pod 'SwifterSwift'                        # swift extension
     # http://answerhuang.duapp.com/index.php/2018/02/15/jenkins-2/      #自动化发布的jekin环境
     # commitizen/cz-cli                         # git commit 格式化
-
+    # manofit/GJLightBlueTooth                  # 蓝牙demo
+    # pod 'SwiftSoup'                           # html parser
     
     
     # Debug
@@ -115,7 +116,7 @@ target 'iOS_Demos' do
     # pod 'DotzuX', :configurations => ['Debug'] # Swift4.0 Debug网络
     # DebuggableContext                         # 摇晃手机
     # pod 'ResumableAssert', '~> 1.0'           # 可恢复断言
-
+    # shaps80/Peek                              # 摇一摇就能看到整个app的界面结构
 
 
     # reactive
