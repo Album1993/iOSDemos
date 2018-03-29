@@ -72,6 +72,8 @@
 		FC7FBAFF2069D60A00157E07 /* 特征序列2：Driver.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAEF2069D60A00157E07 /* 特征序列2：Driver.md */; };
 		FC7FBB54206A602700157E07 /* OperationQueue.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB53206A602700157E07 /* OperationQueue.md */; };
 		FC7FBB57206B41FC00157E07 /* Concept.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB56206B41FC00157E07 /* Concept.md */; };
+		FC7FBB5B206C8C1400157E07 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FBB5A206C8C1400157E07 /* LockViewController.swift */; };
+		FC7FBB5D206C8C2F00157E07 /* Lock.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB5C206C8C2F00157E07 /* Lock.md */; };
 		FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */; };
 		FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */; };
 		FCA902A52037EB5D0088AC7B /* RACMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A42037EB5D0088AC7B /* RACMapViewController.m */; };
@@ -263,6 +265,8 @@
 		FC7FBAEF2069D60A00157E07 /* 特征序列2：Driver.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "特征序列2：Driver.md"; sourceTree = "<group>"; };
 		FC7FBB53206A602700157E07 /* OperationQueue.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = OperationQueue.md; sourceTree = "<group>"; };
 		FC7FBB56206B41FC00157E07 /* Concept.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Concept.md; sourceTree = "<group>"; };
+		FC7FBB5A206C8C1400157E07 /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
+		FC7FBB5C206C8C2F00157E07 /* Lock.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Lock.md; sourceTree = "<group>"; };
 		FC8A13A22063538C00150191 /* CodableDemos.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CodableDemos.playground; sourceTree = "<group>"; };
 		FC9738092013413900E6CFA8 /* iOS_9ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_9ViewController.h; sourceTree = "<group>"; };
 		FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_9ViewController.m; sourceTree = "<group>"; };
@@ -617,6 +621,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		FC7FBB59206C8BF400157E07 /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				FC7FBB5A206C8C1400157E07 /* LockViewController.swift */,
+				FC7FBB5C206C8C2F00157E07 /* Lock.md */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
 		FC9738082013410400E6CFA8 /* iOS9 */ = {
 			isa = PBXGroup;
 			children = (
@@ -939,6 +952,7 @@
 		FCED5D782005DFDA009A43DD /* GCD */ = {
 			isa = PBXGroup;
 			children = (
+				FC7FBB59206C8BF400157E07 /* Lock */,
 				FC7FBB58206B469400157E07 /* Resources */,
 				FC7FBB55206B3CCF00157E07 /* NSOperation */,
 				FCED5D792005E055009A43DD /* NotifyRegisterDispatchViewController.h */,
@@ -1114,6 +1128,7 @@
 				FC54B74A202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */,
 				FC7FBAF02069D60A00157E07 /* 条件和布尔操作符：amb、takeWhile、skipWhile等.md in Resources */,
 				FC7FBAF82069D60A00157E07 /* 特征序列1：Single、Completable、Maybe.md in Resources */,
+				FC7FBB5D206C8C2F00157E07 /* Lock.md in Resources */,
 				FC7FBAFD2069D60A00157E07 /* 特征序列3：ControlProperty、 ControlEvent.md in Resources */,
 				FC7FBAF22069D60A00157E07 /* UI控件扩展1：UILabel.md in Resources */,
 				FC6733B62022EDE80078CE03 /* Xcode快捷键 in Resources */,
@@ -1319,6 +1334,7 @@
 				FCB9EB6020565C0F00F59A38 /* EnumViewController.swift in Sources */,
 				FCF568E3204FCFC800AD5D86 /* MacroViewController.m in Sources */,
 				FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */,
+				FC7FBB5B206C8C1400157E07 /* LockViewController.swift in Sources */,
 				FCA902A820382C5E0088AC7B /* RACConcatViewController.m in Sources */,
 				FC01911C200749990069A3E0 /* GlobalQueueInitialAndQueueSpec.m in Sources */,
 				FCED5D4B2005DFD2009A43DD /* ViewController.m in Sources */,
