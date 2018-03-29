@@ -459,7 +459,7 @@ _所以在并发的时候，同时能有多少线程在跑是有线程池的线�
 
 多线程同步实现的方式:
 
-[* **@synchronized**
+[ * **@synchronized**
 * **NSLock**
 * **NSRecursiveLock**
 * **NSCondition**
