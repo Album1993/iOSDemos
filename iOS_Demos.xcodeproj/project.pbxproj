@@ -74,6 +74,9 @@
 		FC7FBB57206B41FC00157E07 /* Concept.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB56206B41FC00157E07 /* Concept.md */; };
 		FC7FBB5B206C8C1400157E07 /* LockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7FBB5A206C8C1400157E07 /* LockViewController.swift */; };
 		FC7FBB5D206C8C2F00157E07 /* Lock.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB5C206C8C2F00157E07 /* Lock.md */; };
+		FC7FBB60206CAF1900157E07 /* GCD.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB5F206CAF1900157E07 /* GCD.md */; };
+		FC7FBB62206CCB1800157E07 /* iOS 下如何一键调试 Push.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB61206CCB1800157E07 /* iOS 下如何一键调试 Push.md */; };
+		FC7FBB65206CCBC100157E07 /* r1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB64206CCBC100157E07 /* r1.png */; };
 		FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */; };
 		FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */; };
 		FCA902A52037EB5D0088AC7B /* RACMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A42037EB5D0088AC7B /* RACMapViewController.m */; };
@@ -267,6 +270,9 @@
 		FC7FBB56206B41FC00157E07 /* Concept.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Concept.md; sourceTree = "<group>"; };
 		FC7FBB5A206C8C1400157E07 /* LockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockViewController.swift; sourceTree = "<group>"; };
 		FC7FBB5C206C8C2F00157E07 /* Lock.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Lock.md; sourceTree = "<group>"; };
+		FC7FBB5F206CAF1900157E07 /* GCD.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GCD.md; sourceTree = "<group>"; };
+		FC7FBB61206CCB1800157E07 /* iOS 下如何一键调试 Push.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "iOS 下如何一键调试 Push.md"; sourceTree = "<group>"; };
+		FC7FBB64206CCBC100157E07 /* r1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r1.png; sourceTree = "<group>"; };
 		FC8A13A22063538C00150191 /* CodableDemos.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CodableDemos.playground; sourceTree = "<group>"; };
 		FC9738092013413900E6CFA8 /* iOS_9ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_9ViewController.h; sourceTree = "<group>"; };
 		FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_9ViewController.m; sourceTree = "<group>"; };
@@ -550,7 +556,9 @@
 		FC6733B72022F08F0078CE03 /* iOS11 */ = {
 			isa = PBXGroup;
 			children = (
+				FC7FBB63206CCBA600157E07 /* resources */,
 				FC6733BA2028163C0078CE03 /* safe_area.pdf */,
+				FC7FBB61206CCB1800157E07 /* iOS 下如何一键调试 Push.md */,
 			);
 			path = iOS11;
 			sourceTree = "<group>";
@@ -628,6 +636,34 @@
 				FC7FBB5C206C8C2F00157E07 /* Lock.md */,
 			);
 			path = Lock;
+			sourceTree = "<group>";
+		};
+		FC7FBB5E206CAE8000157E07 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				FCED5D792005E055009A43DD /* NotifyRegisterDispatchViewController.h */,
+				FCED5D7A2005E055009A43DD /* NotifyRegisterDispatchViewController.m */,
+				FC019117200746530069A3E0 /* DispatchSourceTypeTimerViewController.h */,
+				FC019118200746530069A3E0 /* DispatchSourceTypeTimerViewController.m */,
+				FC01911A200749990069A3E0 /* GlobalQueueInitialAndQueueSpec.h */,
+				FC01911B200749990069A3E0 /* GlobalQueueInitialAndQueueSpec.m */,
+				FC362B6D2008A7580001DD6E /* DispatchGroupViewController.h */,
+				FC362B6E2008A7580001DD6E /* DispatchGroupViewController.m */,
+				FCA7AC922008D03C00586824 /* DispatchGroupViewController+Testing.h */,
+				FCE789DB200F0DDE003C621D /* DispathcAsyncAndSyncViewController.h */,
+				FCE789DC200F0DDE003C621D /* DispathcAsyncAndSyncViewController.m */,
+				FCE8C53520528F9E00BD1562 /* DispatchSemaphoreViewController.swift */,
+				FC7FBB5F206CAF1900157E07 /* GCD.md */,
+			);
+			path = GCD;
+			sourceTree = "<group>";
+		};
+		FC7FBB63206CCBA600157E07 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC7FBB64206CCBC100157E07 /* r1.png */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		FC9738082013410400E6CFA8 /* iOS9 */ = {
@@ -952,26 +988,15 @@
 		FCED5D782005DFDA009A43DD /* GCD */ = {
 			isa = PBXGroup;
 			children = (
+				FC7FBB5E206CAE8000157E07 /* GCD */,
 				FC7FBB59206C8BF400157E07 /* Lock */,
 				FC7FBB58206B469400157E07 /* Resources */,
 				FC7FBB55206B3CCF00157E07 /* NSOperation */,
-				FCED5D792005E055009A43DD /* NotifyRegisterDispatchViewController.h */,
-				FCED5D7A2005E055009A43DD /* NotifyRegisterDispatchViewController.m */,
 				FC01910B2005E4510069A3E0 /* GCDTableViewController.h */,
 				FC01910C2005E4510069A3E0 /* GCDTableViewController.m */,
-				FC019117200746530069A3E0 /* DispatchSourceTypeTimerViewController.h */,
-				FC019118200746530069A3E0 /* DispatchSourceTypeTimerViewController.m */,
-				FC01911A200749990069A3E0 /* GlobalQueueInitialAndQueueSpec.h */,
-				FC01911B200749990069A3E0 /* GlobalQueueInitialAndQueueSpec.m */,
-				FC362B6D2008A7580001DD6E /* DispatchGroupViewController.h */,
-				FC362B6E2008A7580001DD6E /* DispatchGroupViewController.m */,
-				FCA7AC922008D03C00586824 /* DispatchGroupViewController+Testing.h */,
-				FCE789DB200F0DDE003C621D /* DispathcAsyncAndSyncViewController.h */,
-				FCE789DC200F0DDE003C621D /* DispathcAsyncAndSyncViewController.m */,
 				FC48A463204E6FA300B27F1E /* BizarreQuestionViewController.swift */,
 				FC151705204E8B93001FABCE /* RunLoopViewController.h */,
 				FC151706204E8B94001FABCE /* RunLoopViewController.m */,
-				FCE8C53520528F9E00BD1562 /* DispatchSemaphoreViewController.swift */,
 				FC7FBB56206B41FC00157E07 /* Concept.md */,
 			);
 			path = GCD;
@@ -1112,6 +1137,7 @@
 				FC54B758202D5E3000007FC8 /* JS 与iOS交互 in Resources */,
 				FC7FBAF62069D60A00157E07 /* 其他操作符：delay、materialize、timeout等.md in Resources */,
 				FC7FBADE20651E3500157E07 /* 观察者2： 自定义可绑定属性.md in Resources */,
+				FC7FBB65206CCBC100157E07 /* r1.png in Resources */,
 				FC54B765202D7CBE00007FC8 /* HTTP的客户端识别.pdf in Resources */,
 				FC54B74D202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */,
 				FC7FBAF92069D60A00157E07 /* 调试操作.md in Resources */,
@@ -1124,6 +1150,7 @@
 				FC6733C020281B690078CE03 /* iOS 静态库详解与开发.pdf in Resources */,
 				FCAF86FF204158ED008CFE43 /* swift4_tips.pdf in Resources */,
 				FC7FBAF32069D60A00157E07 /* Combining Observables.md in Resources */,
+				FC7FBB62206CCB1800157E07 /* iOS 下如何一键调试 Push.md in Resources */,
 				FC54B76D202D7CFB00007FC8 /* 深入理解RunLoop.pdf in Resources */,
 				FC54B74A202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */,
 				FC7FBAF02069D60A00157E07 /* 条件和布尔操作符：amb、takeWhile、skipWhile等.md in Resources */,
@@ -1136,6 +1163,7 @@
 				FC7FBAF52069D60A00157E07 /* 调度器、subscribeOn、observeOn.md in Resources */,
 				FC7FBAFB2069D60A00157E07 /* UI控件扩展2：UITextField、UITextView.md in Resources */,
 				FC54B76B202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf in Resources */,
+				FC7FBB60206CAF1900157E07 /* GCD.md in Resources */,
 				FC7FBAFC2069D60A00157E07 /* 变换操作符：buffer、map、flatMap、scan等.md in Resources */,
 				FC7FBB54206A602700157E07 /* OperationQueue.md in Resources */,
 				FC7FBADD20651E3500157E07 /* 观察者1： AnyObserver、Binder.md in Resources */,
