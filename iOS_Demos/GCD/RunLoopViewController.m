@@ -74,6 +74,27 @@ static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActi
 
     // clean up code here . Be sure to release any allocated autorelease pools
 }
+//
+//- (void)runThread {
+//    @autoreleasepool {
+//        //做一次retain操作
+//        self.currentRunloop = CFRetain(CFRunLoopGetCurrent());
+//        [self addRunloopSource];
+//        [self addSocketSource];
+//
+//        CFRunLoopRun();
+//    }
+//    NSLog(@"线程退出");
+//}
+//
+//- (void)stopThread {
+//    if (_currentRunloop) {
+//        [self removeSocketSource];
+//        CFRunLoopStop(_currentRunloop);
+//        CFRelease(_currentRunloop);
+//        self.currentRunloop = NULL;
+//    }
+//}
 
 
 @end

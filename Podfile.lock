@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
   - JLRoutes (2.0.6)
+  - Masonry (1.0.2)
   - ReactiveObjC (3.0.0)
   - SVProgressHUD (2.2.5)
   - YTKNetwork (2.0.4):
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Aspects (~> 1.4.1)
   - JLRoutes (~> 2.0.5)
+  - Masonry (~> 1.0.2)
   - ReactiveObjC (~> 3.0.0)
   - SVProgressHUD (~> 2.2.2)
   - YTKNetwork
@@ -33,10 +35,11 @@ SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   JLRoutes: 92dcba8bdc54cc18af06ab5578ca1180cb3c83bb
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: 28a47d33156a9e488b4f94b10e5cb63bfac8165e
+PODFILE CHECKSUM: 3d3ddc9a70a43a1e33e0521950ed8b97a6ce0ded
 
 COCOAPODS: 1.4.0

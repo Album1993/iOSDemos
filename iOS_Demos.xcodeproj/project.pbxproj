@@ -49,6 +49,7 @@
 		FC69DF45206103AA006461A6 /* Xcode配置.md in Resources */ = {isa = PBXBuildFile; fileRef = FC69DF44206103AA006461A6 /* Xcode配置.md */; };
 		FC6EB4702029417E00DF644D /* mac下的socket调试工具---sokit.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */; };
 		FC6EB4722029439A00DF644D /* Swift 网络单元测试完全手册.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */; };
+		FC7CBC26207C898A00638C50 /* Swift4.1.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7CBC25207C898A00638C50 /* Swift4.1.md */; };
 		FC7FBAD72064D8D200157E07 /* Observable.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAD62064D8D200157E07 /* Observable.md */; };
 		FC7FBADC20651E3500157E07 /* Subjects、Variables.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAD820651E3500157E07 /* Subjects、Variables.md */; };
 		FC7FBADD20651E3500157E07 /* 观察者1： AnyObserver、Binder.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBAD920651E3500157E07 /* 观察者1： AnyObserver、Binder.md */; };
@@ -78,6 +79,7 @@
 		FC7FBB62206CCB1800157E07 /* iOS 下如何一键调试 Push.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB61206CCB1800157E07 /* iOS 下如何一键调试 Push.md */; };
 		FC7FBB65206CCBC100157E07 /* r1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB64206CCBC100157E07 /* r1.png */; };
 		FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */; };
+		FCA36C43207DD9F2004CF921 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA36C42207DD9F2004CF921 /* NameSpace.swift */; };
 		FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */; };
 		FCA902A52037EB5D0088AC7B /* RACMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A42037EB5D0088AC7B /* RACMapViewController.m */; };
 		FCA902A820382C5E0088AC7B /* RACConcatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A720382C5E0088AC7B /* RACConcatViewController.m */; };
@@ -102,6 +104,8 @@
 		FCAF86FD2041560E008CFE43 /* SequenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86FC2041560E008CFE43 /* SequenceViewController.swift */; };
 		FCAF86FF204158ED008CFE43 /* swift4_tips.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FCAF86FE204158EC008CFE43 /* swift4_tips.pdf */; };
 		FCAF87012043F1E0008CFE43 /* EscapingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF87002043F1E0008CFE43 /* EscapingViewController.swift */; };
+		FCB38C2C207CA4290081757C /* 链式动画.md in Resources */ = {isa = PBXBuildFile; fileRef = FCB38C2B207CA4290081757C /* 链式动画.md */; };
+		FCB38C30207CA95D0081757C /* attrbute.md in Resources */ = {isa = PBXBuildFile; fileRef = FCB38C2F207CA95D0081757C /* attrbute.md */; };
 		FCB663D32031968C004B1325 /* NSString+EmailAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663D22031968B004B1325 /* NSString+EmailAdditions.m */; };
 		FCB663D62032712D004B1325 /* NSObject+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663D52032712D004B1325 /* NSObject+Property.m */; };
 		FCB663D9203278D1004B1325 /* MethodChainingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663D8203278D1004B1325 /* MethodChainingViewController.m */; };
@@ -245,6 +249,7 @@
 		FC69DF44206103AA006461A6 /* Xcode配置.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Xcode配置.md"; sourceTree = "<group>"; };
 		FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "mac下的socket调试工具---sokit.pdf"; sourceTree = "<group>"; };
 		FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Swift 网络单元测试完全手册.pdf"; sourceTree = "<group>"; };
+		FC7CBC25207C898A00638C50 /* Swift4.1.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Swift4.1.md; sourceTree = "<group>"; };
 		FC7FBAD62064D8D200157E07 /* Observable.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Observable.md; sourceTree = "<group>"; };
 		FC7FBAD820651E3500157E07 /* Subjects、Variables.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Subjects、Variables.md"; sourceTree = "<group>"; };
 		FC7FBAD920651E3500157E07 /* 观察者1： AnyObserver、Binder.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "观察者1： AnyObserver、Binder.md"; sourceTree = "<group>"; };
@@ -273,9 +278,10 @@
 		FC7FBB5F206CAF1900157E07 /* GCD.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GCD.md; sourceTree = "<group>"; };
 		FC7FBB61206CCB1800157E07 /* iOS 下如何一键调试 Push.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "iOS 下如何一键调试 Push.md"; sourceTree = "<group>"; };
 		FC7FBB64206CCBC100157E07 /* r1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r1.png; sourceTree = "<group>"; };
-		FC8A13A22063538C00150191 /* CodableDemos.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CodableDemos.playground; sourceTree = "<group>"; };
+		FC8A13A22063538C00150191 /* CodableDemos.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CodableDemos.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FC9738092013413900E6CFA8 /* iOS_9ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_9ViewController.h; sourceTree = "<group>"; };
 		FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_9ViewController.m; sourceTree = "<group>"; };
+		FCA36C42207DD9F2004CF921 /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
 		FCA7AC8F2008CEE000586824 /* iOS_Demos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_Demos-Bridging-Header.h"; sourceTree = "<group>"; };
 		FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		FCA7AC922008D03C00586824 /* DispatchGroupViewController+Testing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DispatchGroupViewController+Testing.h"; sourceTree = "<group>"; };
@@ -328,6 +334,8 @@
 		FCAF86FC2041560E008CFE43 /* SequenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceViewController.swift; sourceTree = "<group>"; };
 		FCAF86FE204158EC008CFE43 /* swift4_tips.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = swift4_tips.pdf; sourceTree = "<group>"; };
 		FCAF87002043F1E0008CFE43 /* EscapingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapingViewController.swift; sourceTree = "<group>"; };
+		FCB38C2B207CA4290081757C /* 链式动画.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "链式动画.md"; sourceTree = "<group>"; };
+		FCB38C2F207CA95D0081757C /* attrbute.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = attrbute.md; sourceTree = "<group>"; };
 		FCB663D12031968B004B1325 /* NSString+EmailAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EmailAdditions.h"; sourceTree = "<group>"; };
 		FCB663D22031968B004B1325 /* NSString+EmailAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EmailAdditions.m"; sourceTree = "<group>"; };
 		FCB663D42032712D004B1325 /* NSObject+Property.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Property.h"; sourceTree = "<group>"; };
@@ -537,6 +545,7 @@
 				FCD72D6120456A6E001EC81E /* BlurViewController.swift */,
 				FC48A45D204E6D9E00B27F1E /* UIControl+Permission.h */,
 				FC48A45E204E6D9E00B27F1E /* UIControl+Permission.m */,
+				FCB38C2B207CA4290081757C /* 链式动画.md */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -559,6 +568,7 @@
 				FC7FBB63206CCBA600157E07 /* resources */,
 				FC6733BA2028163C0078CE03 /* safe_area.pdf */,
 				FC7FBB61206CCB1800157E07 /* iOS 下如何一键调试 Push.md */,
+				FC7CBC25207C898A00638C50 /* Swift4.1.md */,
 			);
 			path = iOS11;
 			sourceTree = "<group>";
@@ -778,6 +788,8 @@
 				FCAF87002043F1E0008CFE43 /* EscapingViewController.swift */,
 				FCB9EB5D20564BC500F59A38 /* SetViewController.swift */,
 				FCB9EB5F20565C0F00F59A38 /* EnumViewController.swift */,
+				FCB38C2F207CA95D0081757C /* attrbute.md */,
+				FCA36C42207DD9F2004CF921 /* NameSpace.swift */,
 			);
 			path = "Swift tips";
 			sourceTree = "<group>";
@@ -1134,8 +1146,10 @@
 				FCED5D502005DFD2009A43DD /* Assets.xcassets in Resources */,
 				FC7FBB57206B41FC00157E07 /* Concept.md in Resources */,
 				FC7FBAF42069D60A00157E07 /* toArray、reduce、concat.md in Resources */,
+				FCB38C2C207CA4290081757C /* 链式动画.md in Resources */,
 				FC54B758202D5E3000007FC8 /* JS 与iOS交互 in Resources */,
 				FC7FBAF62069D60A00157E07 /* 其他操作符：delay、materialize、timeout等.md in Resources */,
+				FC7CBC26207C898A00638C50 /* Swift4.1.md in Resources */,
 				FC7FBADE20651E3500157E07 /* 观察者2： 自定义可绑定属性.md in Resources */,
 				FC7FBB65206CCBC100157E07 /* r1.png in Resources */,
 				FC54B765202D7CBE00007FC8 /* HTTP的客户端识别.pdf in Resources */,
@@ -1171,6 +1185,7 @@
 				FC6733BB2028163C0078CE03 /* safe_area.pdf in Resources */,
 				FC7FBAFE2069D60A00157E07 /* 错误处理操作（Error Handling Operators）.md in Resources */,
 				FC7FBAFA2069D60A00157E07 /* UI控件扩展3：UIButton、UIBarButtonItem.md in Resources */,
+				FCB38C30207CA95D0081757C /* attrbute.md in Resources */,
 				FC54B769202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf in Resources */,
 				FC69DF45206103AA006461A6 /* Xcode配置.md in Resources */,
 			);
@@ -1274,6 +1289,7 @@
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
 				"${BUILT_PRODUCTS_DIR}/JLRoutes/JLRoutes.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
@@ -1283,6 +1299,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JLRoutes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
@@ -1422,6 +1439,7 @@
 				FC6308982032B17D005BB402 /* RACSubjectViewController.m in Sources */,
 				FCE789DA200DF2D5003C621D /* HttpsAuthenticationViewController.m in Sources */,
 				FC019119200746530069A3E0 /* DispatchSourceTypeTimerViewController.m in Sources */,
+				FCA36C43207DD9F2004CF921 /* NameSpace.swift in Sources */,
 				FCAF86CD203FDFCE008CFE43 /* UIView+NonBase.m in Sources */,
 				FCDD8DF72052247A0077A7A5 /* CountReferenceViewController.m in Sources */,
 				FCAF82332033F9B700A46E21 /* RACNormalViewController.m in Sources */,

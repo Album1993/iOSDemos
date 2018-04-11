@@ -24,6 +24,7 @@ target 'iOS_Demos' do
     # pod 'Moya/ReactiveSwift', '~> 11.0'
     # pod 'Alamofire', '~> 4.6'
     # pod 'Tiercel'                            # swift 大文件下载框架
+    # zhuhaow/NEKit                            # 网络代理拓展
 
     # audio
     
@@ -51,14 +52,18 @@ target 'iOS_Demos' do
     pod 'SVProgressHUD', '~> 2.2.2'             # 提示组件
     # pigfly/A_J_Dot_Loading_Indicator          # 三个点的loading动画
     # yinxing29/YZXCalendar                     # 日历
+    # cxa/MenuItemKit                           # 类似微信的复制粘贴的弹出框
+    # pod 'HomeButton'                          # iphoneX仿真home键
+    # wubianxiaoxian/CustomChannel              # 标签选择
 
-    
+
     # 图表
 
     # pod 'Charts'
     # pod 'iOS-Echarts'
     # ResearchKit                               # 要集成
     # pod 'HSStockChart'                        # 股票图表
+    # AAChartModel/AAChartKit               
 
     
     
@@ -82,7 +87,7 @@ target 'iOS_Demos' do
     
     # 约束
 
-    # pod 'Masonry', '~> 1.0.2'                 # 自动布局
+    pod 'Masonry', '~> 1.0.2'                 # 自动布局
     # pod 'SnapKit', '~> 4.0.0'
     # pod 'HandyFrame'                          # 简化语法
     # schibsted/layout                          # 使用html来写layout
@@ -109,6 +114,8 @@ target 'iOS_Demos' do
     # commitizen/cz-cli                         # git commit 格式化
     # manofit/GJLightBlueTooth                  # 蓝牙demo
     # pod 'SwiftSoup'                           # html parser
+    # fletcheryang2014/BundleLoader             # 加载自定义bundle
+    # benjaminmayo/merchantkit                  # 获取是否购买app 的信息
     
     
     # Debug
@@ -117,6 +124,7 @@ target 'iOS_Demos' do
     # DebuggableContext                         # 摇晃手机
     # pod 'ResumableAssert', '~> 1.0'           # 可恢复断言
     # shaps80/Peek                              # 摇一摇就能看到整个app的界面结构
+    # pod 'netfox'                              #  a quick look on all executed network requests performed by your iOS or OSX app.
 
 
     # reactive
@@ -179,4 +187,28 @@ target 'iOS_Demos' do
     end
     
 end
+
+
+#自定义pod中添加图片什么的
+
+#NSString *normalImgName = [NSString stringWithFormat:@"%@@2x.png", normalImg];
+#NSBundle *curBundle = [NSBundle bundleForClass:self.class];
+#//  *********** 重点 ***********   //
+#NSString *curBundleName = curBundle.infoDictionary[@"CFBundleName"];
+#NSString *curBundleDirectory = [NSString stringWithFormat:@"%@.bundle", curBundleName];
+#NSString *normalImgPath = [curBundle pathForResource:normalImgName ofType:nil inDirectory:curBundleDirectory];
+#//  ***************************   //
+#UIImage *normalImage = [UIImage imageWithContentsOfFile:normalImgPath];
+
+
+#nib
+
+#NSBundle *curBundle = [NSBundle bundleForClass:self.class];
+#LXFCenterView *centerView = (LXFCenterView *)[curBundle loadNibNamed:@"LXFCenterView" owner:nil options:nil].firstObject;
+#centerView.frame = CGRectMake(30, 140, 200, 100);
+#[self.view addSubview:centerView];
+
+#不过xib中值得一提的是，如果是直接在xib中拖入一个imageView控件来设置图片的加载，我们则需要在图片名字前加上当前bundle名称
+
+#LXFMain.bundle/imagename
 
