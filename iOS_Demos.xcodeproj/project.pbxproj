@@ -80,6 +80,10 @@
 		FC7FBB65206CCBC100157E07 /* r1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB64206CCBC100157E07 /* r1.png */; };
 		FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */; };
 		FCA36C43207DD9F2004CF921 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA36C42207DD9F2004CF921 /* NameSpace.swift */; };
+		FCA36C48207E1C4C004CF921 /* Defer.md in Resources */ = {isa = PBXBuildFile; fileRef = FCA36C47207E1C4C004CF921 /* Defer.md */; };
+		FCA36C4A207E272D004CF921 /* RunTime.md in Resources */ = {isa = PBXBuildFile; fileRef = FCA36C49207E272D004CF921 /* RunTime.md */; };
+		FCA36C4D207E2BF5004CF921 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA36C4C207E2BF5004CF921 /* 1.png */; };
+		FCA36C4F207E2DA8004CF921 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA36C4E207E2DA8004CF921 /* 2.png */; };
 		FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */; };
 		FCA902A52037EB5D0088AC7B /* RACMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A42037EB5D0088AC7B /* RACMapViewController.m */; };
 		FCA902A820382C5E0088AC7B /* RACConcatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A720382C5E0088AC7B /* RACConcatViewController.m */; };
@@ -282,6 +286,10 @@
 		FC9738092013413900E6CFA8 /* iOS_9ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_9ViewController.h; sourceTree = "<group>"; };
 		FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_9ViewController.m; sourceTree = "<group>"; };
 		FCA36C42207DD9F2004CF921 /* NameSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpace.swift; sourceTree = "<group>"; };
+		FCA36C47207E1C4C004CF921 /* Defer.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Defer.md; sourceTree = "<group>"; };
+		FCA36C49207E272D004CF921 /* RunTime.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RunTime.md; sourceTree = "<group>"; };
+		FCA36C4C207E2BF5004CF921 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		FCA36C4E207E2DA8004CF921 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		FCA7AC8F2008CEE000586824 /* iOS_Demos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_Demos-Bridging-Header.h"; sourceTree = "<group>"; };
 		FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		FCA7AC922008D03C00586824 /* DispatchGroupViewController+Testing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DispatchGroupViewController+Testing.h"; sourceTree = "<group>"; };
@@ -505,6 +513,7 @@
 		FC54B751202AD93C00007FC8 /* oc */ = {
 			isa = PBXGroup;
 			children = (
+				FCA36C4B207E2BE4004CF921 /* resources */,
 				FCF568E1204FCFC800AD5D86 /* MacroViewController.h */,
 				FCF568E2204FCFC800AD5D86 /* MacroViewController.m */,
 				FC54B755202AE83D00007FC8 /* Objective C类方法load和initialize的区别.pdf */,
@@ -546,6 +555,7 @@
 				FC48A45D204E6D9E00B27F1E /* UIControl+Permission.h */,
 				FC48A45E204E6D9E00B27F1E /* UIControl+Permission.m */,
 				FCB38C2B207CA4290081757C /* 链式动画.md */,
+				FCA36C49207E272D004CF921 /* RunTime.md */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -685,6 +695,15 @@
 			path = iOS9;
 			sourceTree = "<group>";
 		};
+		FCA36C4B207E2BE4004CF921 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FCA36C4E207E2DA8004CF921 /* 2.png */,
+				FCA36C4C207E2BF5004CF921 /* 1.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		FCAF86B6203FDFCE008CFE43 /* NonBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -790,6 +809,7 @@
 				FCB9EB5F20565C0F00F59A38 /* EnumViewController.swift */,
 				FCB38C2F207CA95D0081757C /* attrbute.md */,
 				FCA36C42207DD9F2004CF921 /* NameSpace.swift */,
+				FCA36C47207E1C4C004CF921 /* Defer.md */,
 			);
 			path = "Swift tips";
 			sourceTree = "<group>";
@@ -1142,6 +1162,7 @@
 				FC7FBADC20651E3500157E07 /* Subjects、Variables.md in Resources */,
 				FC6EB4702029417E00DF644D /* mac下的socket调试工具---sokit.pdf in Resources */,
 				FC6EB4722029439A00DF644D /* Swift 网络单元测试完全手册.pdf in Resources */,
+				FCA36C48207E1C4C004CF921 /* Defer.md in Resources */,
 				FC7FBAF72069D60A00157E07 /* 连接操作符：connect、publish、replay、multicast.md in Resources */,
 				FCED5D502005DFD2009A43DD /* Assets.xcassets in Resources */,
 				FC7FBB57206B41FC00157E07 /* Concept.md in Resources */,
@@ -1179,6 +1200,7 @@
 				FC54B76B202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf in Resources */,
 				FC7FBB60206CAF1900157E07 /* GCD.md in Resources */,
 				FC7FBAFC2069D60A00157E07 /* 变换操作符：buffer、map、flatMap、scan等.md in Resources */,
+				FCA36C4F207E2DA8004CF921 /* 2.png in Resources */,
 				FC7FBB54206A602700157E07 /* OperationQueue.md in Resources */,
 				FC7FBADD20651E3500157E07 /* 观察者1： AnyObserver、Binder.md in Resources */,
 				FC7FBADF20651E3500157E07 /* Observable订阅、事件监听、订阅销毁.md in Resources */,
@@ -1186,6 +1208,8 @@
 				FC7FBAFE2069D60A00157E07 /* 错误处理操作（Error Handling Operators）.md in Resources */,
 				FC7FBAFA2069D60A00157E07 /* UI控件扩展3：UIButton、UIBarButtonItem.md in Resources */,
 				FCB38C30207CA95D0081757C /* attrbute.md in Resources */,
+				FCA36C4A207E272D004CF921 /* RunTime.md in Resources */,
+				FCA36C4D207E2BF5004CF921 /* 1.png in Resources */,
 				FC54B769202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf in Resources */,
 				FC69DF45206103AA006461A6 /* Xcode配置.md in Resources */,
 			);
