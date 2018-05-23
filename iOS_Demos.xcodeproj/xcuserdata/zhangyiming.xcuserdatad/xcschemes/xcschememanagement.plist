@@ -7,7 +7,7 @@
 		<key>iOS_Demos.xcscheme</key>
 		<dict>
 			<key>isShown</key>
-			<true/>
+			<true />
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
@@ -17,17 +17,17 @@
 		<key>FC362B782008BB770001DD6E</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 		<key>FCED5D422005DFD2009A43DD</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 		<key>FCED5D652005DFD2009A43DD</key>
 		<dict>
 			<key>primary</key>
-			<true/>
+			<true />
 		</dict>
 	</dict>
 </dict>

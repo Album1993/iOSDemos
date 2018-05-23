@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		209975F331AB38DBFE8D4D9A /* SchedulingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209976C6F64CEA18086AAAC6 /* SchedulingService.swift */; };
+		209976E641B0A0EFCC61BCF8 /* usage.md in Sources */ = {isa = PBXBuildFile; fileRef = 20997F268A28F97A832BB376 /* usage.md */; };
+		20997AF4E9B8CA523065247F /* SchedulingServiceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20997D25544070F8AB33D87A /* SchedulingServiceStore.swift */; };
+		20997B483F61DABCDD51D66C /* Mock_Appdelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209977DE81A3182B518B0184 /* Mock_Appdelegate.swift */; };
 		26572243B1FE09942A13D386 /* Pods_iOS_Demos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CD4923D8770ECBD3B3FF22 /* Pods_iOS_Demos.framework */; };
 		3D8B2D16C6E2134949089DFF /* Pods_iOS_DemosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F25930448EAED84CCDD81685 /* Pods_iOS_DemosTests.framework */; };
 		A9D76D6A7646DDEAF9B0BC94 /* Pods_iOS_DemosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B43DA54E42699AE0913FE41B /* Pods_iOS_DemosUITests.framework */; };
@@ -37,6 +41,7 @@
 		FC54B769202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B768202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf */; };
 		FC54B76B202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B76A202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf */; };
 		FC54B76D202D7CFB00007FC8 /* 深入理解RunLoop.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B76C202D7CFB00007FC8 /* 深入理解RunLoop.pdf */; };
+		FC56E7BF20AC2C7D00A008D3 /* iOS 中 iBeacon 开发.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC56E7BE20AC2C7C00A008D3 /* iOS 中 iBeacon 开发.pdf */; };
 		FC601013203413A900E2C193 /* RacLifeSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC601012203413A900E2C193 /* RacLifeSelectorViewController.m */; };
 		FC601016203414F500E2C193 /* RACMacroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC601015203414F500E2C193 /* RACMacroViewController.m */; };
 		FC60101920341A7200E2C193 /* RACMulticastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60101820341A7200E2C193 /* RACMulticastViewController.m */; };
@@ -78,6 +83,8 @@
 		FC7FBB60206CAF1900157E07 /* GCD.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB5F206CAF1900157E07 /* GCD.md */; };
 		FC7FBB62206CCB1800157E07 /* iOS 下如何一键调试 Push.md in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB61206CCB1800157E07 /* iOS 下如何一键调试 Push.md */; };
 		FC7FBB65206CCBC100157E07 /* r1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC7FBB64206CCBC100157E07 /* r1.png */; };
+		FC80C75D20A5914700F394AC /* snowflake.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC80C75C20A5914700F394AC /* snowflake.swift */; };
+		FC80C76020A91EFF00F394AC /* JSContext.md in Resources */ = {isa = PBXBuildFile; fileRef = FC80C75F20A91EFF00F394AC /* JSContext.md */; };
 		FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */; };
 		FCA36C43207DD9F2004CF921 /* NameSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA36C42207DD9F2004CF921 /* NameSpace.swift */; };
 		FCA36C48207E1C4C004CF921 /* Defer.md in Resources */ = {isa = PBXBuildFile; fileRef = FCA36C47207E1C4C004CF921 /* Defer.md */; };
@@ -104,10 +111,7 @@
 		FCAF86F3203FE032008CFE43 /* UIImage+SVW_Color.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86EE203FE032008CFE43 /* UIImage+SVW_Color.m */; };
 		FCAF86F4203FE032008CFE43 /* UIColor+SVW_Color.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86F0203FE032008CFE43 /* UIColor+SVW_Color.m */; };
 		FCAF86F5203FE032008CFE43 /* SVProgressHUD+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86F2203FE032008CFE43 /* SVProgressHUD+Helper.m */; };
-		FCAF86F920413574008CFE43 /* CurryingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86F820413573008CFE43 /* CurryingViewController.swift */; };
-		FCAF86FD2041560E008CFE43 /* SequenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF86FC2041560E008CFE43 /* SequenceViewController.swift */; };
 		FCAF86FF204158ED008CFE43 /* swift4_tips.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FCAF86FE204158EC008CFE43 /* swift4_tips.pdf */; };
-		FCAF87012043F1E0008CFE43 /* EscapingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAF87002043F1E0008CFE43 /* EscapingViewController.swift */; };
 		FCB38C2C207CA4290081757C /* 链式动画.md in Resources */ = {isa = PBXBuildFile; fileRef = FCB38C2B207CA4290081757C /* 链式动画.md */; };
 		FCB38C30207CA95D0081757C /* attrbute.md in Resources */ = {isa = PBXBuildFile; fileRef = FCB38C2F207CA95D0081757C /* attrbute.md */; };
 		FCB663D32031968C004B1325 /* NSString+EmailAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663D22031968B004B1325 /* NSString+EmailAdditions.m */; };
@@ -116,8 +120,12 @@
 		FCB663DF203289C6004B1325 /* FunctionProgrammingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663DE203289C6004B1325 /* FunctionProgrammingViewController.m */; };
 		FCB663E220328E4E004B1325 /* RacSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663E120328E4E004B1325 /* RacSignalViewController.m */; };
 		FCB663E520329FD3004B1325 /* RacDisposibleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB663E420329FD3004B1325 /* RacDisposibleViewController.m */; };
-		FCB9EB5E20564BC500F59A38 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9EB5D20564BC500F59A38 /* SetViewController.swift */; };
 		FCB9EB6020565C0F00F59A38 /* EnumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB9EB5F20565C0F00F59A38 /* EnumViewController.swift */; };
+		FCCA36F220AC367200104A8A /* Charles 4.2.1 HTTPS抓包.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FCCA36F120AC367200104A8A /* Charles 4.2.1 HTTPS抓包.pdf */; };
+		FCCA36F620AC371E00104A8A /* 《高性能iOS 应用开发》之降低你 APP 的电量消耗.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FCCA36F520AC371D00104A8A /* 《高性能iOS 应用开发》之降低你 APP 的电量消耗.pdf */; };
+		FCCA36F920AC374500104A8A /* iOS 持续交付之 Fastlane.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FCCA36F820AC374500104A8A /* iOS 持续交付之 Fastlane.pdf */; };
+		FCCA36FF20B550D400104A8A /* fastlane.md in Resources */ = {isa = PBXBuildFile; fileRef = FCCA36FE20B550D400104A8A /* fastlane.md */; };
+		FCCA370120B550D900104A8A /* proxychain.md in Resources */ = {isa = PBXBuildFile; fileRef = FCCA370020B550D900104A8A /* proxychain.md */; };
 		FCD72D332044FB6F001EC81E /* SVW_LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD72D322044FB6F001EC81E /* SVW_LoginRequest.m */; };
 		FCD72D372044FBBA001EC81E /* SVW_LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD72D352044FBBA001EC81E /* SVW_LoginViewModel.m */; };
 		FCD72D462044FC03001EC81E /* SVW_LoginInputFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD72D402044FC03001EC81E /* SVW_LoginInputFooterView.m */; };
@@ -140,6 +148,9 @@
 		FCED5D562005DFD2009A43DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED5D552005DFD2009A43DD /* main.m */; };
 		FCED5D6B2005DFD2009A43DD /* iOS_DemosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED5D6A2005DFD2009A43DD /* iOS_DemosUITests.m */; };
 		FCED5D7B2005E055009A43DD /* NotifyRegisterDispatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCED5D7A2005E055009A43DD /* NotifyRegisterDispatchViewController.m */; };
+		FCF213832092CBA2009D8337 /* 引用循环.md in Resources */ = {isa = PBXBuildFile; fileRef = FCF213822092CBA2009D8337 /* 引用循环.md */; };
+		FCF2138720941513009D8337 /* Conditional conformances in Swift.md in Resources */ = {isa = PBXBuildFile; fileRef = FCF2138620941513009D8337 /* Conditional conformances in Swift.md */; };
+		FCF21389209428D0009D8337 /* 命名规范.md in Resources */ = {isa = PBXBuildFile; fileRef = FCF21388209428D0009D8337 /* 命名规范.md */; };
 		FCF568E3204FCFC800AD5D86 /* MacroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF568E2204FCFC800AD5D86 /* MacroViewController.m */; };
 		FCF568E6204FFF1800AD5D86 /* OperationQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF568E5204FFF1800AD5D86 /* OperationQueueViewController.m */; };
 /* End PBXBuildFile section */
@@ -162,6 +173,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		209976C6F64CEA18086AAAC6 /* SchedulingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulingService.swift; sourceTree = "<group>"; };
+		209977DE81A3182B518B0184 /* Mock_Appdelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock_Appdelegate.swift; sourceTree = "<group>"; };
+		20997D25544070F8AB33D87A /* SchedulingServiceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulingServiceStore.swift; sourceTree = "<group>"; };
+		20997F268A28F97A832BB376 /* usage.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = usage.md; sourceTree = "<group>"; };
 		3AD2402F91C7F18972D3412A /* Pods-iOS_DemosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_DemosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_DemosUITests/Pods-iOS_DemosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		60CD4923D8770ECBD3B3FF22 /* Pods_iOS_Demos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Demos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D2050726460391757CE189 /* Pods-iOS_DemosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_DemosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS_DemosTests/Pods-iOS_DemosTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,7 +217,7 @@
 		FC48A45E204E6D9E00B27F1E /* UIControl+Permission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Permission.m"; sourceTree = "<group>"; };
 		FC48A463204E6FA300B27F1E /* BizarreQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizarreQuestionViewController.swift; sourceTree = "<group>"; };
 		FC54B749202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "用 LLDB 调试 Swift 代码.pdf"; sourceTree = "<group>"; };
-		FC54B74C202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "用 LLDB 调试 Swift 代码.pdf"; sourceTree = "<group>"; };
+		FC54B74C202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "用 LLDB 调试 Swift 代码.pdf"; path = "../pattern/用 LLDB 调试 Swift 代码.pdf"; sourceTree = "<group>"; };
 		FC54B755202AE83D00007FC8 /* Objective C类方法load和initialize的区别.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Objective C类方法load和initialize的区别.pdf"; sourceTree = "<group>"; };
 		FC54B757202D5E3000007FC8 /* JS 与iOS交互 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "JS 与iOS交互"; sourceTree = "<group>"; };
 		FC54B75A202D705400007FC8 /* IMPDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMPDemo.h; sourceTree = "<group>"; };
@@ -216,6 +231,7 @@
 		FC54B768202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS 模块化之 JLRoute 路由示例.pdf"; sourceTree = "<group>"; };
 		FC54B76A202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "URI跳转方式地图导航的代码实践.pdf"; sourceTree = "<group>"; };
 		FC54B76C202D7CFB00007FC8 /* 深入理解RunLoop.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "深入理解RunLoop.pdf"; sourceTree = "<group>"; };
+		FC56E7BE20AC2C7C00A008D3 /* iOS 中 iBeacon 开发.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS 中 iBeacon 开发.pdf"; sourceTree = "<group>"; };
 		FC601011203413A900E2C193 /* RacLifeSelectorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RacLifeSelectorViewController.h; sourceTree = "<group>"; };
 		FC601012203413A900E2C193 /* RacLifeSelectorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RacLifeSelectorViewController.m; sourceTree = "<group>"; };
 		FC601014203414F500E2C193 /* RACMacroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACMacroViewController.h; sourceTree = "<group>"; };
@@ -282,6 +298,8 @@
 		FC7FBB5F206CAF1900157E07 /* GCD.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GCD.md; sourceTree = "<group>"; };
 		FC7FBB61206CCB1800157E07 /* iOS 下如何一键调试 Push.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "iOS 下如何一键调试 Push.md"; sourceTree = "<group>"; };
 		FC7FBB64206CCBC100157E07 /* r1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = r1.png; sourceTree = "<group>"; };
+		FC80C75C20A5914700F394AC /* snowflake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = snowflake.swift; sourceTree = "<group>"; };
+		FC80C75F20A91EFF00F394AC /* JSContext.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = JSContext.md; sourceTree = "<group>"; };
 		FC8A13A22063538C00150191 /* CodableDemos.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = CodableDemos.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FC9738092013413900E6CFA8 /* iOS_9ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOS_9ViewController.h; sourceTree = "<group>"; };
 		FC97380A2013413900E6CFA8 /* iOS_9ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_9ViewController.m; sourceTree = "<group>"; };
@@ -338,10 +356,7 @@
 		FCAF86F1203FE032008CFE43 /* UIImage+SVW_Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SVW_Color.h"; sourceTree = "<group>"; };
 		FCAF86F2203FE032008CFE43 /* SVProgressHUD+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+Helper.m"; sourceTree = "<group>"; };
 		FCAF86F6203FE3A6008CFE43 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		FCAF86F820413573008CFE43 /* CurryingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurryingViewController.swift; sourceTree = "<group>"; };
-		FCAF86FC2041560E008CFE43 /* SequenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceViewController.swift; sourceTree = "<group>"; };
 		FCAF86FE204158EC008CFE43 /* swift4_tips.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = swift4_tips.pdf; sourceTree = "<group>"; };
-		FCAF87002043F1E0008CFE43 /* EscapingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapingViewController.swift; sourceTree = "<group>"; };
 		FCB38C2B207CA4290081757C /* 链式动画.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "链式动画.md"; sourceTree = "<group>"; };
 		FCB38C2F207CA95D0081757C /* attrbute.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = attrbute.md; sourceTree = "<group>"; };
 		FCB663D12031968B004B1325 /* NSString+EmailAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EmailAdditions.h"; sourceTree = "<group>"; };
@@ -356,8 +371,12 @@
 		FCB663E120328E4E004B1325 /* RacSignalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RacSignalViewController.m; sourceTree = "<group>"; };
 		FCB663E320329FD3004B1325 /* RacDisposibleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RacDisposibleViewController.h; sourceTree = "<group>"; };
 		FCB663E420329FD3004B1325 /* RacDisposibleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RacDisposibleViewController.m; sourceTree = "<group>"; };
-		FCB9EB5D20564BC500F59A38 /* SetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 		FCB9EB5F20565C0F00F59A38 /* EnumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumViewController.swift; sourceTree = "<group>"; };
+		FCCA36F120AC367200104A8A /* Charles 4.2.1 HTTPS抓包.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Charles 4.2.1 HTTPS抓包.pdf"; sourceTree = "<group>"; };
+		FCCA36F520AC371D00104A8A /* 《高性能iOS 应用开发》之降低你 APP 的电量消耗.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "《高性能iOS 应用开发》之降低你 APP 的电量消耗.pdf"; sourceTree = "<group>"; };
+		FCCA36F820AC374500104A8A /* iOS 持续交付之 Fastlane.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS 持续交付之 Fastlane.pdf"; sourceTree = "<group>"; };
+		FCCA36FE20B550D400104A8A /* fastlane.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = fastlane.md; sourceTree = "<group>"; };
+		FCCA370020B550D900104A8A /* proxychain.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = proxychain.md; sourceTree = "<group>"; };
 		FCD72D312044FB6F001EC81E /* SVW_LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_LoginRequest.h; sourceTree = "<group>"; };
 		FCD72D322044FB6F001EC81E /* SVW_LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVW_LoginRequest.m; sourceTree = "<group>"; };
 		FCD72D352044FBBA001EC81E /* SVW_LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVW_LoginViewModel.m; sourceTree = "<group>"; };
@@ -400,6 +419,9 @@
 		FCED5D7A2005E055009A43DD /* NotifyRegisterDispatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifyRegisterDispatchViewController.m; sourceTree = "<group>"; };
 		FCEDE11D205F7EBE00A30CFF /* Factory.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Factory.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FCEDE11E205F7F8000A30CFF /* Builder.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Builder.playground; sourceTree = "<group>"; };
+		FCF213822092CBA2009D8337 /* 引用循环.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "引用循环.md"; sourceTree = "<group>"; };
+		FCF2138620941513009D8337 /* Conditional conformances in Swift.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Conditional conformances in Swift.md"; sourceTree = "<group>"; };
+		FCF21388209428D0009D8337 /* 命名规范.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "命名规范.md"; sourceTree = "<group>"; };
 		FCF568E1204FCFC800AD5D86 /* MacroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroViewController.h; sourceTree = "<group>"; };
 		FCF568E2204FCFC800AD5D86 /* MacroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacroViewController.m; sourceTree = "<group>"; };
 		FCF568E4204FFF1800AD5D86 /* OperationQueueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationQueueViewController.h; sourceTree = "<group>"; };
@@ -434,6 +456,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2099725218859AC81A36EB38 /* Scheduling-Notification */ = {
+			isa = PBXGroup;
+			children = (
+				209977DE81A3182B518B0184 /* Mock_Appdelegate.swift */,
+				209976C6F64CEA18086AAAC6 /* SchedulingService.swift */,
+				20997D25544070F8AB33D87A /* SchedulingServiceStore.swift */,
+				20997F268A28F97A832BB376 /* usage.md */,
+			);
+			path = "Scheduling-Notification";
+			sourceTree = "<group>";
+		};
 		334EE5DA452D7D2E3FBB089B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,15 +535,7 @@
 			path = iOS_DemosTests;
 			sourceTree = "<group>";
 		};
-		FC54B74B202AC51700007FC8 /* pattern */ = {
-			isa = PBXGroup;
-			children = (
-				FC54B74C202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf */,
-			);
-			path = pattern;
-			sourceTree = "<group>";
-		};
-		FC54B751202AD93C00007FC8 /* oc */ = {
+		FC54B751202AD93C00007FC8 /* OC */ = {
 			isa = PBXGroup;
 			children = (
 				FCA36C49207E272D004CF921 /* RunTime.md */,
@@ -524,11 +549,12 @@
 				FCB663DE203289C6004B1325 /* FunctionProgrammingViewController.m */,
 				FCDD8DF52052247A0077A7A5 /* CountReferenceViewController.h */,
 				FCDD8DF62052247A0077A7A5 /* CountReferenceViewController.m */,
+				FCF21388209428D0009D8337 /* 命名规范.md */,
 			);
-			path = oc;
+			path = OC;
 			sourceTree = "<group>";
 		};
-		FC54B759202D702A00007FC8 /* runtime */ = {
+		FC54B759202D702A00007FC8 /* RunTime */ = {
 			isa = PBXGroup;
 			children = (
 				FC54B76C202D7CFB00007FC8 /* 深入理解RunLoop.pdf */,
@@ -541,12 +567,13 @@
 				FCDD8DF8205268560077A7A5 /* Felix.h */,
 				FCDD8DF9205268560077A7A5 /* Felix.m */,
 			);
-			path = runtime;
+			path = RunTime;
 			sourceTree = "<group>";
 		};
 		FC54B760202D79B200007FC8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FC80C75B20A590F500F394AC /* Animation */,
 				FC54B766202D7CC900007FC8 /* iOS 保持界面流畅的技巧.pdf */,
 				FC54B768202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf */,
 				FC54B76A202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf */,
@@ -560,9 +587,30 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		FC56E7BD20AC2C6000A008D3 /* Outer Equipment */ = {
+			isa = PBXGroup;
+			children = (
+				FC56E7BE20AC2C7C00A008D3 /* iOS 中 iBeacon 开发.pdf */,
+			);
+			path = "Outer Equipment";
+			sourceTree = "<group>";
+		};
+		FC56E7C020AC2D7900A008D3 /* Swift4 */ = {
+			isa = PBXGroup;
+			children = (
+				FC7CBC25207C898A00638C50 /* Swift4.1.md */,
+				FCAF86FE204158EC008CFE43 /* swift4_tips.pdf */,
+			);
+			path = Swift4;
+			sourceTree = "<group>";
+		};
 		FC6733B22022ED920078CE03 /* Xcode */ = {
 			isa = PBXGroup;
 			children = (
+				FCCA370020B550D900104A8A /* proxychain.md */,
+				FCCA36FE20B550D400104A8A /* fastlane.md */,
+				FC7FBB61206CCB1800157E07 /* iOS 下如何一键调试 Push.md */,
+				FC54B74C202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf */,
 				FC69DF44206103AA006461A6 /* Xcode配置.md */,
 				FC54B749202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf */,
 				FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */,
@@ -577,8 +625,6 @@
 			children = (
 				FC7FBB63206CCBA600157E07 /* resources */,
 				FC6733BA2028163C0078CE03 /* safe_area.pdf */,
-				FC7FBB61206CCB1800157E07 /* iOS 下如何一键调试 Push.md */,
-				FC7CBC25207C898A00638C50 /* Swift4.1.md */,
 			);
 			path = iOS11;
 			sourceTree = "<group>";
@@ -684,6 +730,22 @@
 				FC7FBB64206CCBC100157E07 /* r1.png */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		FC80C75B20A590F500F394AC /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				FC80C75C20A5914700F394AC /* snowflake.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		FC80C75E20A91ECF00F394AC /* JS */ = {
+			isa = PBXGroup;
+			children = (
+				FC80C75F20A91EFF00F394AC /* JSContext.md */,
+			);
+			path = JS;
 			sourceTree = "<group>";
 		};
 		FC9738082013410400E6CFA8 /* iOS9 */ = {
@@ -800,16 +862,14 @@
 		FCAF86F72041354A008CFE43 /* Swift tips */ = {
 			isa = PBXGroup;
 			children = (
+				FC56E7C020AC2D7900A008D3 /* Swift4 */,
 				FC8A13A22063538C00150191 /* CodableDemos.playground */,
-				FCAF86FE204158EC008CFE43 /* swift4_tips.pdf */,
-				FCAF86F820413573008CFE43 /* CurryingViewController.swift */,
-				FCAF86FC2041560E008CFE43 /* SequenceViewController.swift */,
-				FCAF87002043F1E0008CFE43 /* EscapingViewController.swift */,
-				FCB9EB5D20564BC500F59A38 /* SetViewController.swift */,
 				FCB9EB5F20565C0F00F59A38 /* EnumViewController.swift */,
 				FCB38C2F207CA95D0081757C /* attrbute.md */,
 				FCA36C42207DD9F2004CF921 /* NameSpace.swift */,
 				FCA36C47207E1C4C004CF921 /* Defer.md */,
+				FCF213822092CBA2009D8337 /* 引用循环.md */,
+				FCF2138620941513009D8337 /* Conditional conformances in Swift.md */,
 			);
 			path = "Swift tips";
 			sourceTree = "<group>";
@@ -885,6 +945,41 @@
 			path = DesignPattern;
 			sourceTree = "<group>";
 		};
+		FCCA36F320AC36A000104A8A /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				FCED5D492005DFD2009A43DD /* ViewController.h */,
+				FCED5D4A2005DFD2009A43DD /* ViewController.m */,
+				FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */,
+				FCAF86F6203FE3A6008CFE43 /* PrefixHeader.pch */,
+				FCED5D512005DFD2009A43DD /* LaunchScreen.storyboard */,
+				FCED5D552005DFD2009A43DD /* main.m */,
+				FCED5D4C2005DFD2009A43DD /* Main.storyboard */,
+				FCED5D542005DFD2009A43DD /* Info.plist */,
+				FCA7AC8F2008CEE000586824 /* iOS_Demos-Bridging-Header.h */,
+				FCED5D462005DFD2009A43DD /* AppDelegate.h */,
+				FCED5D472005DFD2009A43DD /* AppDelegate.m */,
+				FCED5D4F2005DFD2009A43DD /* Assets.xcassets */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		FCCA36F420AC370E00104A8A /* Optimize */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA36F520AC371D00104A8A /* 《高性能iOS 应用开发》之降低你 APP 的电量消耗.pdf */,
+			);
+			path = Optimize;
+			sourceTree = "<group>";
+		};
+		FCCA36F720AC372F00104A8A /* CI */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA36F820AC374500104A8A /* iOS 持续交付之 Fastlane.pdf */,
+			);
+			path = CI;
+			sourceTree = "<group>";
+		};
 		FCD72D2F2044FB53001EC81E /* Practioner */ = {
 			isa = PBXGroup;
 			children = (
@@ -924,19 +1019,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FCD72D6520464507001EC81E /* algorithm */ = {
+		FCD72D6520464507001EC81E /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
 				FCC0D8D0205F79C1002A8CDA /* DesignPattern */,
 				FCD72D66204646C9001EC81E /* MirrorBinaryTree.h */,
 				FCD72D67204646C9001EC81E /* MirrorBinaryTree.m */,
 			);
-			path = algorithm;
+			path = Algorithm;
 			sourceTree = "<group>";
 		};
 		FCE789D4200DF137003C621D /* Http */ = {
 			isa = PBXGroup;
 			children = (
+				FCCA36F120AC367200104A8A /* Charles 4.2.1 HTTPS抓包.pdf */,
 				FC6EB4712029439A00DF644D /* Swift 网络单元测试完全手册.pdf */,
 				FC54B764202D7CBE00007FC8 /* HTTP的客户端识别.pdf */,
 				FCE789D5200DF164003C621D /* HttpTableViewController.h */,
@@ -975,35 +1071,27 @@
 		FCED5D452005DFD2009A43DD /* iOS_Demos */ = {
 			isa = PBXGroup;
 			children = (
-				FCD72D6520464507001EC81E /* algorithm */,
-				FC70AF582044F5840037EDB8 /* MVVMDemo */,
-				FCAF86F72041354A008CFE43 /* Swift tips */,
-				FCB663C9203195C3004B1325 /* Rac */,
-				FC54B760202D79B200007FC8 /* UI */,
-				FC54B759202D702A00007FC8 /* runtime */,
-				FC54B751202AD93C00007FC8 /* oc */,
-				FC54B74B202AC51700007FC8 /* pattern */,
-				FC6733BC2028184E0078CE03 /* Cocoapods */,
-				FC6733B72022F08F0078CE03 /* iOS11 */,
-				FC6733B22022ED920078CE03 /* Xcode */,
-				FC9738082013410400E6CFA8 /* iOS9 */,
-				FCE789D4200DF137003C621D /* Http */,
-				FC01912820075AA20069A3E0 /* DeviceInfo */,
+				FCCA36F720AC372F00104A8A /* CI */,
+				FCCA36F420AC370E00104A8A /* Optimize */,
+				FCCA36F320AC36A000104A8A /* Project */,
+				FCD72D6520464507001EC81E /* Algorithm */,
 				FC01911D20074F220069A3E0 /* App */,
 				FC01910E2005F1640069A3E0 /* Base */,
+				FC6733BC2028184E0078CE03 /* Cocoapods */,
+				FC01912820075AA20069A3E0 /* DeviceInfo */,
 				FCED5D782005DFDA009A43DD /* GCD */,
-				FCED5D462005DFD2009A43DD /* AppDelegate.h */,
-				FCED5D472005DFD2009A43DD /* AppDelegate.m */,
-				FCED5D492005DFD2009A43DD /* ViewController.h */,
-				FCED5D4A2005DFD2009A43DD /* ViewController.m */,
-				FCED5D4C2005DFD2009A43DD /* Main.storyboard */,
-				FCED5D4F2005DFD2009A43DD /* Assets.xcassets */,
-				FCED5D512005DFD2009A43DD /* LaunchScreen.storyboard */,
-				FCED5D542005DFD2009A43DD /* Info.plist */,
-				FCED5D552005DFD2009A43DD /* main.m */,
-				FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */,
-				FCA7AC8F2008CEE000586824 /* iOS_Demos-Bridging-Header.h */,
-				FCAF86F6203FE3A6008CFE43 /* PrefixHeader.pch */,
+				FCE789D4200DF137003C621D /* Http */,
+				FC9738082013410400E6CFA8 /* iOS9 */,
+				FC6733B72022F08F0078CE03 /* iOS11 */,
+				FC80C75E20A91ECF00F394AC /* JS */,
+				FC70AF582044F5840037EDB8 /* MVVMDemo */,
+				FC54B751202AD93C00007FC8 /* OC */,
+				FC56E7BD20AC2C6000A008D3 /* Outer Equipment */,
+				FCB663C9203195C3004B1325 /* Rac */,
+				FC54B759202D702A00007FC8 /* RunTime */,
+				FCAF86F72041354A008CFE43 /* Swift tips */,
+				FC54B760202D79B200007FC8 /* UI */,
+				FC6733B22022ED920078CE03 /* Xcode */,
 			);
 			path = iOS_Demos;
 			sourceTree = "<group>";
@@ -1030,6 +1118,7 @@
 				FC151705204E8B93001FABCE /* RunLoopViewController.h */,
 				FC151706204E8B94001FABCE /* RunLoopViewController.m */,
 				FC7FBB56206B41FC00157E07 /* Concept.md */,
+				2099725218859AC81A36EB38 /* Scheduling-Notification */,
 			);
 			path = GCD;
 			sourceTree = "<group>";
@@ -1163,20 +1252,26 @@
 				FC6EB4702029417E00DF644D /* mac下的socket调试工具---sokit.pdf in Resources */,
 				FC6EB4722029439A00DF644D /* Swift 网络单元测试完全手册.pdf in Resources */,
 				FCA36C48207E1C4C004CF921 /* Defer.md in Resources */,
+				FCCA36F220AC367200104A8A /* Charles 4.2.1 HTTPS抓包.pdf in Resources */,
 				FC7FBAF72069D60A00157E07 /* 连接操作符：connect、publish、replay、multicast.md in Resources */,
 				FCED5D502005DFD2009A43DD /* Assets.xcassets in Resources */,
 				FC7FBB57206B41FC00157E07 /* Concept.md in Resources */,
+				FCCA36FF20B550D400104A8A /* fastlane.md in Resources */,
+				FCF213832092CBA2009D8337 /* 引用循环.md in Resources */,
 				FC7FBAF42069D60A00157E07 /* toArray、reduce、concat.md in Resources */,
 				FCB38C2C207CA4290081757C /* 链式动画.md in Resources */,
 				FC54B758202D5E3000007FC8 /* JS 与iOS交互 in Resources */,
 				FC7FBAF62069D60A00157E07 /* 其他操作符：delay、materialize、timeout等.md in Resources */,
 				FC7CBC26207C898A00638C50 /* Swift4.1.md in Resources */,
 				FC7FBADE20651E3500157E07 /* 观察者2： 自定义可绑定属性.md in Resources */,
+				FCCA370120B550D900104A8A /* proxychain.md in Resources */,
 				FC7FBB65206CCBC100157E07 /* r1.png in Resources */,
 				FC54B765202D7CBE00007FC8 /* HTTP的客户端识别.pdf in Resources */,
 				FC54B74D202AC53400007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */,
 				FC7FBAF92069D60A00157E07 /* 调试操作.md in Resources */,
+				FCF21389209428D0009D8337 /* 命名规范.md in Resources */,
 				FC7FBAF12069D60A00157E07 /* 过滤操作符：filter、take、skip等.md in Resources */,
+				FCF2138720941513009D8337 /* Conditional conformances in Swift.md in Resources */,
 				FC7FBAD72064D8D200157E07 /* Observable.md in Resources */,
 				FC7FBAFF2069D60A00157E07 /* 特征序列2：Driver.md in Resources */,
 				FC6733BE2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf in Resources */,
@@ -1191,6 +1286,8 @@
 				FC7FBAF02069D60A00157E07 /* 条件和布尔操作符：amb、takeWhile、skipWhile等.md in Resources */,
 				FC7FBAF82069D60A00157E07 /* 特征序列1：Single、Completable、Maybe.md in Resources */,
 				FC7FBB5D206C8C2F00157E07 /* Lock.md in Resources */,
+				FC80C76020A91EFF00F394AC /* JSContext.md in Resources */,
+				FCCA36F920AC374500104A8A /* iOS 持续交付之 Fastlane.pdf in Resources */,
 				FC7FBAFD2069D60A00157E07 /* 特征序列3：ControlProperty、 ControlEvent.md in Resources */,
 				FC7FBAF22069D60A00157E07 /* UI控件扩展1：UILabel.md in Resources */,
 				FC6733B62022EDE80078CE03 /* Xcode快捷键 in Resources */,
@@ -1199,6 +1296,7 @@
 				FC7FBAFB2069D60A00157E07 /* UI控件扩展2：UITextField、UITextView.md in Resources */,
 				FC54B76B202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf in Resources */,
 				FC7FBB60206CAF1900157E07 /* GCD.md in Resources */,
+				FCCA36F620AC371E00104A8A /* 《高性能iOS 应用开发》之降低你 APP 的电量消耗.pdf in Resources */,
 				FC7FBAFC2069D60A00157E07 /* 变换操作符：buffer、map、flatMap、scan等.md in Resources */,
 				FCA36C4F207E2DA8004CF921 /* 2.png in Resources */,
 				FC7FBB54206A602700157E07 /* OperationQueue.md in Resources */,
@@ -1208,6 +1306,7 @@
 				FC7FBAFE2069D60A00157E07 /* 错误处理操作（Error Handling Operators）.md in Resources */,
 				FC7FBAFA2069D60A00157E07 /* UI控件扩展3：UIButton、UIBarButtonItem.md in Resources */,
 				FCB38C30207CA95D0081757C /* attrbute.md in Resources */,
+				FC56E7BF20AC2C7D00A008D3 /* iOS 中 iBeacon 开发.pdf in Resources */,
 				FCA36C4A207E272D004CF921 /* RunTime.md in Resources */,
 				FCA36C4D207E2BF5004CF921 /* 1.png in Resources */,
 				FC54B769202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf in Resources */,
@@ -1429,17 +1528,15 @@
 				FCE550DC2037BF030088BFFB /* RACBindViewController.m in Sources */,
 				FCF568E6204FFF1800AD5D86 /* OperationQueueViewController.m in Sources */,
 				FCAF86F5203FE032008CFE43 /* SVProgressHUD+Helper.m in Sources */,
-				FCAF86FD2041560E008CFE43 /* SequenceViewController.swift in Sources */,
 				FCB663D32031968C004B1325 /* NSString+EmailAdditions.m in Sources */,
 				FCA902AB203BEC510088AC7B /* RACFliterViewController.m in Sources */,
 				FC48A45F204E6D9E00B27F1E /* UIControl+Permission.m in Sources */,
 				FCE789D7200DF164003C621D /* HttpTableViewController.m in Sources */,
 				FCAF86CC203FDFCE008CFE43 /* NSObject+NonBase.m in Sources */,
 				FC54B763202D79F200007FC8 /* UINavigationBar+DeletebarColor.m in Sources */,
+				FC80C75D20A5914700F394AC /* snowflake.swift in Sources */,
 				FC01912B20075ACF0069A3E0 /* DeviceInformationTableViewController.m in Sources */,
-				FCAF87012043F1E0008CFE43 /* EscapingViewController.swift in Sources */,
 				FCD72D472044FC03001EC81E /* SVW_LoginPwdInputTableViewCell.m in Sources */,
-				FCB9EB5E20564BC500F59A38 /* SetViewController.swift in Sources */,
 				FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */,
 				FCAF86F3203FE032008CFE43 /* UIImage+SVW_Color.m in Sources */,
 				FCAF82302033EFC400A46E21 /* RACTupleViewController.m in Sources */,
@@ -1468,13 +1565,16 @@
 				FCDD8DF72052247A0077A7A5 /* CountReferenceViewController.m in Sources */,
 				FCAF82332033F9B700A46E21 /* RACNormalViewController.m in Sources */,
 				FCD72D372044FBBA001EC81E /* SVW_LoginViewModel.m in Sources */,
-				FCAF86F920413574008CFE43 /* CurryingViewController.swift in Sources */,
 				FCAF86E2203FE01F008CFE43 /* SVW_BaseRequest+Rac.m in Sources */,
 				FCED5D7B2005E055009A43DD /* NotifyRegisterDispatchViewController.m in Sources */,
 				FC60101C203521B500E2C193 /* RACCommandViewController.m in Sources */,
 				FCAF86D0203FDFCE008CFE43 /* SVW_ViewControllerIntercepter.m in Sources */,
 				FC362B6F2008A7580001DD6E /* DispatchGroupViewController.m in Sources */,
 				FCED5D482005DFD2009A43DD /* AppDelegate.m in Sources */,
+				20997B483F61DABCDD51D66C /* Mock_Appdelegate.swift in Sources */,
+				209975F331AB38DBFE8D4D9A /* SchedulingService.swift in Sources */,
+				20997AF4E9B8CA523065247F /* SchedulingServiceStore.swift in Sources */,
+				209976E641B0A0EFCC61BCF8 /* usage.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

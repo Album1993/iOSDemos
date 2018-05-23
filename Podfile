@@ -25,10 +25,16 @@ target 'iOS_Demos' do
     # pod 'Alamofire', '~> 4.6'
     # pod 'Tiercel'                            # swift 大文件下载框架
     # zhuhaow/NEKit                            # 网络代理拓展
+    # Tencent/mars                             # 腾讯支持长链接的网络库
+    # Boilertalk/Web3.swift		                 # rpc 服务连接解析
+    # swisspol/GCDWebServer                    # oc
 
     # audio
     
     # pod 'AudioKit', '~> 4.0'
+
+    # video
+    # SJVideoPlayer                             # 功能全面的视频播放器
     
     
     # UI 库
@@ -41,6 +47,8 @@ target 'iOS_Demos' do
     # pod 'ZHStatusVolume'                      # 调节音量的指示器在屏幕上方
     # pod 'SMSegmentView'                       # 分割视图 ，SegmentView
     # pod 'XLForm', '~> 4.0'                    # form表单，用户填写使用的
+    # pod 'Eureka'                              # form 表单，还有地图
+    # cgoldsby/LoginCritter                     # 有趣的注册页面，有个熊头在转
     # pod 'Parchment'                           # 滚动的viewcontrollers
     # pod 'XHLaunchAd'                          # 启动广告
     # pod 'MessageViewController'               # 输入的文本框 （有@功能）
@@ -55,8 +63,13 @@ target 'iOS_Demos' do
     # cxa/MenuItemKit                           # 类似微信的复制粘贴的弹出框
     # pod 'HomeButton'                          # iphoneX仿真home键
     # wubianxiaoxian/CustomChannel              # 标签选择
-
-
+    # newyjp/JPVideoPlayer                      # 播放器， 类似tumblr
+    # HelloElephant/Parade                      # 各种不同的cell
+    # pod 'Sheeeeeeeeet'                        # 各种弹框
+    # pod 'FSPagerView'                         # 轮播图
+    # pod 'BRPickerView'                        # picker view
+    # pod 'CardParts'                           # 一系列卡片UI
+    
     # 图表
 
     # pod 'Charts'
@@ -72,17 +85,18 @@ target 'iOS_Demos' do
     # pod 'YPImagePicker'                       # 照片选取（有滤镜）
     # LKImageKit                                # 包括了图片控件，图片下载、内存缓存、磁盘缓存、图片解码、图片处理
     # EasyImagy                                 # 图片剪切旋转放大缩小
-
-    
+    # Saberization/emiya-canvas                 # 修正图片
+    # pod 'WXImageCompress', '~> 0.1.1'         # 图片压缩
     
     # 基础动画
 
     # Hero                                      # 基础动画库，页面切换动画
     # pod 'Presentation'                        # 页面切换动画
+    # marcosgriselli/EasyTransitions            # 页面切换动画
     # pod "ViewAnimator"                        # tableview，collectionview 的切换动画
     # CosmicMind/Material                       # 很多优秀的小交互
     # pod 'Blueprints'                          # Blueprints is a collection of flow layouts that is meant to make your life easier when working with collection view flow layouts.
-
+    # khanlou/SKBounceAnimation                 # 基础弹性动画
 
     
     # 约束
@@ -116,7 +130,16 @@ target 'iOS_Demos' do
     # pod 'SwiftSoup'                           # html parser
     # fletcheryang2014/BundleLoader             # 加载自定义bundle
     # benjaminmayo/merchantkit                  # 获取是否购买app 的信息
-    
+    # pod 'ShineUpdater', '~> 1.0'              # 提供app更新提醒
+    # kreait/convertappicon                     # 将gif 转化为appicon
+    # lukakerr/regxr                            # 正则表达式小工具
+    # pointfreeco/swift-tagged                  # 规范化模型类型
+    # mpangburn/FunctionKit                     # 自定义公式符号集合
+    # pointfreeco/swift-tagged                  # A library for safer types.
+    # pod 'MRDLNA'                              # dlna 投屏功能
+    # pod 'TheAnimation'                        # 检测动画的类型
+    # realm/SwiftLint                           # swift 代码lint
+
     
     # Debug
 
@@ -125,7 +148,8 @@ target 'iOS_Demos' do
     # pod 'ResumableAssert', '~> 1.0'           # 可恢复断言
     # shaps80/Peek                              # 摇一摇就能看到整个app的界面结构
     # pod 'netfox'                              #  a quick look on all executed network requests performed by your iOS or OSX app.
-
+    # kstenerud/KSCrash                         # 记录crash信息，并且发送邮件
+    # RyanLeeLY/Coolog                          # 可通过网络请求访问log
 
     # reactive
 
@@ -133,6 +157,8 @@ target 'iOS_Demos' do
     # pod 'RxCocoa',    '~> 4.0'
 
 
+    # 数据库
+    # stephencelis/SQLite.swift
 
     # 架构
 
@@ -142,7 +168,8 @@ target 'iOS_Demos' do
     # pod "PromiseKit", "~> 6.0"                # 异步编程
     # pod 'HydraAsync'                          # 异步编程
     # pod "FluxCapacitor"                       # fluxprotocal
-
+    # kawoou/Deli                               # 依赖注入的框架
+    
 
 
     # 组件化
@@ -167,8 +194,10 @@ target 'iOS_Demos' do
     # raywenderlich/swift-algorithm-club        # swift 实现的各大算法
     # soapyigu/LeetCode-Swift                   # swift 实现的各大算法
     # LiuqingDu/30_Swift_Projects               # swift 30种使用UI基本组件使用方式
-
-
+    # sheng/ladder-ios 				            # vpn
+    # Flight-School/MessagePack                 # matt swift教程
+    # Flight-School/AnyCodable
+    # marcosgriselli/EasyTransitions            # 各种页面跳转交互
 
     # 集合类
 

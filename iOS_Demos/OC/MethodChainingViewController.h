@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface MethodChainingViewController : UIViewController
+@interface MethodChainingViewController : UIViewController<SVW_ViewControllerProtocol>
 
 @end
-
+-viewcon
+{
+    SUPERPAGE_NONE
+    view.color = color
+}
 
 @interface Calculate : NSObject
 
