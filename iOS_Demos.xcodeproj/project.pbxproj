@@ -126,6 +126,9 @@
 		FCCA36F920AC374500104A8A /* iOS 持续交付之 Fastlane.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FCCA36F820AC374500104A8A /* iOS 持续交付之 Fastlane.pdf */; };
 		FCCA36FF20B550D400104A8A /* fastlane.md in Resources */ = {isa = PBXBuildFile; fileRef = FCCA36FE20B550D400104A8A /* fastlane.md */; };
 		FCCA370120B550D900104A8A /* proxychain.md in Resources */ = {isa = PBXBuildFile; fileRef = FCCA370020B550D900104A8A /* proxychain.md */; };
+		FCCA370420B5834600104A8A /* BiometrySupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA370320B5834600104A8A /* BiometrySupport.swift */; };
+		FCCA370620B5838000104A8A /* BiometricAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA370520B5838000104A8A /* BiometricAuth.swift */; };
+		FCCA370820B5866E00104A8A /* CreateKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA370720B5866E00104A8A /* CreateKeys.swift */; };
 		FCD72D332044FB6F001EC81E /* SVW_LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD72D322044FB6F001EC81E /* SVW_LoginRequest.m */; };
 		FCD72D372044FBBA001EC81E /* SVW_LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD72D352044FBBA001EC81E /* SVW_LoginViewModel.m */; };
 		FCD72D462044FC03001EC81E /* SVW_LoginInputFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD72D402044FC03001EC81E /* SVW_LoginInputFooterView.m */; };
@@ -252,7 +255,7 @@
 		FC69DE8A20609911006461A6 /* Strategy.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Strategy.playground; sourceTree = "<group>"; };
 		FC69DE8B20609912006461A6 /* Command.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Command.playground; sourceTree = "<group>"; };
 		FC69DE8C20609912006461A6 /* Prototype.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Prototype.playground; sourceTree = "<group>"; };
-		FC69DE8D20609912006461A6 /* Memento.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Memento.playground; sourceTree = "<group>"; };
+		FC69DE8D20609912006461A6 /* Memento.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Memento.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		FC69DE8E20609912006461A6 /* Iterator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Iterator.playground; sourceTree = "<group>"; };
 		FC69DE8F20609912006461A6 /* TemplateMethod.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TemplateMethod.playground; sourceTree = "<group>"; };
 		FC69DE9020609912006461A6 /* Visit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Visit.playground; sourceTree = "<group>"; };
@@ -377,6 +380,9 @@
 		FCCA36F820AC374500104A8A /* iOS 持续交付之 Fastlane.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iOS 持续交付之 Fastlane.pdf"; sourceTree = "<group>"; };
 		FCCA36FE20B550D400104A8A /* fastlane.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = fastlane.md; sourceTree = "<group>"; };
 		FCCA370020B550D900104A8A /* proxychain.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = proxychain.md; sourceTree = "<group>"; };
+		FCCA370320B5834600104A8A /* BiometrySupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometrySupport.swift; sourceTree = "<group>"; };
+		FCCA370520B5838000104A8A /* BiometricAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuth.swift; sourceTree = "<group>"; };
+		FCCA370720B5866E00104A8A /* CreateKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateKeys.swift; sourceTree = "<group>"; };
 		FCD72D312044FB6F001EC81E /* SVW_LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVW_LoginRequest.h; sourceTree = "<group>"; };
 		FCD72D322044FB6F001EC81E /* SVW_LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVW_LoginRequest.m; sourceTree = "<group>"; };
 		FCD72D352044FBBA001EC81E /* SVW_LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVW_LoginViewModel.m; sourceTree = "<group>"; };
@@ -951,12 +957,9 @@
 				FCED5D492005DFD2009A43DD /* ViewController.h */,
 				FCED5D4A2005DFD2009A43DD /* ViewController.m */,
 				FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */,
-				FCAF86F6203FE3A6008CFE43 /* PrefixHeader.pch */,
 				FCED5D512005DFD2009A43DD /* LaunchScreen.storyboard */,
 				FCED5D552005DFD2009A43DD /* main.m */,
 				FCED5D4C2005DFD2009A43DD /* Main.storyboard */,
-				FCED5D542005DFD2009A43DD /* Info.plist */,
-				FCA7AC8F2008CEE000586824 /* iOS_Demos-Bridging-Header.h */,
 				FCED5D462005DFD2009A43DD /* AppDelegate.h */,
 				FCED5D472005DFD2009A43DD /* AppDelegate.m */,
 				FCED5D4F2005DFD2009A43DD /* Assets.xcassets */,
@@ -978,6 +981,16 @@
 				FCCA36F820AC374500104A8A /* iOS 持续交付之 Fastlane.pdf */,
 			);
 			path = CI;
+			sourceTree = "<group>";
+		};
+		FCCA370220B5832500104A8A /* FaceIDAndTouchID */ = {
+			isa = PBXGroup;
+			children = (
+				FCCA370320B5834600104A8A /* BiometrySupport.swift */,
+				FCCA370520B5838000104A8A /* BiometricAuth.swift */,
+				FCCA370720B5866E00104A8A /* CreateKeys.swift */,
+			);
+			path = FaceIDAndTouchID;
 			sourceTree = "<group>";
 		};
 		FCD72D2F2044FB53001EC81E /* Practioner */ = {
@@ -1071,6 +1084,10 @@
 		FCED5D452005DFD2009A43DD /* iOS_Demos */ = {
 			isa = PBXGroup;
 			children = (
+				FCA7AC8F2008CEE000586824 /* iOS_Demos-Bridging-Header.h */,
+				FCAF86F6203FE3A6008CFE43 /* PrefixHeader.pch */,
+				FCED5D542005DFD2009A43DD /* Info.plist */,
+				FCCA370220B5832500104A8A /* FaceIDAndTouchID */,
 				FCCA36F720AC372F00104A8A /* CI */,
 				FCCA36F420AC370E00104A8A /* Optimize */,
 				FCCA36F320AC36A000104A8A /* Project */,
@@ -1502,7 +1519,9 @@
 				FCB9EB6020565C0F00F59A38 /* EnumViewController.swift in Sources */,
 				FCF568E3204FCFC800AD5D86 /* MacroViewController.m in Sources */,
 				FC97380B2013413900E6CFA8 /* iOS_9ViewController.m in Sources */,
+				FCCA370820B5866E00104A8A /* CreateKeys.swift in Sources */,
 				FC7FBB5B206C8C1400157E07 /* LockViewController.swift in Sources */,
+				FCCA370420B5834600104A8A /* BiometrySupport.swift in Sources */,
 				FCA902A820382C5E0088AC7B /* RACConcatViewController.m in Sources */,
 				FC01911C200749990069A3E0 /* GlobalQueueInitialAndQueueSpec.m in Sources */,
 				FCED5D4B2005DFD2009A43DD /* ViewController.m in Sources */,
@@ -1510,6 +1529,7 @@
 				FCAF86DA203FE011008CFE43 /* SVW_FunctionDefine.m in Sources */,
 				FC54B75C202D705400007FC8 /* IMPDemo.m in Sources */,
 				FCD72D6220456A6E001EC81E /* BlurViewController.swift in Sources */,
+				FCCA370620B5838000104A8A /* BiometricAuth.swift in Sources */,
 				FC0191112005F1A60069A3E0 /* BaseNaviViewController.m in Sources */,
 				FCAF86EB203FE029008CFE43 /* JLRoutes+GenerateURL.m in Sources */,
 				FC48A464204E6FA300B27F1E /* BizarreQuestionViewController.swift in Sources */,

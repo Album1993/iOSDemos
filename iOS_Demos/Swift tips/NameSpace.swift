@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 
 // 定义泛型类
@@ -56,5 +56,27 @@ extension SCBKit where Base == String {
 
 // 使用
 let string = "abcd".scb.localized
+
+
+struct SVW<Base> {
+    public let base: Base
+    
+    init(with base:Base) {
+        self.base = base
+    }
+}
+
+extension SVW where Base: UIButton {
+    func hello(){
+        let title = self.base.title(for: .normal) ?? ""
+        print ("Hello \(title)")
+    }
+}
+
+extension UIButton {
+    var svw: SVW<UIButton> {
+        return SVW(with: self)
+    }
+}
 
 

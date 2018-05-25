@@ -20,7 +20,7 @@ public final class SchedulingService {
 
     public weak var delegate: SchedulingServiceDelegate?
 
-    private var _requests: [SchedulingRequest] = [] {
+    internal var _requests: [SchedulingRequest] = [] {
         didSet {
             NotificationCenter.default.post(name: .SchedulingServiceDidChange, object: self)
             delegate?.schedulingServiceDidChange(self)
