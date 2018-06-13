@@ -28,6 +28,8 @@ target 'iOS_Demos' do
     # Tencent/mars                             # 腾讯支持长链接的网络库
     # Boilertalk/Web3.swift		                 # rpc 服务连接解析
     # swisspol/GCDWebServer                    # oc
+    # pod 'Crossroad'                          # 方便创建schema
+
 
     # audio
     
@@ -69,7 +71,13 @@ target 'iOS_Demos' do
     # pod 'FSPagerView'                         # 轮播图
     # pod 'BRPickerView'                        # picker view
     # pod 'CardParts'                           # 一系列卡片UI
-    
+    # pod 'SwiftEntryKit', '0.2.4'              # swift 各种样式弹框
+    # pod 'BulletinBoard'                       # swift 弹出框
+    # naturaln0va/VisualActivityViewController  # 分享显示
+    # pod 'FoldingCell'                         # 弹出式cell
+    # pod 'SSSpinnerButton'                     # 点击就会变小的按钮
+    # pod 'StyledTextKit'                       # 简单的富文本
+
     # 图表
 
     # pod 'Charts'
@@ -97,7 +105,7 @@ target 'iOS_Demos' do
     # CosmicMind/Material                       # 很多优秀的小交互
     # pod 'Blueprints'                          # Blueprints is a collection of flow layouts that is meant to make your life easier when working with collection view flow layouts.
     # khanlou/SKBounceAnimation                 # 基础弹性动画
-
+    # Ramotion/swift-ui-animation-components-and-libraries # 优秀动画合集
     
     # 约束
 
@@ -122,7 +130,8 @@ target 'iOS_Demos' do
     # frogg/Steal-Phone-Number                  # 获取用户电话号码    
     # pod 'Consumer', '~> 0.3'                  # swift 格式化数据解析（json， repl）
     # pod 'MoreCodable'                         # json 转字符串， json 比较
-    # IBM-Swift/Swift-Kuery-ORM                 # mac 对象存储 
+    # pod 'SwiftyJSON', '~> 4.0'                # json 解析
+    # IBM-Swift/Swift-Kuery-ORM                 # mac 对象存储
     # pod 'SwifterSwift'                        # swift extension
     # http://answerhuang.duapp.com/index.php/2018/02/15/jenkins-2/      #自动化发布的jekin环境
     # commitizen/cz-cli                         # git commit 格式化
@@ -139,7 +148,7 @@ target 'iOS_Demos' do
     # pod 'MRDLNA'                              # dlna 投屏功能
     # pod 'TheAnimation'                        # 检测动画的类型
     # realm/SwiftLint                           # swift 代码lint
-
+    # ralcr/ConsentKit                          # 上传到icloud
     
     # Debug
 
@@ -150,7 +159,9 @@ target 'iOS_Demos' do
     # pod 'netfox'                              #  a quick look on all executed network requests performed by your iOS or OSX app.
     # kstenerud/KSCrash                         # 记录crash信息，并且发送邮件
     # RyanLeeLY/Coolog                          # 可通过网络请求访问log
-
+    # pod 'SpecLeaks'                           # 防止内存泄漏
+    # pod 'LifetimeTracker'                     # 实时内存泄漏检测
+    
     # reactive
 
     # pod 'RxSwift',    '~> 4.0'                # 和RxCocoa配套
