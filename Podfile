@@ -26,10 +26,9 @@ target 'iOS_Demos' do
     # pod 'Tiercel'                            # swift 大文件下载框架
     # zhuhaow/NEKit                            # 网络代理拓展
     # Tencent/mars                             # 腾讯支持长链接的网络库
-    # Boilertalk/Web3.swift		                 # rpc 服务连接解析
+    # Boilertalk/Web3.swift		               # rpc 服务连接解析
     # swisspol/GCDWebServer                    # oc
     # pod 'Crossroad'                          # 方便创建schema
-
 
     # audio
     
@@ -77,7 +76,10 @@ target 'iOS_Demos' do
     # pod 'FoldingCell'                         # 弹出式cell
     # pod 'SSSpinnerButton'                     # 点击就会变小的按钮
     # pod 'StyledTextKit'                       # 简单的富文本
-
+    # pod "SearchTextField"                     # 搜索框
+    # pod 'Bartinter'                           # 隐形status bar
+    # badoo/Chatto                              # 聊天界面
+    
     # 图表
 
     # pod 'Charts'
@@ -106,6 +108,7 @@ target 'iOS_Demos' do
     # pod 'Blueprints'                          # Blueprints is a collection of flow layouts that is meant to make your life easier when working with collection view flow layouts.
     # khanlou/SKBounceAnimation                 # 基础弹性动画
     # Ramotion/swift-ui-animation-components-and-libraries # 优秀动画合集
+    # pod 'Sica'                                # keypath 动画便捷操作
     
     # 约束
 
@@ -149,6 +152,10 @@ target 'iOS_Demos' do
     # pod 'TheAnimation'                        # 检测动画的类型
     # realm/SwiftLint                           # swift 代码lint
     # ralcr/ConsentKit                          # 上传到icloud
+    # ephread/Instructions                      # 控件的引导
+    # Flight-School/Money                       # 汇率
+    # mac-cain13/R.swift                        # 检测使用资源是否存在
+    
     
     # Debug
 
@@ -161,12 +168,16 @@ target 'iOS_Demos' do
     # RyanLeeLY/Coolog                          # 可通过网络请求访问log
     # pod 'SpecLeaks'                           # 防止内存泄漏
     # pod 'LifetimeTracker'                     # 实时内存泄漏检测
-    
+    # facebook/Sonar                            # Facebook开源了移动应用调试平台Sonar
+    # pod 'FBRetainCycleDetector'               # facebook 引用循环检测
+
+
     # reactive
 
     # pod 'RxSwift',    '~> 4.0'                # 和RxCocoa配套
     # pod 'RxCocoa',    '~> 4.0'
-
+    # pod 'RxValidator'                         # 各种校验
+    # pod 'Then'                                # 简略初始化
 
     # 数据库
     # stephencelis/SQLite.swift
@@ -188,8 +199,9 @@ target 'iOS_Demos' do
     pod 'JLRoutes', '~> 2.0.5'                  # objc
     # pod 'URLNavigator'                        # swift
     # swift 路由组件化，场景挺多的
-    # pod 'FNUrlRoute', :git => 'git@github.com:Fnoz/FNUrlRoute.git', :tag => '1.0.0'           
-
+    # pod 'FNUrlRoute', :git => 'git@github.com:Fnoz/FNUrlRoute.git', :tag => '1.0.0'
+    # faviomob/WidgetKit                        # 通过json来组织界面
+    
 
 
     # js Bridge

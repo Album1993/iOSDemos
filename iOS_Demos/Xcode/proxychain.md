@@ -21,6 +21,7 @@
 
 
 注意: **socks,http**代理等使用的是**TCP**或**UDP**协议, 而**ping**命令则是**ICMP**协议, 所以**proxychains4**对**ping**命令无效.
-  
+
+如果不行的话讲sock4   注释掉
 
 

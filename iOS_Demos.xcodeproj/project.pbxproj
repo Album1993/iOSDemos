@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044DA3CA20DBA06C004FBAA8 /* Workarounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DA3C820DBA06C004FBAA8 /* Workarounds.swift */; };
+		044DA3CB20DBA06C004FBAA8 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DA3C920DBA06C004FBAA8 /* Preferences.swift */; };
+		044DA3CD20DBA082004FBAA8 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044DA3CC20DBA082004FBAA8 /* WordList.swift */; };
 		209975F331AB38DBFE8D4D9A /* SchedulingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209976C6F64CEA18086AAAC6 /* SchedulingService.swift */; };
 		209976E641B0A0EFCC61BCF8 /* usage.md in Sources */ = {isa = PBXBuildFile; fileRef = 20997F268A28F97A832BB376 /* usage.md */; };
 		20997AF4E9B8CA523065247F /* SchedulingServiceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20997D25544070F8AB33D87A /* SchedulingServiceStore.swift */; };
@@ -23,6 +26,8 @@
 		FC01912320074FC10069A3E0 /* ApplicationWillTerminateNotificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC01912220074FC10069A3E0 /* ApplicationWillTerminateNotificationViewController.m */; };
 		FC01912B20075ACF0069A3E0 /* DeviceInformationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC01912A20075ACF0069A3E0 /* DeviceInformationTableViewController.m */; };
 		FC01912E20075AE10069A3E0 /* ProcessNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC01912D20075AE10069A3E0 /* ProcessNumberViewController.m */; };
+		FC01AC802105C669007D7D23 /* Graph_C.c in Sources */ = {isa = PBXBuildFile; fileRef = FC01AC7F2105C669007D7D23 /* Graph_C.c */; };
+		FC01AC832105C92C007D7D23 /* amain.c in Sources */ = {isa = PBXBuildFile; fileRef = FC01AC792105C632007D7D23 /* amain.c */; };
 		FC151707204E8B94001FABCE /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC151706204E8B94001FABCE /* RunLoopViewController.m */; };
 		FC2A210420122DB9006B723F /* YtknetworkHttpsSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2A210320122DB9006B723F /* YtknetworkHttpsSetting.m */; };
 		FC362B6F2008A7580001DD6E /* DispatchGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC362B6E2008A7580001DD6E /* DispatchGroupViewController.m */; };
@@ -91,7 +96,6 @@
 		FCA36C4A207E272D004CF921 /* RunTime.md in Resources */ = {isa = PBXBuildFile; fileRef = FCA36C49207E272D004CF921 /* RunTime.md */; };
 		FCA36C4D207E2BF5004CF921 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA36C4C207E2BF5004CF921 /* 1.png */; };
 		FCA36C4F207E2DA8004CF921 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA36C4E207E2DA8004CF921 /* 2.png */; };
-		FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */; };
 		FCA902A52037EB5D0088AC7B /* RACMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A42037EB5D0088AC7B /* RACMapViewController.m */; };
 		FCA902A820382C5E0088AC7B /* RACConcatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902A720382C5E0088AC7B /* RACConcatViewController.m */; };
 		FCA902AB203BEC510088AC7B /* RACFliterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCA902AA203BEC500088AC7B /* RACFliterViewController.m */; };
@@ -156,6 +160,7 @@
 		FCF21389209428D0009D8337 /* 命名规范.md in Resources */ = {isa = PBXBuildFile; fileRef = FCF21388209428D0009D8337 /* 命名规范.md */; };
 		FCF568E3204FCFC800AD5D86 /* MacroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF568E2204FCFC800AD5D86 /* MacroViewController.m */; };
 		FCF568E6204FFF1800AD5D86 /* OperationQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF568E5204FFF1800AD5D86 /* OperationQueueViewController.m */; };
+		FCFF2D1920F75EDB00C7A421 /* MacConsoleLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFF2D1820F75EDB00C7A421 /* MacConsoleLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,7 +180,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FC01AC752105C632007D7D23 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0445A22D20E24E6A00CFE66F /* iOS开发技巧和窍门.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "iOS开发技巧和窍门.md"; sourceTree = "<group>"; };
+		044DA3C820DBA06C004FBAA8 /* Workarounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Workarounds.swift; sourceTree = "<group>"; };
+		044DA3C920DBA06C004FBAA8 /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		044DA3CC20DBA082004FBAA8 /* WordList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
+		044DA3CE20DBA116004FBAA8 /* UITestTips.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = UITestTips.md; sourceTree = "<group>"; };
+		049CCC4920DCA407008F277F /* 工程架构原则.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "工程架构原则.md"; sourceTree = "<group>"; };
 		209976C6F64CEA18086AAAC6 /* SchedulingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulingService.swift; sourceTree = "<group>"; };
 		209977DE81A3182B518B0184 /* Mock_Appdelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mock_Appdelegate.swift; sourceTree = "<group>"; };
 		20997D25544070F8AB33D87A /* SchedulingServiceStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulingServiceStore.swift; sourceTree = "<group>"; };
@@ -207,6 +230,10 @@
 		FC01912A20075ACF0069A3E0 /* DeviceInformationTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceInformationTableViewController.m; sourceTree = "<group>"; };
 		FC01912C20075AE10069A3E0 /* ProcessNumberViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProcessNumberViewController.h; sourceTree = "<group>"; };
 		FC01912D20075AE10069A3E0 /* ProcessNumberViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProcessNumberViewController.m; sourceTree = "<group>"; };
+		FC01AC772105C632007D7D23 /* AL_Graph */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AL_Graph; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC01AC792105C632007D7D23 /* amain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = amain.c; sourceTree = "<group>"; };
+		FC01AC7E2105C669007D7D23 /* Graph_C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graph_C.h; sourceTree = "<group>"; };
+		FC01AC7F2105C669007D7D23 /* Graph_C.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Graph_C.c; sourceTree = "<group>"; };
 		FC151705204E8B93001FABCE /* RunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
 		FC151706204E8B94001FABCE /* RunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopViewController.m; sourceTree = "<group>"; };
 		FC2A210220122DB9006B723F /* YtknetworkHttpsSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YtknetworkHttpsSetting.h; sourceTree = "<group>"; };
@@ -312,7 +339,6 @@
 		FCA36C4C207E2BF5004CF921 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		FCA36C4E207E2DA8004CF921 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		FCA7AC8F2008CEE000586824 /* iOS_Demos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS_Demos-Bridging-Header.h"; sourceTree = "<group>"; };
-		FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		FCA7AC922008D03C00586824 /* DispatchGroupViewController+Testing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DispatchGroupViewController+Testing.h"; sourceTree = "<group>"; };
 		FCA902A32037EB5D0088AC7B /* RACMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACMapViewController.h; sourceTree = "<group>"; };
 		FCA902A42037EB5D0088AC7B /* RACMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACMapViewController.m; sourceTree = "<group>"; };
@@ -432,9 +458,17 @@
 		FCF568E2204FCFC800AD5D86 /* MacroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacroViewController.m; sourceTree = "<group>"; };
 		FCF568E4204FFF1800AD5D86 /* OperationQueueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationQueueViewController.h; sourceTree = "<group>"; };
 		FCF568E5204FFF1800AD5D86 /* OperationQueueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationQueueViewController.m; sourceTree = "<group>"; };
+		FCFF2D1820F75EDB00C7A421 /* MacConsoleLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacConsoleLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FC01AC742105C632007D7D23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC362B762008BB770001DD6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,10 +557,14 @@
 		FC01912820075AA20069A3E0 /* DeviceInfo */ = {
 			isa = PBXGroup;
 			children = (
+				044DA3CC20DBA082004FBAA8 /* WordList.swift */,
+				044DA3C920DBA06C004FBAA8 /* Preferences.swift */,
+				044DA3C820DBA06C004FBAA8 /* Workarounds.swift */,
 				FC01912920075ACF0069A3E0 /* DeviceInformationTableViewController.h */,
 				FC01912A20075ACF0069A3E0 /* DeviceInformationTableViewController.m */,
 				FC01912C20075AE10069A3E0 /* ProcessNumberViewController.h */,
 				FC01912D20075AE10069A3E0 /* ProcessNumberViewController.m */,
+				FCFF2D1820F75EDB00C7A421 /* MacConsoleLog.swift */,
 			);
 			path = DeviceInfo;
 			sourceTree = "<group>";
@@ -589,6 +627,7 @@
 				FC48A45D204E6D9E00B27F1E /* UIControl+Permission.h */,
 				FC48A45E204E6D9E00B27F1E /* UIControl+Permission.m */,
 				FCB38C2B207CA4290081757C /* 链式动画.md */,
+				044DA3CE20DBA116004FBAA8 /* UITestTips.md */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -622,6 +661,7 @@
 				FC6EB46F2029417E00DF644D /* mac下的socket调试工具---sokit.pdf */,
 				FC6733BF20281B690078CE03 /* iOS 静态库详解与开发.pdf */,
 				FC6733B52022EDE80078CE03 /* Xcode快捷键 */,
+				0445A22D20E24E6A00CFE66F /* iOS开发技巧和窍门.md */,
 			);
 			path = Xcode;
 			sourceTree = "<group>";
@@ -652,6 +692,7 @@
 				FCAF86DB203FE01F008CFE43 /* Network */,
 				FCAF86D6203FE011008CFE43 /* Constant */,
 				FCAF86B6203FDFCE008CFE43 /* NonBase */,
+				049CCC4920DCA407008F277F /* 工程架构原则.md */,
 			);
 			path = MVVMDemo;
 			sourceTree = "<group>";
@@ -752,6 +793,16 @@
 				FC80C75F20A91EFF00F394AC /* JSContext.md */,
 			);
 			path = JS;
+			sourceTree = "<group>";
+		};
+		FC8A49ED20FDA59600460C45 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				FC01AC792105C632007D7D23 /* amain.c */,
+				FC01AC7E2105C669007D7D23 /* Graph_C.h */,
+				FC01AC7F2105C669007D7D23 /* Graph_C.c */,
+			);
+			path = Graph;
 			sourceTree = "<group>";
 		};
 		FC9738082013410400E6CFA8 /* iOS9 */ = {
@@ -956,7 +1007,6 @@
 			children = (
 				FCED5D492005DFD2009A43DD /* ViewController.h */,
 				FCED5D4A2005DFD2009A43DD /* ViewController.m */,
-				FCA7AC902008CEE100586824 /* ViewControllerExtension.swift */,
 				FCED5D512005DFD2009A43DD /* LaunchScreen.storyboard */,
 				FCED5D552005DFD2009A43DD /* main.m */,
 				FCED5D4C2005DFD2009A43DD /* Main.storyboard */,
@@ -1035,6 +1085,7 @@
 		FCD72D6520464507001EC81E /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				FC8A49ED20FDA59600460C45 /* Graph */,
 				FCC0D8D0205F79C1002A8CDA /* DesignPattern */,
 				FCD72D66204646C9001EC81E /* MirrorBinaryTree.h */,
 				FCD72D67204646C9001EC81E /* MirrorBinaryTree.m */,
@@ -1077,6 +1128,7 @@
 				FCED5D432005DFD2009A43DD /* iOS_Demos.app */,
 				FCED5D662005DFD2009A43DD /* iOS_DemosUITests.xctest */,
 				FC362B792008BB770001DD6E /* iOS_DemosTests.xctest */,
+				FC01AC772105C632007D7D23 /* AL_Graph */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1143,6 +1195,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FC01AC762105C632007D7D23 /* AL_Graph */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC01AC7D2105C632007D7D23 /* Build configuration list for PBXNativeTarget "AL_Graph" */;
+			buildPhases = (
+				FC01AC732105C632007D7D23 /* Sources */,
+				FC01AC742105C632007D7D23 /* Frameworks */,
+				FC01AC752105C632007D7D23 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AL_Graph;
+			productName = AL_Graph;
+			productReference = FC01AC772105C632007D7D23 /* AL_Graph */;
+			productType = "com.apple.product-type.tool";
+		};
 		FC362B782008BB770001DD6E /* iOS_DemosTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC362B802008BB770001DD6E /* Build configuration list for PBXNativeTarget "iOS_DemosTests" */;
@@ -1215,6 +1284,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "张一鸣";
 				TargetAttributes = {
+					FC01AC762105C632007D7D23 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
 					FC362B782008BB770001DD6E = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -1248,6 +1321,7 @@
 				FCED5D422005DFD2009A43DD /* iOS_Demos */,
 				FCED5D652005DFD2009A43DD /* iOS_DemosUITests */,
 				FC362B782008BB770001DD6E /* iOS_DemosTests */,
+				FC01AC762105C632007D7D23 /* AL_Graph */,
 			);
 		};
 /* End PBXProject section */
@@ -1503,6 +1577,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FC01AC732105C632007D7D23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC01AC832105C92C007D7D23 /* amain.c in Sources */,
+				FC01AC802105C669007D7D23 /* Graph_C.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FC362B752008BB770001DD6E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1524,6 +1607,7 @@
 				FCCA370420B5834600104A8A /* BiometrySupport.swift in Sources */,
 				FCA902A820382C5E0088AC7B /* RACConcatViewController.m in Sources */,
 				FC01911C200749990069A3E0 /* GlobalQueueInitialAndQueueSpec.m in Sources */,
+				FCFF2D1920F75EDB00C7A421 /* MacConsoleLog.swift in Sources */,
 				FCED5D4B2005DFD2009A43DD /* ViewController.m in Sources */,
 				FC54B75F202D77A700007FC8 /* SetAssociatedObject.m in Sources */,
 				FCAF86DA203FE011008CFE43 /* SVW_FunctionDefine.m in Sources */,
@@ -1533,6 +1617,7 @@
 				FC0191112005F1A60069A3E0 /* BaseNaviViewController.m in Sources */,
 				FCAF86EB203FE029008CFE43 /* JLRoutes+GenerateURL.m in Sources */,
 				FC48A464204E6FA300B27F1E /* BizarreQuestionViewController.swift in Sources */,
+				044DA3CB20DBA06C004FBAA8 /* Preferences.swift in Sources */,
 				FCAF86E3203FE01F008CFE43 /* SVW_BaseRequest.m in Sources */,
 				FC01910D2005E4510069A3E0 /* GCDTableViewController.m in Sources */,
 				FC01912320074FC10069A3E0 /* ApplicationWillTerminateNotificationViewController.m in Sources */,
@@ -1540,9 +1625,11 @@
 				FCD72D332044FB6F001EC81E /* SVW_LoginRequest.m in Sources */,
 				FC01912E20075AE10069A3E0 /* ProcessNumberViewController.m in Sources */,
 				FCAF86CB203FDFCE008CFE43 /* SVW_ViewModelIntercepter.m in Sources */,
+				044DA3CD20DBA082004FBAA8 /* WordList.swift in Sources */,
 				FC0191142005F4120069A3E0 /* BaseTableViewController.m in Sources */,
 				FCE8C53620528F9E00BD1562 /* DispatchSemaphoreViewController.swift in Sources */,
 				FC601013203413A900E2C193 /* RacLifeSelectorViewController.m in Sources */,
+				044DA3CA20DBA06C004FBAA8 /* Workarounds.swift in Sources */,
 				FCAF86CF203FDFCE008CFE43 /* UIViewController+NonBase.m in Sources */,
 				FCB663D9203278D1004B1325 /* MethodChainingViewController.m in Sources */,
 				FCE550DC2037BF030088BFFB /* RACBindViewController.m in Sources */,
@@ -1557,7 +1644,6 @@
 				FC80C75D20A5914700F394AC /* snowflake.swift in Sources */,
 				FC01912B20075ACF0069A3E0 /* DeviceInformationTableViewController.m in Sources */,
 				FCD72D472044FC03001EC81E /* SVW_LoginPwdInputTableViewCell.m in Sources */,
-				FCA7AC912008CEE100586824 /* ViewControllerExtension.swift in Sources */,
 				FCAF86F3203FE032008CFE43 /* UIImage+SVW_Color.m in Sources */,
 				FCAF82302033EFC400A46E21 /* RACTupleViewController.m in Sources */,
 				FCB663E220328E4E004B1325 /* RacSignalViewController.m in Sources */,
@@ -1641,6 +1727,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FC01AC7B2105C632007D7D23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FC01AC7C2105C632007D7D23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		FC362B812008BB770001DD6E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 70D2050726460391757CE189 /* Pods-iOS_DemosTests.debug.xcconfig */;
@@ -1865,6 +1979,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FC01AC7D2105C632007D7D23 /* Build configuration list for PBXNativeTarget "AL_Graph" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC01AC7B2105C632007D7D23 /* Debug */,
+				FC01AC7C2105C632007D7D23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FC362B802008BB770001DD6E /* Build configuration list for PBXNativeTarget "iOS_DemosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

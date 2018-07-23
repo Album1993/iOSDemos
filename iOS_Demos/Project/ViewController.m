@@ -60,10 +60,6 @@
     self.tableview.dataSource                     = self;
     self.tableview.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
     [self.tableview registerClass:[UITableViewCell class] forCellReuseIdentifier:@"zymtableview"];
-
-
-    Class cls = NSClassFromString(@"DispatchSemaphoreViewController");
-    [self.navigationController pushViewController:[cls new] animated:YES];
 }
 
 /// 配置导航栏

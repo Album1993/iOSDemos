@@ -12,6 +12,9 @@
 
 #import <WebKit/WebKit.h>
 #import <YTKNetwork/YTKNetwork.h>
+
+#import "iOS_Demos-Swift.h"
+
 NSString *const SVW_LoginStateChangedNotificationKey = @"SVW_LoginStateChangedNotificationKey";
 
 
@@ -113,7 +116,6 @@ NSString *const SVW_LoginStateChangedNotificationKey = @"SVW_LoginStateChangedNo
         //        {
         //            [self.window setRootViewController:self.loginController];
         //        }
-
         [self.window setRootViewController:self.homeNavVC];
     }];
 
