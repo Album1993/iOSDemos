@@ -28,6 +28,7 @@
 		FC01912E20075AE10069A3E0 /* ProcessNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC01912D20075AE10069A3E0 /* ProcessNumberViewController.m */; };
 		FC01AC802105C669007D7D23 /* Graph_C.c in Sources */ = {isa = PBXBuildFile; fileRef = FC01AC7F2105C669007D7D23 /* Graph_C.c */; };
 		FC01AC832105C92C007D7D23 /* amain.c in Sources */ = {isa = PBXBuildFile; fileRef = FC01AC792105C632007D7D23 /* amain.c */; };
+		FC01AC85210868C7007D7D23 /* CADisplayLink.md in Resources */ = {isa = PBXBuildFile; fileRef = FC01AC84210868C7007D7D23 /* CADisplayLink.md */; };
 		FC151707204E8B94001FABCE /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC151706204E8B94001FABCE /* RunLoopViewController.m */; };
 		FC2A210420122DB9006B723F /* YtknetworkHttpsSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2A210320122DB9006B723F /* YtknetworkHttpsSetting.m */; };
 		FC362B6F2008A7580001DD6E /* DispatchGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC362B6E2008A7580001DD6E /* DispatchGroupViewController.m */; };
@@ -234,6 +235,7 @@
 		FC01AC792105C632007D7D23 /* amain.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = amain.c; sourceTree = "<group>"; };
 		FC01AC7E2105C669007D7D23 /* Graph_C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graph_C.h; sourceTree = "<group>"; };
 		FC01AC7F2105C669007D7D23 /* Graph_C.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Graph_C.c; sourceTree = "<group>"; };
+		FC01AC84210868C7007D7D23 /* CADisplayLink.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CADisplayLink.md; sourceTree = "<group>"; };
 		FC151705204E8B93001FABCE /* RunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
 		FC151706204E8B94001FABCE /* RunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopViewController.m; sourceTree = "<group>"; };
 		FC2A210220122DB9006B723F /* YtknetworkHttpsSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YtknetworkHttpsSetting.h; sourceTree = "<group>"; };
@@ -628,6 +630,7 @@
 				FC48A45E204E6D9E00B27F1E /* UIControl+Permission.m */,
 				FCB38C2B207CA4290081757C /* 链式动画.md */,
 				044DA3CE20DBA116004FBAA8 /* UITestTips.md */,
+				FC01AC84210868C7007D7D23 /* CADisplayLink.md */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1344,6 +1347,7 @@
 				FC6EB4722029439A00DF644D /* Swift 网络单元测试完全手册.pdf in Resources */,
 				FCA36C48207E1C4C004CF921 /* Defer.md in Resources */,
 				FCCA36F220AC367200104A8A /* Charles 4.2.1 HTTPS抓包.pdf in Resources */,
+				FC01AC85210868C7007D7D23 /* CADisplayLink.md in Resources */,
 				FC7FBAF72069D60A00157E07 /* 连接操作符：connect、publish、replay、multicast.md in Resources */,
 				FCED5D502005DFD2009A43DD /* Assets.xcassets in Resources */,
 				FC7FBB57206B41FC00157E07 /* Concept.md in Resources */,

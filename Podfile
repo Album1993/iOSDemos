@@ -79,7 +79,9 @@ target 'iOS_Demos' do
     # pod "SearchTextField"                     # 搜索框
     # pod 'Bartinter'                           # 隐形status bar
     # badoo/Chatto                              # 聊天界面
-    
+    # pod 'Highlightr'                          # 使用js来解析一百种语言
+    # pod 'DWAnimatedLabel', '~> 1.1'           # 非常好的label动画
+
     # 图表
 
     # pod 'Charts'
