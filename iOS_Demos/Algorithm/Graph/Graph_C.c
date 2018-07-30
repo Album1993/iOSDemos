@@ -15,22 +15,24 @@
 #define INFINITY 2147483647
 #define MAX_VEX 30
 
-void printMatrix(int **matrix,int num) {
-    for (int i = 0; i < num ; i++) {
-        for (int j = 0; j < num ; j++) {
-//            printf("%d \t", *((int*)matrix + num*i + j));
+void printMatrix(int **matrix, int num)
+{
+    for (int i = 0; i < num; i++)
+    {
+        for (int j = 0; j < num; j++)
+        {
+            printf("%d \t", *((int *)matrix + num * i + j));
         }
         printf("\n\n");
-        
     }
 }
 
-
 //--------------------------------邻接矩阵----------------------------
 
-int***  transMGraph(MGraph*G) {
-    int (*matrix)[G->Vexnum][G->Vexnum] = malloc(sizeof(int) * G->Vexnum * G->Vexnum) ;
-    memset((*matrix),0, sizeof((*matrix)));
+int ***transMGraph(MGraph *G)
+{
+    int(*matrix)[G->Vexnum][G->Vexnum] = malloc(sizeof(int) * G->Vexnum * G->Vexnum);
+    memset((*matrix), 0, sizeof((*matrix)));
     for (int i = 0; i < G->Vexnum; i++)
     {
         for (int j = 0; j < G->Vexnum; j++)
@@ -97,17 +99,8 @@ Status CreatGraph_UDN(MGraph *G)
 void travelGraph_UDN(MGraph *G)
 {
     printf("vex num: %d\n", G->Vexnum);
-    int  (*matrix)[G->Vexnum][G->Vexnum] = (int(*)[G->Vexnum][G->Vexnum])transMGraph(G);
-    int c = 123;
-    int * s = &c;
-    printf("s: %p",s);
-    
+    int(*matrix)[G->Vexnum][G->Vexnum] = (int(*)[G->Vexnum][G->Vexnum])transMGraph(G);
     printMatrix((int **)(*matrix), G->Vexnum);
-    printf("\n\n");
-    printMatrix(matrix, G->Vexnum);
-    printf("\n\n");
-    printMatrix((*matrix), G->Vexnum);
-
 }
 
 // ------------------------------------------使用邻接表--------------------------------
@@ -241,6 +234,28 @@ Status CreatGraph_UDG(ALGraph *G)
 
     0 	1 	1 	0 	1 	0 	
 */
+
+int ***transALGraph(ALGraph *G)
+{
+    int(*matrix)[G->vexnum][G->vexnum] = malloc(sizeof(int) * G->vexnum * G->vexnum);
+    memset((*matrix), 0, sizeof((*matrix)));
+    printMatrix((int **)(*matrix), G->vexnum);
+    for (int i = 0; i < G->vexnum; i++)
+    {
+        VNode *node = &(G->vertices[i]);
+        ArcNode *arc = node->firstarc;
+        printf("node : %d ,first arc:%d\n", node->data - 1, node->firstarc->adjvex);
+        while (arc != NULL)
+        {
+            printf("current arc : %d ,next arc:%d\n", arc->adjvex, arc->nextArc ? arc->nextArc->adjvex : -1);
+            (*matrix)[i][arc->adjvex] = 1;
+            arc = arc->nextArc;
+        };
+
+        printf("\n\n");
+    }
+    return (int ***)matrix;
+}
 void travelGraph_UDG(ALGraph *G)
 {
     int vexnum = G->vexnum;
@@ -251,33 +266,9 @@ void travelGraph_UDG(ALGraph *G)
         return;
     }
 
-    int graArray[6][6];
-    printf("%lu\n", sizeof(graArray));
-    memset(graArray, 0, sizeof(graArray));
-
-    for (int i = 0; i < G->vexnum; i++)
-    {
-        VNode *node = &(G->vertices[i]);
-        ArcNode *arc = node->firstarc;
-        printf("node : %d ,first arc:%d\n", node->data - 1, node->firstarc->adjvex);
-        while (arc != NULL)
-        {
-            printf("current arc : %d ,next arc:%d\n", arc->adjvex, arc->nextArc ? arc->nextArc->adjvex : -1);
-            graArray[i][arc->adjvex] = 1;
-            arc = arc->nextArc;
-        };
-
-        printf("\n\n");
-    }
-
-    for (int i = 0; i < G->vexnum; i++)
-    {
-        for (int j = 0; j < G->vexnum; j++)
-        {
-            printf("%d \t", graArray[i][j] != INFINITY ? graArray[i][j] : 0);
-        }
-        printf("\n\n");
-    }
+    printf("vex num: %d\n", G->vexnum);
+    int(*matrix)[G->vexnum][G->vexnum] = (int(*)[G->vexnum][G->vexnum])transALGraph(G);
+    printMatrix((int **)(*matrix), G->vexnum);
 }
 
 // ---------------------十字链表--------
@@ -340,6 +331,25 @@ Status CreatGraph_DG(OLGraph *G)
     return Success;
 }
 
+int ***transGraph_DG_OL(OLGraph *G)
+{
+    int(*matrix)[G->vexnum][G->vexnum] = malloc(sizeof(int) * G->vexnum * G->vexnum);
+    memset((*matrix), 0, sizeof((*matrix)));
+    for (int i = 0; i < G->vexnum; i++)
+    {
+        VexNode *node = &(G->xlist[i]);
+
+        ArcBox *arc = node->firstout;
+
+        while (arc != NULL)
+        {
+            (*matrix)[arc->tailvex][arc->headvex] = 1;
+            arc = arc->tlink;
+        }
+    }
+    return (int ***)matrix;
+}
+
 void travelGraph_DG(OLGraph *G)
 {
 
@@ -350,31 +360,9 @@ void travelGraph_DG(OLGraph *G)
         return;
     }
 
-    int graArray[vexNum][vexNum];
-    printf("%lu\n", sizeof(graArray));
-    memset(graArray, 0, sizeof(graArray));
+    int(*matrix)[G->vexnum][G->vexnum] = (int(*)[G->vexnum][G->vexnum])transGraph_DG_OL(G);
 
-    for (int i = 0; i < vexNum; i++)
-    {
-        VexNode *node = &(G->xlist[i]);
-
-        ArcBox *arc = node->firstout;
-
-        while (arc != NULL)
-        {
-            graArray[arc->tailvex][arc->headvex] = 1;
-            arc = arc->tlink;
-        }
-    }
-
-    for (int i = 0; i < vexNum; i++)
-    {
-        for (int j = 0; j < vexNum; j++)
-        {
-            printf("%d \t", graArray[i][j]);
-        }
-        printf("\n\n");
-    }
+    printMatrix((int **)(*matrix), G->vexnum);
 }
 
 // -----------------------临接多重表------------
@@ -387,13 +375,12 @@ EBox *generateArc_UDG_AML(AMLGraph *G, int v1, int v2)
     ebox->ivex = v1;
     ebox->jvex = v2;
     ebox->ilink = G->adjmulist[v1].firstedge;
-    ebox->jlink =  G->adjmulist[v2].firstedge;
+    ebox->jlink = G->adjmulist[v2].firstedge;
 
     ebox->info = 0;
 
     G->adjmulist[v1].firstedge = ebox;
     G->adjmulist[v2].firstedge = ebox;
-
 
     return ebox;
 }
@@ -415,6 +402,7 @@ Status CreateGraph_UDN_AML(AMLGraph *G)
 {
     G->vexnum = 6;
     G->edgenum = 8;
+    G->kind = UDN;
 
     for (int i = 0; i < G->vexnum; i++)
     {
@@ -427,20 +415,25 @@ Status CreateGraph_UDN_AML(AMLGraph *G)
     return Success;
 }
 
-Status travelGraph_UDN_AML(AMLGraph *G) {
-    
-    int vexNum = G->vexnum;
+/**
+    0 	1 	0 	0 	1 	0 	
 
-    if (vexNum == 0)
-    {
-        return Error;
-    }
+    1 	0 	1 	0 	0 	1 	
 
-    int graArray[vexNum][vexNum];
-    printf("%lu\n", sizeof(graArray));
-    memset(graArray, 0, sizeof(graArray));
+    0 	1 	0 	1 	0 	1 	
 
-    for (int i = 0; i < vexNum; i++)
+    0 	0 	1 	0 	1 	0 	
+
+    1 	0 	0 	1 	0 	1 	
+
+    0 	1 	1 	0 	1 	0 	
+ */
+
+int ***transGraph_UDN_AML(AMLGraph *G)
+{
+    int(*matrix)[G->vexnum][G->vexnum] = malloc(sizeof(int) * G->vexnum * G->vexnum);
+    memset((*matrix), 0, sizeof((*matrix)));
+    for (int i = 0; i < G->vexnum; i++)
     {
         VexBox *node = &(G->adjmulist[i]);
 
@@ -448,24 +441,52 @@ Status travelGraph_UDN_AML(AMLGraph *G) {
 
         while (arc != NULL)
         {
-            
-            if (arc->mark == visited) {
+
+            if (arc->mark == visited)
+            {
                 break;
             }
             arc->mark = visited;
-            graArray[arc->ivex][arc->jvex] += 1;
+            (*matrix)[arc->ivex][arc->jvex] = 1;
             arc = arc->ilink;
         }
     }
 
-    for (int i = 0; i < vexNum; i++)
+    switch (G->kind)
     {
-        for (int j = 0; j < vexNum; j++)
+    case UDN:
+
+        for (size_t i = 0; i < G->vexnum; i++)
         {
-            printf("%d \t", graArray[i][j]);
+            for (size_t j = 0; j < G->vexnum; j++)
+            {
+                if ((*matrix)[i][j] == 1 && (*matrix)[j][i] == 0)
+                {
+                    (*matrix)[j][i] = 1;
+                }
+            }
         }
-        printf("\n\n");
+
+        break;
+
+    default:
+        break;
     }
-    return Success;
+    return (int ***)matrix;
 }
 
+Status travelGraph_UDN_AML(AMLGraph *G)
+{
+
+    int vexNum = G->vexnum;
+
+    if (vexNum == 0)
+    {
+        return Error;
+    }
+
+    int(*matrix)[vexNum][vexNum] = (int(*)[vexNum][vexNum])transGraph_UDN_AML(G);
+    printMatrix((int **)(*matrix), vexNum);
+
+    return Success;
+}

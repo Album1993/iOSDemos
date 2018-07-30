@@ -196,7 +196,7 @@ retry:
 
 ```
 
-###  1)、SideTable
+###  SideTable
 
  
 
@@ -211,11 +211,15 @@ struct SideTable {
 }
 ```
 
+- `slock` 是一个自旋锁，用来对 `SideTable` 实例进行操作时的加锁。
 
+- `refcnts` 则是存放引用计数的地方。
+
+- `weak_table` 则是存放弱引用的地方
+
+  
 
 回到 `storeWeak` 函数：
-
- 
 
 ```c++
 // Acquire locks for old and new values.
@@ -243,3 +247,144 @@ struct SideTable {
 
 ```
 
+这一段即获取 `oldObj`、`oldTable`和 `newTable`，并将获取的两个表上锁。注意到获取 `oldTable`和 `newTable`时，其实是用对象的地址当作 key 从 `SideTables`获取的，`SideTables`返回的就是一个哈希表，存储着若干个 `SideTable`，一般是 **64** 个。
+
+
+
+```c++
+// Prevent a deadlock between the weak reference machinery
+// and the +initialize machinery by ensuring that no 
+// weakly-referenced object has an un-+initialized isa.
+if (HaveNew  &&  newObj) {
+    Class cls = newObj->getIsa();
+    if (cls != previouslyInitializedClass  &&  
+        !((objc_class *)cls)->isInitialized()) 
+    {
+        SideTable::unlockTwo<HaveOld, HaveNew>(oldTable, newTable);
+        _class_initialize(_class_getNonMetaClass(cls, (id)newObj));
+
+        // If this class is finished with +initialize then we're good.
+        // If this class is still running +initialize on this thread 
+        // (i.e. +initialize called storeWeak on an instance of itself)
+        // then we may proceed but it will appear initializing and 
+        // not yet initialized to the check above.
+        // Instead set previouslyInitializedClass to recognize it on retry.
+        previouslyInitializedClass = cls;
+
+        goto retry;
+    }
+}
+```
+
+ 
+
+上面这一段代码也有着很好的注释，就是要确保对象的类已经走过 `+initialize` 流程了。
+
+
+
+```c++
+// Clean up old value, if any.
+    if (HaveOld) {
+        weak_unregister_no_lock(&oldTable->weak_table, oldObj, location);
+    }
+
+    // Assign new value, if any.
+    if (HaveNew) {
+        newObj = (objc_object *)weak_register_no_lock(&newTable->weak_table, 
+                                                      (id)newObj, location, 
+                                                      CrashIfDeallocating);
+        // weak_register_no_lock returns nil if weak store should be rejected
+
+        // Set is-weakly-referenced bit in refcount table.
+        if (newObj  &&  !newObj->isTaggedPointer()) {
+            newObj->setWeaklyReferenced_nolock();
+        }
+
+        // Do not set *location anywhere else. That would introduce a race.
+        *location = (id)newObj;
+    }
+    else {
+        // No new value. The storage is not changed.
+    }
+    
+    SideTable::unlockTwo<HaveOld, HaveNew>(oldTable, newTable);
+
+    return (id)newObj;
+}
+
+```
+
+ 
+
+最后一段的逻辑也是很清晰的。首先，如果有旧的值（`HaveOld`），则使用 `weak_unregister_no_lock`函数将其从 `oldTable`的 `weak_table`中移除。其次，如果有新的值（`HaveNew`），则使用 `weak_register_no_lock`函数将其注册到 `newTable`的 `weak_table`中，并使用 `setWeaklyReferenced_nolock`函数将对象标记为被弱引用过。
+
+`storeWeak`的实现就告一段落了，其重点就在 `weak_register_no_lock`和 `weak_unregister_no_lock`函数上。
+
+###  weak_table_t
+
+ weak表是一个弱引用表，实现为一个weak_table_t结构体，存储了某个对象相关的的所有的弱引用信息。其定义如下(具体定义在[objc-weak.h](https://link.jianshu.com/?t=https://opensource.apple.com/source/objc4/objc4-646/runtime/objc-weak.h)中)：
+
+```c++
+/**
+ * The global weak references table. Stores object ids as keys,
+ * and weak_entry_t structs as their values.
+ */
+struct weak_table_t {
+    // 保存了所有指向指定对象的 weak 指针
+    weak_entry_t *weak_entries;
+    // 存储空间
+    size_t    num_entries;
+    // 参与判断引用计数辅助量
+    uintptr_t mask;
+    // hash key 最大偏移值
+    uintptr_t max_hash_displacement;
+};
+
+```
+
+ 
+
+- `weak_entries`便是存放弱引用的数组；
+- `num_entries`是存放的 `weak_entry_t`条目的数量；
+- `mask`则是动态申请的弱引用数组 `weak_entries`长度减 1 的值，用来对哈希后的值取余和记录数组大小；
+- `max_hash_displacement`则是哈希碰撞后最大的位移值。
+
+ 其实 `weak_table_t` 就是一个动态增长的哈希表。
+
+ 继续看看其相关的操作，首先是对整个表的扩大：
+
+ 
+
+其中**weak_entry_t**是存储在弱引用表中的一个内部结构体，它负责维护和存储指向一个对象的所有弱引用hash表。其定义如下：
+
+```c++
+typedef objc_object ** weak_referrer_t;
+struct weak_entry_t {
+    DisguisedPtr<objc_object> referent;
+    union {
+        struct {
+            weak_referrer_t *referrers;
+            uintptr_t        out_of_line : 1;
+            uintptr_t        num_refs : PTR_MINUS_1;
+            uintptr_t        mask;
+            uintptr_t        max_hash_displacement;
+        };
+        struct {
+            // out_of_line=0 is LSB of one of these (don't care which)
+            weak_referrer_t  inline_referrers[WEAK_INLINE_COUNT];
+        };
+    }
+}
+
+
+```
+
+ 
+
+ 
+
+   
+
+ 
+
+ 

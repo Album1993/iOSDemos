@@ -109,6 +109,7 @@ typedef struct VexBox {
 typedef struct {
    VexBox adjmulist[MAX_VEX];
    int vexnum,edgenum;
+   GraphKind kind;
 }AMLGraph;
 
 Status CreateGraph_UDN_AML(AMLGraph *G);

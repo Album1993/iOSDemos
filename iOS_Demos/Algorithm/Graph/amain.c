@@ -13,10 +13,10 @@
 
 int main(int argc, const char * argv[]) {
 
-     MGraph * G1 = malloc(sizeof(MGraph));
+    //  MGraph * G1 = malloc(sizeof(MGraph));
 
-     CreatGraph_UDN(G1);
-     travelGraph_UDN(G1);
+    //  CreatGraph_UDN(G1);
+    //  travelGraph_UDN(G1);
 
     
     // ALGraph * G2 = malloc(sizeof(ALGraph));
@@ -27,9 +27,9 @@ int main(int argc, const char * argv[]) {
     // CreatGraph_DG(G3);
     // travelGraph_DG(G3);
     
-    // AMLGraph * G4 = malloc(sizeof(AMLGraph));
-    // CreateGraph_UDN_AML(G4);
-    // travelGraph_UDN_AML(G4);
+    AMLGraph * G4 = malloc(sizeof(AMLGraph));
+    CreateGraph_UDN_AML(G4);
+    travelGraph_UDN_AML(G4);
 
     return 0;
 }
