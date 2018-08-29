@@ -33,6 +33,10 @@
 		FC2A210420122DB9006B723F /* YtknetworkHttpsSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2A210320122DB9006B723F /* YtknetworkHttpsSetting.m */; };
 		FC362B6F2008A7580001DD6E /* DispatchGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC362B6E2008A7580001DD6E /* DispatchGroupViewController.m */; };
 		FC362B7C2008BB770001DD6E /* iOS_DemosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC362B7B2008BB770001DD6E /* iOS_DemosTests.swift */; };
+		FC3952182113F9D1006CE134 /* Graph_Search_c.c in Sources */ = {isa = PBXBuildFile; fileRef = FC3952162113EFD0006CE134 /* Graph_Search_c.c */; };
+		FC39521F21140855006CE134 /* Queue_c.c in Sources */ = {isa = PBXBuildFile; fileRef = FC39521D21140454006CE134 /* Queue_c.c */; };
+		FC39522421144821006CE134 /* Tree_c.c in Sources */ = {isa = PBXBuildFile; fileRef = FC3952222114458C006CE134 /* Tree_c.c */; };
+		FC3C31FF21291D9300362CCE /* Graph_MiniSpanTree_c.c in Sources */ = {isa = PBXBuildFile; fileRef = FC3C31FD2126BCDE00362CCE /* Graph_MiniSpanTree_c.c */; };
 		FC48A45F204E6D9E00B27F1E /* UIControl+Permission.m in Sources */ = {isa = PBXBuildFile; fileRef = FC48A45E204E6D9E00B27F1E /* UIControl+Permission.m */; };
 		FC48A464204E6FA300B27F1E /* BizarreQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC48A463204E6FA300B27F1E /* BizarreQuestionViewController.swift */; };
 		FC54B74A202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC54B749202AC4B100007FC8 /* 用 LLDB 调试 Swift 代码.pdf */; };
@@ -53,6 +57,8 @@
 		FC60101920341A7200E2C193 /* RACMulticastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60101820341A7200E2C193 /* RACMulticastViewController.m */; };
 		FC60101C203521B500E2C193 /* RACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC60101B203521B500E2C193 /* RACCommandViewController.m */; };
 		FC6308982032B17D005BB402 /* RACSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6308972032B17D005BB402 /* RACSubjectViewController.m */; };
+		FC64DDE921367C9D00F096A0 /* 模块化与Compile.md in Resources */ = {isa = PBXBuildFile; fileRef = FC64DDE821367C9D00F096A0 /* 模块化与Compile.md */; };
+		FC64DDEC21367CE300F096A0 /* 20160325_XcodeIntelliJLibrary04.png in Resources */ = {isa = PBXBuildFile; fileRef = FC64DDEB21367CE300F096A0 /* 20160325_XcodeIntelliJLibrary04.png */; };
 		FC6733B62022EDE80078CE03 /* Xcode快捷键 in Resources */ = {isa = PBXBuildFile; fileRef = FC6733B52022EDE80078CE03 /* Xcode快捷键 */; };
 		FC6733BB2028163C0078CE03 /* safe_area.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6733BA2028163C0078CE03 /* safe_area.pdf */; };
 		FC6733BE2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FC6733BD2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf */; };
@@ -161,6 +167,13 @@
 		FCF21389209428D0009D8337 /* 命名规范.md in Resources */ = {isa = PBXBuildFile; fileRef = FCF21388209428D0009D8337 /* 命名规范.md */; };
 		FCF568E3204FCFC800AD5D86 /* MacroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF568E2204FCFC800AD5D86 /* MacroViewController.m */; };
 		FCF568E6204FFF1800AD5D86 /* OperationQueueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCF568E5204FFF1800AD5D86 /* OperationQueueViewController.m */; };
+		FCFA68ED211048D30013BF9F /* RecordingsResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA68EC211048D30013BF9F /* RecordingsResult.swift */; };
+		FCFA68F4211048E60013BF9F /* BirdSoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCFA68EE211048E60013BF9F /* BirdSoundTableViewCell.xib */; };
+		FCFA68F5211048E60013BF9F /* Recording.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA68EF211048E60013BF9F /* Recording.swift */; };
+		FCFA68F6211048E60013BF9F /* BirdSoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA68F0211048E60013BF9F /* BirdSoundTableViewCell.swift */; };
+		FCFA68F7211048E60013BF9F /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA68F1211048E60013BF9F /* NetworkingService.swift */; };
+		FCFA68F8211048E60013BF9F /* ServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA68F2211048E60013BF9F /* ServiceResponse.swift */; };
+		FCFA68F9211048E60013BF9F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA68F3211048E60013BF9F /* MainViewController.swift */; };
 		FCFF2D1920F75EDB00C7A421 /* MacConsoleLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFF2D1820F75EDB00C7A421 /* MacConsoleLog.swift */; };
 /* End PBXBuildFile section */
 
@@ -245,6 +258,14 @@
 		FC362B792008BB770001DD6E /* iOS_DemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_DemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC362B7B2008BB770001DD6E /* iOS_DemosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_DemosTests.swift; sourceTree = "<group>"; };
 		FC362B7D2008BB770001DD6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC3952152113EFD0006CE134 /* Graph_Search_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graph_Search_c.h; sourceTree = "<group>"; };
+		FC3952162113EFD0006CE134 /* Graph_Search_c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Graph_Search_c.c; sourceTree = "<group>"; };
+		FC39521C21140454006CE134 /* Queue_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue_c.h; sourceTree = "<group>"; };
+		FC39521D21140454006CE134 /* Queue_c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Queue_c.c; sourceTree = "<group>"; };
+		FC3952212114458C006CE134 /* Tree_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree_c.h; sourceTree = "<group>"; };
+		FC3952222114458C006CE134 /* Tree_c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Tree_c.c; sourceTree = "<group>"; };
+		FC3C31FC2126BCDE00362CCE /* Graph_MiniSpanTree_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graph_MiniSpanTree_c.h; sourceTree = "<group>"; };
+		FC3C31FD2126BCDE00362CCE /* Graph_MiniSpanTree_c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Graph_MiniSpanTree_c.c; sourceTree = "<group>"; };
 		FC48A45D204E6D9E00B27F1E /* UIControl+Permission.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+Permission.h"; sourceTree = "<group>"; };
 		FC48A45E204E6D9E00B27F1E /* UIControl+Permission.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Permission.m"; sourceTree = "<group>"; };
 		FC48A463204E6FA300B27F1E /* BizarreQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BizarreQuestionViewController.swift; sourceTree = "<group>"; };
@@ -274,6 +295,8 @@
 		FC60101B203521B500E2C193 /* RACCommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACCommandViewController.m; sourceTree = "<group>"; };
 		FC6308962032B17D005BB402 /* RACSubjectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACSubjectViewController.h; sourceTree = "<group>"; };
 		FC6308972032B17D005BB402 /* RACSubjectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACSubjectViewController.m; sourceTree = "<group>"; };
+		FC64DDE821367C9D00F096A0 /* 模块化与Compile.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "模块化与Compile.md"; sourceTree = "<group>"; };
+		FC64DDEB21367CE300F096A0 /* 20160325_XcodeIntelliJLibrary04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 20160325_XcodeIntelliJLibrary04.png; sourceTree = "<group>"; };
 		FC6733B52022EDE80078CE03 /* Xcode快捷键 */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Xcode快捷键"; sourceTree = "<group>"; };
 		FC6733BA2028163C0078CE03 /* safe_area.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = safe_area.pdf; sourceTree = "<group>"; };
 		FC6733BD2028185D0078CE03 /* CocoaPods 给每个库单独指定 Swift 版本教程.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "CocoaPods 给每个库单独指定 Swift 版本教程.pdf"; sourceTree = "<group>"; };
@@ -460,6 +483,13 @@
 		FCF568E2204FCFC800AD5D86 /* MacroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacroViewController.m; sourceTree = "<group>"; };
 		FCF568E4204FFF1800AD5D86 /* OperationQueueViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationQueueViewController.h; sourceTree = "<group>"; };
 		FCF568E5204FFF1800AD5D86 /* OperationQueueViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationQueueViewController.m; sourceTree = "<group>"; };
+		FCFA68EC211048D30013BF9F /* RecordingsResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingsResult.swift; sourceTree = "<group>"; };
+		FCFA68EE211048E60013BF9F /* BirdSoundTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BirdSoundTableViewCell.xib; sourceTree = "<group>"; };
+		FCFA68EF211048E60013BF9F /* Recording.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recording.swift; sourceTree = "<group>"; };
+		FCFA68F0211048E60013BF9F /* BirdSoundTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdSoundTableViewCell.swift; sourceTree = "<group>"; };
+		FCFA68F1211048E60013BF9F /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		FCFA68F2211048E60013BF9F /* ServiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceResponse.swift; sourceTree = "<group>"; };
+		FCFA68F3211048E60013BF9F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FCFF2D1820F75EDB00C7A421 /* MacConsoleLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacConsoleLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -581,6 +611,24 @@
 			path = iOS_DemosTests;
 			sourceTree = "<group>";
 		};
+		FC39521B21140435006CE134 /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				FC39521C21140454006CE134 /* Queue_c.h */,
+				FC39521D21140454006CE134 /* Queue_c.c */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
+		FC3952202114453C006CE134 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				FC3952212114458C006CE134 /* Tree_c.h */,
+				FC3952222114458C006CE134 /* Tree_c.c */,
+			);
+			path = Tree;
+			sourceTree = "<group>";
+		};
 		FC54B751202AD93C00007FC8 /* OC */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,6 +667,7 @@
 		FC54B760202D79B200007FC8 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FCFA68EB211048B90013BF9F /* TableViewTemplate */,
 				FC80C75B20A590F500F394AC /* Animation */,
 				FC54B766202D7CC900007FC8 /* iOS 保持界面流畅的技巧.pdf */,
 				FC54B768202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf */,
@@ -652,9 +701,19 @@
 			path = Swift4;
 			sourceTree = "<group>";
 		};
+		FC64DDEA21367CAF00F096A0 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				FC64DDEB21367CE300F096A0 /* 20160325_XcodeIntelliJLibrary04.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		FC6733B22022ED920078CE03 /* Xcode */ = {
 			isa = PBXGroup;
 			children = (
+				FC64DDEA21367CAF00F096A0 /* Image */,
+				FC64DDE821367C9D00F096A0 /* 模块化与Compile.md */,
 				FCCA370020B550D900104A8A /* proxychain.md */,
 				FCCA36FE20B550D400104A8A /* fastlane.md */,
 				FC7FBB61206CCB1800157E07 /* iOS 下如何一键调试 Push.md */,
@@ -804,6 +863,10 @@
 				FC01AC792105C632007D7D23 /* amain.c */,
 				FC01AC7E2105C669007D7D23 /* Graph_C.h */,
 				FC01AC7F2105C669007D7D23 /* Graph_C.c */,
+				FC3952152113EFD0006CE134 /* Graph_Search_c.h */,
+				FC3952162113EFD0006CE134 /* Graph_Search_c.c */,
+				FC3C31FC2126BCDE00362CCE /* Graph_MiniSpanTree_c.h */,
+				FC3C31FD2126BCDE00362CCE /* Graph_MiniSpanTree_c.c */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -1088,6 +1151,8 @@
 		FCD72D6520464507001EC81E /* Algorithm */ = {
 			isa = PBXGroup;
 			children = (
+				FC3952202114453C006CE134 /* Tree */,
+				FC39521B21140435006CE134 /* Queue */,
 				FC8A49ED20FDA59600460C45 /* Graph */,
 				FCC0D8D0205F79C1002A8CDA /* DesignPattern */,
 				FCD72D66204646C9001EC81E /* MirrorBinaryTree.h */,
@@ -1193,6 +1258,20 @@
 				2099725218859AC81A36EB38 /* Scheduling-Notification */,
 			);
 			path = GCD;
+			sourceTree = "<group>";
+		};
+		FCFA68EB211048B90013BF9F /* TableViewTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				FCFA68F0211048E60013BF9F /* BirdSoundTableViewCell.swift */,
+				FCFA68EE211048E60013BF9F /* BirdSoundTableViewCell.xib */,
+				FCFA68F3211048E60013BF9F /* MainViewController.swift */,
+				FCFA68F1211048E60013BF9F /* NetworkingService.swift */,
+				FCFA68EF211048E60013BF9F /* Recording.swift */,
+				FCFA68F2211048E60013BF9F /* ServiceResponse.swift */,
+				FCFA68EC211048D30013BF9F /* RecordingsResult.swift */,
+			);
+			path = TableViewTemplate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1388,9 +1467,11 @@
 				FC6733B62022EDE80078CE03 /* Xcode快捷键 in Resources */,
 				FC54B756202AE83D00007FC8 /* Objective C类方法load和initialize的区别.pdf in Resources */,
 				FC7FBAF52069D60A00157E07 /* 调度器、subscribeOn、observeOn.md in Resources */,
+				FC64DDEC21367CE300F096A0 /* 20160325_XcodeIntelliJLibrary04.png in Resources */,
 				FC7FBAFB2069D60A00157E07 /* UI控件扩展2：UITextField、UITextView.md in Resources */,
 				FC54B76B202D7CE200007FC8 /* URI跳转方式地图导航的代码实践.pdf in Resources */,
 				FC7FBB60206CAF1900157E07 /* GCD.md in Resources */,
+				FC64DDE921367C9D00F096A0 /* 模块化与Compile.md in Resources */,
 				FCCA36F620AC371E00104A8A /* 《高性能iOS 应用开发》之降低你 APP 的电量消耗.pdf in Resources */,
 				FC7FBAFC2069D60A00157E07 /* 变换操作符：buffer、map、flatMap、scan等.md in Resources */,
 				FCA36C4F207E2DA8004CF921 /* 2.png in Resources */,
@@ -1405,6 +1486,7 @@
 				FCA36C4A207E272D004CF921 /* RunTime.md in Resources */,
 				FCA36C4D207E2BF5004CF921 /* 1.png in Resources */,
 				FC54B769202D7CD700007FC8 /* iOS 模块化之 JLRoute 路由示例.pdf in Resources */,
+				FCFA68F4211048E60013BF9F /* BirdSoundTableViewCell.xib in Resources */,
 				FC69DF45206103AA006461A6 /* Xcode配置.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1586,7 +1668,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC01AC832105C92C007D7D23 /* amain.c in Sources */,
+				FC39521F21140855006CE134 /* Queue_c.c in Sources */,
 				FC01AC802105C669007D7D23 /* Graph_C.c in Sources */,
+				FC39522421144821006CE134 /* Tree_c.c in Sources */,
+				FC3952182113F9D1006CE134 /* Graph_Search_c.c in Sources */,
+				FC3C31FF21291D9300362CCE /* Graph_MiniSpanTree_c.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1622,9 +1708,11 @@
 				FCAF86EB203FE029008CFE43 /* JLRoutes+GenerateURL.m in Sources */,
 				FC48A464204E6FA300B27F1E /* BizarreQuestionViewController.swift in Sources */,
 				044DA3CB20DBA06C004FBAA8 /* Preferences.swift in Sources */,
+				FCFA68F5211048E60013BF9F /* Recording.swift in Sources */,
 				FCAF86E3203FE01F008CFE43 /* SVW_BaseRequest.m in Sources */,
 				FC01910D2005E4510069A3E0 /* GCDTableViewController.m in Sources */,
 				FC01912320074FC10069A3E0 /* ApplicationWillTerminateNotificationViewController.m in Sources */,
+				FCFA68F9211048E60013BF9F /* MainViewController.swift in Sources */,
 				FCD72D68204646C9001EC81E /* MirrorBinaryTree.m in Sources */,
 				FCD72D332044FB6F001EC81E /* SVW_LoginRequest.m in Sources */,
 				FC01912E20075AE10069A3E0 /* ProcessNumberViewController.m in Sources */,
@@ -1632,7 +1720,9 @@
 				044DA3CD20DBA082004FBAA8 /* WordList.swift in Sources */,
 				FC0191142005F4120069A3E0 /* BaseTableViewController.m in Sources */,
 				FCE8C53620528F9E00BD1562 /* DispatchSemaphoreViewController.swift in Sources */,
+				FCFA68F8211048E60013BF9F /* ServiceResponse.swift in Sources */,
 				FC601013203413A900E2C193 /* RacLifeSelectorViewController.m in Sources */,
+				FCFA68F7211048E60013BF9F /* NetworkingService.swift in Sources */,
 				044DA3CA20DBA06C004FBAA8 /* Workarounds.swift in Sources */,
 				FCAF86CF203FDFCE008CFE43 /* UIViewController+NonBase.m in Sources */,
 				FCB663D9203278D1004B1325 /* MethodChainingViewController.m in Sources */,
@@ -1641,6 +1731,7 @@
 				FCAF86F5203FE032008CFE43 /* SVProgressHUD+Helper.m in Sources */,
 				FCB663D32031968C004B1325 /* NSString+EmailAdditions.m in Sources */,
 				FCA902AB203BEC510088AC7B /* RACFliterViewController.m in Sources */,
+				FCFA68ED211048D30013BF9F /* RecordingsResult.swift in Sources */,
 				FC48A45F204E6D9E00B27F1E /* UIControl+Permission.m in Sources */,
 				FCE789D7200DF164003C621D /* HttpTableViewController.m in Sources */,
 				FCAF86CC203FDFCE008CFE43 /* NSObject+NonBase.m in Sources */,
@@ -1663,6 +1754,7 @@
 				FC601016203414F500E2C193 /* RACMacroViewController.m in Sources */,
 				FCA902A52037EB5D0088AC7B /* RACMapViewController.m in Sources */,
 				FC60101920341A7200E2C193 /* RACMulticastViewController.m in Sources */,
+				FCFA68F6211048E60013BF9F /* BirdSoundTableViewCell.swift in Sources */,
 				FCB663D62032712D004B1325 /* NSObject+Property.m in Sources */,
 				FC151707204E8B94001FABCE /* RunLoopViewController.m in Sources */,
 				FCAF86EA203FE029008CFE43 /* SVW_RouterConstant.m in Sources */,

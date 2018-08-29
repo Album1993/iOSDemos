@@ -381,10 +381,512 @@ struct weak_entry_t {
 
  
 
+ 在 **weak_entry_t** 的结构中，`DisguisedPtr referent` 是对泛型对象的指针做了一个封装，通过这个泛型类来解决内存泄漏的问题。从注释中写 `out_of_line` 成员为最低有效位，当其为**0**的时候， `weak_referrer_t` 成员将扩展为多行静态 `hash table`。其实其中的 `weak_referrer_t` 是二维 `objc_object` 的别名，通过一个二维指针地址偏移，用下标作为 **hash** 的 **key**，做成了一个弱引用散列。
+
+- **out_of_line**：最低有效位，也是标志位。当标志位 0 时，增加引用表指针纬度。
+- **num_refs**：引用数值。这里记录弱引用表中引用有效数字，因为弱引用表使用的是静态 hash 结构，所以需要使用变量来记3g5录数目。
+- **mask**：计数辅助量。
+- **max_hash_displacement**：**hash** 元素上限阀值。
+
+其实 `weak_table_t` 就是一个动态增长的哈希表。
+
+继续看看其相关的操作，首先是对整个表的扩大：
+
+```c++
+#define TABLE_SIZE(entry) (entry->mask ? entry->mask + 1 : 0)
+
+// Grow the given zone's table of weak references if it is full.
+static void weak_grow_maybe(weak_table_t *weak_table)
+{
+    size_t old_size = TABLE_SIZE(weak_table);
+
+    // Grow if at least 3/4 full.
+    if (weak_table->num_entries >= old_size * 3 / 4) {
+        weak_resize(weak_table, old_size ? old_size*2 : 64);
+    }
+}
+
+```
+
  
 
-   
+ 
+
+可以看到，当 `weak_table` 里的弱引用条目达到它容量的四分之三时，便会将容量拓展为两倍。值得注意的是第一次拓展也就是是 `mask` 为 0 的情况，初始值是 64。实际对弱引用表大小的操作则交给了 `weak_resize` 函数。
+
+除了扩大，当然也还有缩小：
+
+
+
+```c++
+// Shrink the table if it is mostly empty.
+static void weak_compact_maybe(weak_table_t *weak_table)
+{
+    size_t old_size = TABLE_SIZE(weak_table);
+
+    // Shrink if larger than 1024 buckets and at most 1/16 full.
+    if (old_size >= 1024  && old_size / 16 >= weak_table->num_entries) {
+        weak_resize(weak_table, old_size / 8);
+        // leaves new table no more than 1/2 full
+    }
+}
+
+```
+
+ 
+
+ 缩小的话则是需要表本身大于等于 1024 并且存放了不足十六分之一的条目时，直接缩小 8 倍。实际工作也是交给了 `weak_resize` 函数：
+
+
+
+```c++
+static void weak_resize(weak_table_t *weak_table, size_t new_size)
+{
+    size_t old_size = TABLE_SIZE(weak_table);
+
+    weak_entry_t *old_entries = weak_table->weak_entries;
+    weak_entry_t *new_entries = (weak_entry_t *)
+        calloc(new_size, sizeof(weak_entry_t));
+
+    weak_table->mask = new_size - 1;
+    weak_table->weak_entries = new_entries;
+    weak_table->max_hash_displacement = 0;
+    weak_table->num_entries = 0;  // restored by weak_entry_insert below
+    
+    if (old_entries) {
+        weak_entry_t *entry;
+        weak_entry_t *end = old_entries + old_size;
+        for (entry = old_entries; entry < end; entry++) {
+            if (entry->referent) {
+                weak_entry_insert(weak_table, entry);
+            }
+        }
+        free(old_entries);
+    }
+}
+
+```
+
+ 
+
+ `weak_resize`函数的过程就是新建一个数组，将老数组里的值使用 `weak_entry_insert`函数添加进去，注意到代码中间 `mask`在这里被赋值为新数组的大小减去 1，`max_hash_displacement`和 `num_entries`也都清零了，因为 `weak_entry_insert`函数会对这两个值进行操作。接着对 `weak_entry_insert`函数进行分析：
+
+ 
+
+```c++
+/** 
+ * Add new_entry to the object's table of weak references.
+ * Does not check whether the referent is already in the table.
+ */
+static void weak_entry_insert(weak_table_t *weak_table, weak_entry_t *new_entry)
+{
+    weak_entry_t *weak_entries = weak_table->weak_entries;
+    assert(weak_entries != nil);
+
+    size_t begin = hash_pointer(new_entry->referent) & (weak_table->mask);
+    size_t index = begin;
+    size_t hash_displacement = 0;
+    while (weak_entries[index].referent != nil) {
+        index = (index+1) & weak_table->mask;
+        if (index == begin) bad_weak_table(weak_entries);
+        hash_displacement++;
+    }
+
+    weak_entries[index] = *new_entry;
+    weak_table->num_entries++;
+
+    if (hash_displacement > weak_table->max_hash_displacement) {
+        weak_table->max_hash_displacement = hash_displacement;
+    }
+}
+
+```
+
+ 这个函数就是个很正常的哈希表插入的过程，`hash_pointer`函数是对指针地址进行哈希，哈希后的值之所以要和 `mask`进行 `&`操作，是因为弱引用表的大小永远是 2 的幂（一开始是 64，之后不断乘以 2），`mask`则是大小减去 1 即为一个 `0b111...11`这么一个数，和它进行 `&`运算相当于取余。`hash_displacement`则是记录了哈希相撞后偏移的大小。
+
+既然有插入，也就有删除：
 
  
 
  
+
+```c++
+/**
+ * Remove entry from the zone's table of weak references.
+ */
+static void weak_entry_remove(weak_table_t *weak_table, weak_entry_t *entry)
+{
+    // remove entry
+    if (entry->out_of_line()) free(entry->referrers);
+    bzero(entry, sizeof(*entry));
+
+    weak_table->num_entries--;
+
+    weak_compact_maybe(weak_table);
+}
+
+```
+
+ 
+
+ 很直接的清零 `entry`，并给 `weak_table` 的 `num_entries` 减 1，最后检查看是否需要缩小。
+
+最后还有一个根据指定对象查找存在条目的函数： 
+
+ 
+
+```c++
+/** 
+ * Return the weak reference table entry for the given referent. 
+ * If there is no entry for referent, return NULL. 
+ * Performs a lookup.
+ *
+ * @param weak_table 
+ * @param referent The object. Must not be nil.
+ * 
+ * @return The table of weak referrers to this object. 
+ */
+static weak_entry_t *
+weak_entry_for_referent(weak_table_t *weak_table, objc_object *referent)
+{
+    assert(referent);
+
+    weak_entry_t *weak_entries = weak_table->weak_entries;
+
+    if (!weak_entries) return nil;
+
+    size_t begin = hash_pointer(referent) & weak_table->mask;
+    size_t index = begin;
+    size_t hash_displacement = 0;
+    while (weak_table->weak_entries[index].referent != referent) {
+        index = (index+1) & weak_table->mask;
+        if (index == begin) bad_weak_table(weak_table->weak_entries);
+        hash_displacement++;
+        if (hash_displacement > weak_table->max_hash_displacement) {
+            return nil;
+        }
+    }
+    
+    return &weak_table->weak_entries[index];
+}
+
+```
+
+ 
+
+ 也是很正常的哈希表套路。
+
+### weak_entry_t
+
+那弱引用是怎么存储的呢，继续分析 `weak_entry_t`：
+
+ 
+
+```c++
+#define WEAK_INLINE_COUNT 4
+
+#define REFERRERS_OUT_OF_LINE 2
+
+struct weak_entry_t {
+    DisguisedPtr<objc_object> referent;
+    union {
+        struct {
+            weak_referrer_t *referrers;
+            uintptr_t        out_of_line_ness : 2;
+            uintptr_t        num_refs : PTR_MINUS_2;
+            uintptr_t        mask;
+            uintptr_t        max_hash_displacement;
+        };
+        struct {
+            // out_of_line_ness field is low bits of inline_referrers[1]
+            weak_referrer_t  inline_referrers[WEAK_INLINE_COUNT];
+        };
+    };
+
+    bool out_of_line() {
+        return (out_of_line_ness == REFERRERS_OUT_OF_LINE);
+    }
+
+    weak_entry_t& operator=(const weak_entry_t& other) {
+        memcpy(this, &other, sizeof(other));
+        return *this;
+    }
+
+    weak_entry_t(objc_object *newReferent, objc_object **newReferrer)
+        : referent(newReferent)
+    {
+        inline_referrers[0] = newReferrer;
+        for (int i = 1; i < WEAK_INLINE_COUNT; i++) {
+            inline_referrers[i] = nil;
+        }
+    }
+};
+
+
+```
+
+ 
+
+首先 `DisguisedPtr<T>`类型和 `T*`的行为是一模一样的，这个类型存在的目的是为了躲过内存泄漏工具的检查（注释原文：「`DisguisedPtr<T>`acts like pointer type `T*`, except the stored value is disguised to hide it from tools like `leaks`.」）。所以 `DisguisedPtr<objc_object> referent`可以看作是 `objc_object *referent`。
+
+`referent`这个指针记录的便是被弱引用的对象。接下来的联合里有两种结构体，先分析第一种：
+
+- `referrers`：`referrers`是一个 `weak_referrer_t`类型的数组，用来存放弱引用变量的地址，`weak_referrer_t`的定义是这样的：`typedef DisguisedPtr<objc_object *> weak_referrer_t;`；
+- `out_of_line_ness`：2 bit 标记位，用来确定联合里的内存是第一个结构体还是第二个结构体；
+- `num_refs`：`PTR_MINUS_2`便是字长减去 2 位，和 `out_of_line_ness`一起组成一个字长，用来存储 `referrers`的大小；
+- `mask`和 `max_hash_displacement`：和前面分析的一样，做哈希表用到的东西。
+
+可以发现第一种结构体也是一个哈希表，第二种结构体则是一个和第一种结构体一样大的数组，所谓的 inline 存储。存放思路则是首先 inline 存储，当超过 `WEAK_INLINE_COUNT`也就是 4 时，再变成第一种的动态哈希表存储。代码下方的构造函数便体现了这个思路。
+
+可以注意到 `weak_entry_t`重载了赋值操作符，将赋值变成了一个拷贝内存的操作。
+
+相关操作也是和上面 `weak_table_t`的类似，只不过加上了 inline 存储情况的变化，就不详细分析了。
+
+ 
+
+###  weak_register_no_lock
+
+ 开始分析 `weak_register_no_lock` 函数：
+
+```c++
+/** 
+ * Registers a new (object, weak pointer) pair. Creates a new weak
+ * object entry if it does not exist.
+ * 
+ * @param weak_table The global weak table.
+ * @param referent The object pointed to by the weak reference.
+ * @param referrer The weak pointer address.
+ */
+id 
+weak_register_no_lock(weak_table_t *weak_table, id referent_id, 
+                      id *referrer_id, bool crashIfDeallocating)
+{
+    objc_object *referent = (objc_object *)referent_id;
+    objc_object **referrer = (objc_object **)referrer_id;
+
+    if (!referent  ||  referent->isTaggedPointer()) return referent_id;
+
+```
+
+ 第一段，约等于什么都没干。`referent` 是被弱引用的对象，`referrer` 则是弱引用变量的地址。
+
+ 
+
+```c++
+// ensure that the referenced object is viable
+    bool deallocating;
+    if (!referent->ISA()->hasCustomRR()) {
+        deallocating = referent->rootIsDeallocating();
+    }
+    else {
+        BOOL (*allowsWeakReference)(objc_object *, SEL) = 
+            (BOOL(*)(objc_object *, SEL))
+            object_getMethodImplementation((id)referent, 
+                                           SEL_allowsWeakReference);
+        if ((IMP)allowsWeakReference == _objc_msgForward) {
+            return nil;
+        }
+        deallocating =
+            ! (*allowsWeakReference)(referent, SEL_allowsWeakReference);
+    }
+
+```
+
+ 
+
+ 这一段很有意思，如果对象没有自定义的内存管理方法（`hasCustomRR`），则将 `deallocating`变量赋值为 `rootIsDeallocating`也就是是否正在销毁。但是如果有自定义的内存管理方法的话，发送的是
+`allowsWeakReference`这个消息，即是否允许弱引用。不管怎么样，我们得到了一个 `deallocating`变量。
+
+ 
+
+```c++
+if (deallocating) {
+        if (crashIfDeallocating) {
+            _objc_fatal("Cannot form weak reference to instance (%p) of "
+                        "class %s. It is possible that this object was "
+                        "over-released, or is in the process of deallocation.",
+                        (void*)referent, object_getClassName((id)referent));
+        } else {
+            return nil;
+        }
+    }
+
+```
+
+ 
+
+从上面一段可以知道，`deallocating` 为 `true` 的话肯定是有问题的，所以这一段处理一下。
+
+ 
+
+```c++
+// now remember it and where it is being stored
+    weak_entry_t *entry;
+    if ((entry = weak_entry_for_referent(weak_table, referent))) {
+        append_referrer(entry, referrer);
+    } 
+    else {
+        weak_entry_t new_entry(referent, referrer);
+        weak_grow_maybe(weak_table);
+        weak_entry_insert(weak_table, &new_entry);
+    }
+
+    // Do not set *referrer. objc_storeWeak() requires that the 
+    // value not change.
+
+    return referent_id;
+}
+
+```
+
+最后一段终于做了正事了！首先先用 `weak_entry_for_referent`函数搜索对象是否已经有了 `weak_entry_t`类型的条目，有的话则使用 `append_referrer`添加一个变量位置进去，没有的话则新建一个 `weak_entry_t`条目，使用 `weak_grow_maybe`函数扩大（如果需要的话）弱引用表的大小，并使用 `weak_entry_insert`将弱引用插入表中。
+
+ ### weak_unregister_no_lock
+
+接下来是 `weak_unregister_no_lock` 函数：
+
+ 
+
+```c++
+void
+weak_unregister_no_lock(weak_table_t *weak_table, id referent_id, 
+                        id *referrer_id)
+{
+    objc_object *referent = (objc_object *)referent_id;
+    objc_object **referrer = (objc_object **)referrer_id;
+
+    weak_entry_t *entry;
+
+    if (!referent) return;
+
+    if ((entry = weak_entry_for_referent(weak_table, referent))) {
+        remove_referrer(entry, referrer);
+        bool empty = true;
+        if (entry->out_of_line()  &&  entry->num_refs != 0) {
+            empty = false;
+        }
+        else {
+            for (size_t i = 0; i < WEAK_INLINE_COUNT; i++) {
+                if (entry->inline_referrers[i]) {
+                    empty = false; 
+                    break;
+                }
+            }
+        }
+
+        if (empty) {
+            weak_entry_remove(weak_table, entry);
+        }
+    }
+
+    // Do not set *referrer = nil. objc_storeWeak() requires that the 
+    // value not change.
+}
+
+```
+
+ 
+
+主要功能实现思路很简单，使用 `weak_entry_for_referent` 函数找到对应的弱引用条目，并用 `remove_referrer` 将对应的弱引用变量位置从中移除。最后判断条目是否为空，为空则使用 `weak_entry_remove` 将其从弱引用表中移除。
+
+### 自动置为 nil
+
+对象销毁后，弱引用变量被置为 `nil` 是因为在对象 `dealloc` 的过程中调用了 `weak_clear_no_lock` 函数：
+
+ 
+
+```c++
+/** 
+ * Called by dealloc; nils out all weak pointers that point to the 
+ * provided object so that they can no longer be used.
+ * 
+ * @param weak_table 
+ * @param referent The object being deallocated. 
+ */
+void 
+weak_clear_no_lock(weak_table_t *weak_table, id referent_id) 
+{
+    objc_object *referent = (objc_object *)referent_id;
+
+    weak_entry_t *entry = weak_entry_for_referent(weak_table, referent);
+    if (entry == nil) {
+        /// XXX shouldn't happen, but does with mismatched CF/objc
+        //printf("XXX no entry for clear deallocating %p\n", referent);
+        return;
+    }
+
+```
+
+首先初始化一下，获取到弱引用条目，顺便处理没有弱引用的情况。
+
+ 
+
+```c++
+// zero out references
+    weak_referrer_t *referrers;
+    size_t count;
+    
+    if (entry->out_of_line()) {
+        referrers = entry->referrers;
+        count = TABLE_SIZE(entry);
+    } 
+    else {
+        referrers = entry->inline_referrers;
+        count = WEAK_INLINE_COUNT;
+    }
+
+```
+
+获取弱引用变量位置数组和个数。
+
+```c++
+for (size_t i = 0; i < count; ++i) {
+        objc_object **referrer = referrers[i];
+        if (referrer) {
+            if (*referrer == referent) {
+                *referrer = nil;
+            }
+            else if (*referrer) {
+                _objc_inform("__weak variable at %p holds %p instead of %p. "
+                             "This is probably incorrect use of "
+                             "objc_storeWeak() and objc_loadWeak(). "
+                             "Break on objc_weak_error to debug.\n", 
+                             referrer, (void*)*referrer, (void*)referent);
+                objc_weak_error();
+            }
+        }
+    }
+    
+    weak_entry_remove(weak_table, entry);
+}
+
+```
+
+循环将它们置为 `nil`，最后移除整个弱引用条目。
+
+## 访问弱引用
+
+在访问一个弱引用时，ARC 会对其进行一些操作：
+
+```c++
+obj = weakObj;
+
+// 会变成
+objc_loadWeakRetained(&weakObj);
+obj = weakObj;
+objc_release(weakObj);
+```
+
+`objc_loadWeakRetained` 函数的主要作用就是调用了 `rootTryRetain` 函数：
+
+ 
+
+```c++
+ALWAYS_INLINE bool 
+objc_object::rootTryRetain()
+{
+    return rootRetain(true, false) ? true : false;
+}
+```
+
+实际上就是尝试对引用计数加 1，让弱引用对象在使用时不会被释放掉。

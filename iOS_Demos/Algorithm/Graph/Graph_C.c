@@ -12,8 +12,9 @@
 #include <stdarg.h>
 #include <string.h>
 
-#define INFINITY 2147483647
-#define MAX_VEX 30
+
+
+
 
 void printMatrix(int **matrix, int num)
 {
@@ -25,6 +26,10 @@ void printMatrix(int **matrix, int num)
         }
         printf("\n\n");
     }
+}
+
+int element_Matrix(int **matrix,int num,int x,int y) {
+    return *((int *)matrix + num * x + y);
 }
 
 //--------------------------------邻接矩阵----------------------------
@@ -43,7 +48,7 @@ int ***transMGraph(MGraph *G)
     return (int ***)matrix;
 }
 
-Status generateGraph_UDN(MGraph *G)
+Status generateGraph_MGraph(MGraph *G)
 {
     (*G).arcs[0][1].Graph_Net.Value = 2;
     G->arcs[0][2].Graph_Net.Value = 1;
@@ -62,6 +67,10 @@ Status generateGraph_UDN(MGraph *G)
     G->arcs[10][14].Graph_Net.Value = 4;
     G->arcs[10][11].Graph_Net.Value = 3;
 
+    if (G->kind == DN) {
+        return Success;
+    }
+    
     for (int i = 0; i < G->Vexnum; i++)
     {
         for (int j = 0; j < G->Vexnum; j++)
@@ -76,10 +85,12 @@ Status generateGraph_UDN(MGraph *G)
 }
 
 // 7.1 使用邻接矩阵
-Status CreatGraph_UDN(MGraph *G)
+Status CreatGraph_MGraph(MGraph *G)
 { //构造有向网结构
     G->Vexnum = 15;
     G->Arcnum = 16;
+    
+//    G->kind = UDN;
     for (int i = 0; i < G->Vexnum; i++)
         G->Vertex[i].data = i + 1;
     for (int i = 0; i < G->Vexnum; i++)
@@ -91,12 +102,63 @@ Status CreatGraph_UDN(MGraph *G)
         }
     }
 
-    generateGraph_UDN(G);
+    generateGraph_MGraph(G);
 
     return Success;
 }
 
-void travelGraph_UDN(MGraph *G)
+
+Status generateGraph_ForMiniSpanTree_MGraph(MGraph *G)
+{
+    G->arcs[0][1].Graph_Net.Value = 6;
+    G->arcs[0][2].Graph_Net.Value = 1;
+    G->arcs[0][3].Graph_Net.Value = 5;
+    G->arcs[1][2].Graph_Net.Value = 5;
+    G->arcs[2][3].Graph_Net.Value = 5;
+    G->arcs[1][4].Graph_Net.Value = 3;
+    G->arcs[2][4].Graph_Net.Value = 6;
+    G->arcs[2][5].Graph_Net.Value = 4;
+    G->arcs[3][5].Graph_Net.Value = 2;
+    G->arcs[4][5].Graph_Net.Value = 6;
+    
+    for (int i = 0; i < G->Vexnum; i++)
+    {
+        for (int j = 0; j < G->Vexnum; j++)
+        {
+            if (G->arcs[i][j].Graph_Net.Value != INFINITY && G->arcs[j][i].Graph_Net.Value == INFINITY)
+            {
+                G->arcs[j][i].Graph_Net.Value = G->arcs[i][j].Graph_Net.Value;
+            };
+        }
+    }
+    return Success;
+}
+
+// 7.1 使用邻接矩阵
+Status CreatGraph_ForMiniSpanTree_MGraph(MGraph *G)
+{ //构造有向网结构
+    G->Vexnum = 6;
+    G->Arcnum = 10;
+    
+    //    G->kind = UDN;
+    for (int i = 0; i < G->Vexnum; i++)
+    G->Vertex[i].data = i + 1;
+    for (int i = 0; i < G->Vexnum; i++)
+    {
+        for (int j = 0; j < G->Vexnum; j++)
+        {
+            G->arcs[i][j].info = NULL;
+            G->arcs[i][j].Graph_Net.Value = INFINITY;
+        }
+    }
+    
+    generateGraph_ForMiniSpanTree_MGraph(G);
+    
+    return Success;
+}
+
+
+void travelGraph_MGraph(MGraph *G)
 {
     printf("vex num: %d\n", G->Vexnum);
     int(*matrix)[G->Vexnum][G->Vexnum] = (int(*)[G->Vexnum][G->Vexnum])transMGraph(G);

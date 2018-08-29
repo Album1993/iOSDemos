@@ -81,6 +81,7 @@ target 'iOS_Demos' do
     # badoo/Chatto                              # 聊天界面
     # pod 'Highlightr'                          # 使用js来解析一百种语言
     # pod 'DWAnimatedLabel', '~> 1.1'           # 非常好的label动画
+    # pod 'CardsLayout'                         # 左右滑动的view
 
     # 图表
 
@@ -157,7 +158,7 @@ target 'iOS_Demos' do
     # ephread/Instructions                      # 控件的引导
     # Flight-School/Money                       # 汇率
     # mac-cain13/R.swift                        # 检测使用资源是否存在
-    
+    # pod 'WeScan'                              # 二维码
     
     # Debug
 
@@ -172,6 +173,7 @@ target 'iOS_Demos' do
     # pod 'LifetimeTracker'                     # 实时内存泄漏检测
     # facebook/Sonar                            # Facebook开源了移动应用调试平台Sonar
     # pod 'FBRetainCycleDetector'               # facebook 引用循环检测
+    # pod 'Wormholy', :configurations => ['Debug']  # 看网络请求
 
 
     # reactive
@@ -183,6 +185,7 @@ target 'iOS_Demos' do
 
     # 数据库
     # stephencelis/SQLite.swift
+    # pod 'UserDefaultsStore'                   # UserDefaults
 
     # 架构
 
@@ -203,7 +206,7 @@ target 'iOS_Demos' do
     # swift 路由组件化，场景挺多的
     # pod 'FNUrlRoute', :git => 'git@github.com:Fnoz/FNUrlRoute.git', :tag => '1.0.0'
     # faviomob/WidgetKit                        # 通过json来组织界面
-    
+    # pod 'rx-coordinator'                      # 页面跳转路由
 
 
     # js Bridge
@@ -223,6 +226,7 @@ target 'iOS_Demos' do
     # Flight-School/MessagePack                 # matt swift教程
     # Flight-School/AnyCodable
     # marcosgriselli/EasyTransitions            # 各种页面跳转交互
+    # louisdh/source-editor                     # Swift语言IDE
 
     # 集合类
 

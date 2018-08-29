@@ -21,7 +21,7 @@ typedef enum {Border,UnBorder} Graph_Border;
 typedef int MatrixDataType;
 typedef MatrixDataType** GraphMatrix;
 void printMatrix(int **matrix,int num);
-
+int element_Matrix(int **matrix,int num,int x,int y);
 
 //--------------------------------邻接矩阵----------------------------
 typedef struct {
@@ -45,8 +45,10 @@ typedef struct {
 }MGraph;//图结构的定义
 // GraphMatrix * transMGraph(MGraph*G);
 
-Status CreatGraph_UDN(MGraph * G);
-void travelGraph_UDN(MGraph * G);
+Status CreatGraph_MGraph(MGraph * G);
+Status CreatGraph_ForMiniSpanTree_MGraph(MGraph *G);
+
+void travelGraph_MGraph(MGraph * G);
 
 // ------------------------------------------使用邻接表--------------------------------
 
