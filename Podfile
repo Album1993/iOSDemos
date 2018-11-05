@@ -29,6 +29,8 @@ target 'iOS_Demos' do
     # Boilertalk/Web3.swift		               # rpc 服务连接解析
     # swisspol/GCDWebServer                    # oc
     # pod 'Crossroad'                          # 方便创建schema
+    # yichengchen/clashX                       # 代理
+    # amzn/smoke-framework                     # 测试api
 
     # audio
     
@@ -55,6 +57,7 @@ target 'iOS_Demos' do
     # pod 'MessageViewController'               # 输入的文本框 （有@功能）
     # pod 'Croc'                                # emoji
     # pod 'AZSafariCollectionViewLayout'        # 类似safari的切换页面的动画
+    # pod 'LiveCollections'                     # 一个比较适合不同cell 的collectionview
     # pod 'ContextMenu'                         # menu
     # pod 'SideMenu'                            # 左滑菜单 有隐藏status bar的动画
     # YZXUnlock                                 # 手势解锁
@@ -82,6 +85,10 @@ target 'iOS_Demos' do
     # pod 'Highlightr'                          # 使用js来解析一百种语言
     # pod 'DWAnimatedLabel', '~> 1.1'           # 非常好的label动画
     # pod 'CardsLayout'                         # 左右滑动的view
+    # fahidattique55/FAShimmerViews             # 没加载出来的时候使用占位UI
+    # pod "SkeletonView"                        # 没加载出来的时候使用占位UI
+    # pod "Panels"
+
 
     # 图表
 
@@ -168,13 +175,15 @@ target 'iOS_Demos' do
     # shaps80/Peek                              # 摇一摇就能看到整个app的界面结构
     # pod 'netfox'                              #  a quick look on all executed network requests performed by your iOS or OSX app.
     # kstenerud/KSCrash                         # 记录crash信息，并且发送邮件
-    # RyanLeeLY/Coolog                          # 可通过网络请求访问log
+    # RyanLeeLY/Coolog
+    # 可通过网络请求访问log
     # pod 'SpecLeaks'                           # 防止内存泄漏
     # pod 'LifetimeTracker'                     # 实时内存泄漏检测
     # facebook/Sonar                            # Facebook开源了移动应用调试平台Sonar
     # pod 'FBRetainCycleDetector'               # facebook 引用循环检测
-    # pod 'Wormholy', :configurations => ['Debug']  # 看网络请求
-
+    # pod '
+    ', :configurations => ['Debug']  # 看网络请求
+    # pod 'Sizes'                               # 预览不同尺寸的UI
 
     # reactive
 

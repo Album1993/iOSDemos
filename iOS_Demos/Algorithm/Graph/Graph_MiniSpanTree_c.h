@@ -14,4 +14,6 @@
 
 Status  MiniSpanTree_PRIM_MGraph(MGraph * G,int u);
 
+Status MiniSpanTree_KRUSKAL_MGraph(MGraph *G);
+
 #endif /* Graph_MiniSpanTree_c_h */

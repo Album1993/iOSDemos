@@ -77,5 +77,7 @@ void testMiniSpanTree() {
     G1->kind = UDN;
     CreatGraph_ForMiniSpanTree_MGraph(G1);
     travelGraph_MGraph(G1);
-    MiniSpanTree_PRIM_MGraph(G1, 0);
+//    MiniSpanTree_PRIM_MGraph(G1, 0);
+    
+    MiniSpanTree_KRUSKAL_MGraph(G1);
 }

@@ -43,7 +43,7 @@ typedef struct {
     int Vexnum,Arcnum;//当前途中顶点数目、边或弧数目
     GraphKind kind;//图的类型
 }MGraph;//图结构的定义
-// GraphMatrix * transMGraph(MGraph*G);
+int ***transMGraph(MGraph *G);
 
 Status CreatGraph_MGraph(MGraph * G);
 Status CreatGraph_ForMiniSpanTree_MGraph(MGraph *G);
